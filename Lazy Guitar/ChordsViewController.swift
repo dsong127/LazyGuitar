@@ -19,8 +19,7 @@ class ChordsViewController: UICollectionViewController {
     var selectedChords = [UICollectionViewCell]()
     let editTextLabel = UILabel()
     var chordViewData = [OCChordView]()
-    
-    
+
   /*
     var selecting: Bool = false {
         didSet {
@@ -46,7 +45,6 @@ class ChordsViewController: UICollectionViewController {
 */
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         setupChordSelectButton()
     }
 
@@ -70,8 +68,7 @@ class ChordsViewController: UICollectionViewController {
        
         dropDown1.selectionAction = { [unowned self] (index: Int, item: String) in
             self.chordSelectButton.title = item
-            
-            self.chordViewData.append(self.generateChord(chord: item, frame: cellFrame))
+            self.chordViewData.append(self.generateChord(chord: item))
             self.collectionView!.insertItems(at: [IndexPath(row: self.chordViewData.count - 1, section: 0)])
             print(self.chordViewData.count)
         }
@@ -85,6 +82,7 @@ class ChordsViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChordCell", for: indexPath) as! ChordViewCell
+        chordViewData[indexPath.row].frame = CGRect(x: 0, y: 0, width: cell.bounds.width, height: cell.bounds.height)
         cell.chordView.addSubview(self.chordViewData[indexPath.row])
         return cell
     }
@@ -124,10 +122,10 @@ class ChordsViewController: UICollectionViewController {
         editTextLabel.sizeToFit()
     }
   */
-    func generateChord(chord: String, frame: CGRect) -> OCChordView {
+    func generateChord(chord: String) -> OCChordView {
         
         var cv: OCChordView!
-        cv = OCChordView(frame: frame)
+        cv = OCChordView()
         
         switch chord {
         case "c", "C":
