@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */; };
+		5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311A1DA5C538007690CE /* AppDelegate.swift */; };
+		5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311C1DA5C538007690CE /* ChordsViewController.swift */; };
+		5C3431201DA5C538007690CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C34311E1DA5C538007690CE /* Main.storyboard */; };
+		5C3431231DA5C538007690CE /* Lazy_Guitar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C3431211DA5C538007690CE /* Lazy_Guitar.xcdatamodeld */; };
+		5C3431251DA5C538007690CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431241DA5C538007690CE /* Assets.xcassets */; };
+		5C3431281DA5C538007690CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431261DA5C538007690CE /* LaunchScreen.storyboard */; };
+		5C3431321DA5C551007690CE /* OCChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3431311DA5C551007690CE /* OCChordView.m */; };
+		5C39F18E1DA734CD004DA2AE /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F1841DA734CD004DA2AE /* DPDConstants.swift */; };
+		5C39F18F1DA734CD004DA2AE /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F1851DA734CD004DA2AE /* DPDKeyboardListener.swift */; };
+		5C39F1901DA734CD004DA2AE /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F1861DA734CD004DA2AE /* DPDUIView+Extension.swift */; };
+		5C39F1911DA734CD004DA2AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C39F1871DA734CD004DA2AE /* Info.plist */; };
+		5C39F1921DA734CD004DA2AE /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C39F1891DA734CD004DA2AE /* DropDownCell.xib */; };
+		5C39F1931DA734CD004DA2AE /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18B1DA734CD004DA2AE /* DropDown+Appearance.swift */; };
+		5C39F1941DA734CD004DA2AE /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18C1DA734CD004DA2AE /* DropDown.swift */; };
+		5C39F1951DA734CD004DA2AE /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordViewCell.swift; sourceTree = "<group>"; };
+		5C3431171DA5C538007690CE /* Lazy Guitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Guitar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C34311A1DA5C538007690CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C34311C1DA5C538007690CE /* ChordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
+		5C34311F1DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C3431221DA5C538007690CE /* Lazy_Guitar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lazy_Guitar.xcdatamodel; sourceTree = "<group>"; };
+		5C3431241DA5C538007690CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C3431271DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C3431291DA5C538007690CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C34312F1DA5C551007690CE /* Lazy Guitar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lazy Guitar-Bridging-Header.h"; sourceTree = "<group>"; };
+		5C3431301DA5C551007690CE /* OCChordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCChordView.h; sourceTree = "<group>"; };
+		5C3431311DA5C551007690CE /* OCChordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCChordView.m; sourceTree = "<group>"; };
+		5C39F1821DA734CD004DA2AE /* DropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDown.h; sourceTree = "<group>"; };
+		5C39F1841DA734CD004DA2AE /* DPDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDConstants.swift; sourceTree = "<group>"; };
+		5C39F1851DA734CD004DA2AE /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		5C39F1861DA734CD004DA2AE /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		5C39F1871DA734CD004DA2AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C39F1891DA734CD004DA2AE /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
+		5C39F18B1DA734CD004DA2AE /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		5C39F18C1DA734CD004DA2AE /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C3431141DA5C538007690CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C34310E1DA5C538007690CE = {
+			isa = PBXGroup;
+			children = (
+				5C3431191DA5C538007690CE /* Lazy Guitar */,
+				5C3431181DA5C538007690CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C3431181DA5C538007690CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C3431171DA5C538007690CE /* Lazy Guitar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C3431191DA5C538007690CE /* Lazy Guitar */ = {
+			isa = PBXGroup;
+			children = (
+				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
+				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
+				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
+				5C34311E1DA5C538007690CE /* Main.storyboard */,
+				5C3431241DA5C538007690CE /* Assets.xcassets */,
+				5C3431261DA5C538007690CE /* LaunchScreen.storyboard */,
+				5C3431291DA5C538007690CE /* Info.plist */,
+				5C3431211DA5C538007690CE /* Lazy_Guitar.xcdatamodeld */,
+				5C39F1811DA734CD004DA2AE /* DropDown */,
+				5C3431331DA5C558007690CE /* OCChordView */,
+			);
+			path = "Lazy Guitar";
+			sourceTree = "<group>";
+		};
+		5C3431331DA5C558007690CE /* OCChordView */ = {
+			isa = PBXGroup;
+			children = (
+				5C3431301DA5C551007690CE /* OCChordView.h */,
+				5C3431311DA5C551007690CE /* OCChordView.m */,
+				5C34312F1DA5C551007690CE /* Lazy Guitar-Bridging-Header.h */,
+			);
+			name = OCChordView;
+			sourceTree = "<group>";
+		};
+		5C39F1811DA734CD004DA2AE /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				5C39F1821DA734CD004DA2AE /* DropDown.h */,
+				5C39F1831DA734CD004DA2AE /* helpers */,
+				5C39F1871DA734CD004DA2AE /* Info.plist */,
+				5C39F1881DA734CD004DA2AE /* resources */,
+				5C39F18A1DA734CD004DA2AE /* src */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		5C39F1831DA734CD004DA2AE /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5C39F1841DA734CD004DA2AE /* DPDConstants.swift */,
+				5C39F1851DA734CD004DA2AE /* DPDKeyboardListener.swift */,
+				5C39F1861DA734CD004DA2AE /* DPDUIView+Extension.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		5C39F1881DA734CD004DA2AE /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C39F1891DA734CD004DA2AE /* DropDownCell.xib */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		5C39F18A1DA734CD004DA2AE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5C39F18B1DA734CD004DA2AE /* DropDown+Appearance.swift */,
+				5C39F18C1DA734CD004DA2AE /* DropDown.swift */,
+				5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C3431161DA5C538007690CE /* Lazy Guitar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C34312C1DA5C538007690CE /* Build configuration list for PBXNativeTarget "Lazy Guitar" */;
+			buildPhases = (
+				5C3431131DA5C538007690CE /* Sources */,
+				5C3431141DA5C538007690CE /* Frameworks */,
+				5C3431151DA5C538007690CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lazy Guitar";
+			productName = "Lazy Guitar";
+			productReference = 5C3431171DA5C538007690CE /* Lazy Guitar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C34310F1DA5C538007690CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Daniel Song";
+				TargetAttributes = {
+					5C3431161DA5C538007690CE = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q89K2W93JC;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5C3431121DA5C538007690CE /* Build configuration list for PBXProject "Lazy Guitar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C34310E1DA5C538007690CE;
+			productRefGroup = 5C3431181DA5C538007690CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C3431161DA5C538007690CE /* Lazy Guitar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C3431151DA5C538007690CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39F1911DA734CD004DA2AE /* Info.plist in Resources */,
+				5C3431281DA5C538007690CE /* LaunchScreen.storyboard in Resources */,
+				5C3431251DA5C538007690CE /* Assets.xcassets in Resources */,
+				5C39F1921DA734CD004DA2AE /* DropDownCell.xib in Resources */,
+				5C3431201DA5C538007690CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C3431131DA5C538007690CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39F1951DA734CD004DA2AE /* DropDownCell.swift in Sources */,
+				5C39F1941DA734CD004DA2AE /* DropDown.swift in Sources */,
+				5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */,
+				5C39F18E1DA734CD004DA2AE /* DPDConstants.swift in Sources */,
+				5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */,
+				5C3431321DA5C551007690CE /* OCChordView.m in Sources */,
+				5C3431231DA5C538007690CE /* Lazy_Guitar.xcdatamodeld in Sources */,
+				5C39F1901DA734CD004DA2AE /* DPDUIView+Extension.swift in Sources */,
+				5C39F18F1DA734CD004DA2AE /* DPDKeyboardListener.swift in Sources */,
+				5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */,
+				5C39F1931DA734CD004DA2AE /* DropDown+Appearance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5C34311E1DA5C538007690CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C34311F1DA5C538007690CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C3431261DA5C538007690CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C3431271DA5C538007690CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C34312A1DA5C538007690CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C34312B1DA5C538007690CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C34312D1DA5C538007690CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Q89K2W93JC;
+				INFOPLIST_FILE = "Lazy Guitar/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.danielsongh.Lazy-Guitar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lazy Guitar/Lazy Guitar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5C34312E1DA5C538007690CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Q89K2W93JC;
+				INFOPLIST_FILE = "Lazy Guitar/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.danielsongh.Lazy-Guitar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lazy Guitar/Lazy Guitar-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C3431121DA5C538007690CE /* Build configuration list for PBXProject "Lazy Guitar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C34312A1DA5C538007690CE /* Debug */,
+				5C34312B1DA5C538007690CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C34312C1DA5C538007690CE /* Build configuration list for PBXNativeTarget "Lazy Guitar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C34312D1DA5C538007690CE /* Debug */,
+				5C34312E1DA5C538007690CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C3431211DA5C538007690CE /* Lazy_Guitar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C3431221DA5C538007690CE /* Lazy_Guitar.xcdatamodel */,
+			);
+			currentVersion = 5C3431221DA5C538007690CE /* Lazy_Guitar.xcdatamodel */;
+			path = Lazy_Guitar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5C34310F1DA5C538007690CE /* Project object */;
+}
