@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,10 +12,10 @@
         <scene sceneID="Kin-9N-ZXf">
             <objects>
                 <collectionViewController id="rzb-rb-E2z" customClass="ChordsViewController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FvD-jr-Emi">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FvD-jr-Emi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.89019607840000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yuO-cB-mml">
                             <size key="itemSize" width="147" height="152"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,7 +35,7 @@
                                         </view>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.99835759400000001" green="0.33364217530000001" blue="0.45152667279999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="PRp-2y-E0z" firstAttribute="centerX" secondItem="fTv-ZY-vTj" secondAttribute="centerX" id="DQG-2j-MRw"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="PRp-2y-E0z" secondAttribute="trailing" constant="-8" id="KyN-h6-4a9"/>
@@ -53,11 +54,18 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="bBl-i7-4J7">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="CvO-LW-FV0">
-                            <connections>
-                                <action selector="chordSelectButtonPressed:" destination="rzb-rb-E2z" id="Rfp-dX-qg7"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Key" id="CvO-LW-FV0">
+                                <connections>
+                                    <action selector="chordSelectButtonPressed:" destination="rzb-rb-E2z" id="Rfp-dX-qg7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Select" id="RWp-il-HNo">
+                                <connections>
+                                    <action selector="variationButtonPressed:" destination="rzb-rb-E2z" id="XFN-Ej-Tnd"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="w3c-TX-IEH">
                             <connections>
                                 <action selector="editButtonPressed:" destination="rzb-rb-E2z" id="eNW-hX-kEy"/>
@@ -67,6 +75,7 @@
                     <connections>
                         <outlet property="chordSelectButton" destination="CvO-LW-FV0" id="kLF-r1-VtA"/>
                         <outlet property="editButton" destination="w3c-TX-IEH" id="vBf-1c-bDS"/>
+                        <outlet property="variationSelectButton" destination="RWp-il-HNo" id="lJp-C2-0go"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCn-pO-3uk" userLabel="First Responder" sceneMemberID="firstResponder"/>

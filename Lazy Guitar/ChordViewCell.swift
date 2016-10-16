@@ -11,21 +11,18 @@ import UIKit
 
 class ChordViewCell: UICollectionViewCell{
     @IBOutlet weak var chordView: OCChordView!
-    
-    
 
-/*
     override var isSelected: Bool{
         didSet{
-            chordView.layer.borderWidth = isSelected ? 10 : 0
+            chordView.layer.borderWidth = isSelected ? 1 : 0
         }
     }
-  */
-    /*
+
     override func awakeFromNib() {
         super.awakeFromNib()
         chordView.layer.borderColor = themeColor.cgColor
         isSelected = false
     }
-    */
+
+    
 }

@@ -8,19 +8,22 @@
 
 import UIKit
 
-
 class ChordsViewController: UICollectionViewController {
-
+    
     @IBOutlet weak var chordSelectButton: UIBarButtonItem!
+    @IBOutlet weak var variationSelectButton: UIBarButtonItem!
+    
     @IBOutlet weak var editButton: UIBarButtonItem!
     
-    let dropDown1 = DropDown()
+    let chordDropDown = DropDown()
+    let variationDropDown = DropDown()
+    let guitarChords = GuitarChords()
     
-    var selectedChords = [UICollectionViewCell]()
+    var selectedChords = [ChordViewCell]()
     let editTextLabel = UILabel()
     var chordViewData = [OCChordView]()
-
-  /*
+    
+    
     var selecting: Bool = false {
         didSet {
             collectionView?.allowsMultipleSelection = selecting
@@ -42,12 +45,14 @@ class ChordsViewController: UICollectionViewController {
             navigationItem.setRightBarButtonItems([editButton,editingDetailItem], animated: true)
         }
     }
-*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChordSelectButton()
+        setupVariationSelectButton()
+        navigationController?.hidesBarsOnSwipe = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -55,22 +60,34 @@ class ChordsViewController: UICollectionViewController {
     //MARK: - Setup
     
     func setupChordSelectButton(){
-        
-        dropDown1.anchorView = chordSelectButton
-        dropDown1.dataSource = ["C", "D", "E"]
-        dropDown1.bottomOffset = CGPoint(x: 0, y:(dropDown1.anchorView?.plainView.bounds.height)!)
-   /*
-        guard !selecting else{
-            chordSelectButton.isEnabled = false
-            return
-        }
-     */
-       
-        dropDown1.selectionAction = { [unowned self] (index: Int, item: String) in
+        chordDropDown.anchorView = chordSelectButton
+        chordDropDown.dataSource = ["C", "D", "E", "F", "G", "A", "B"]
+        chordDropDown.bottomOffset = CGPoint(x: 0, y:(chordDropDown.anchorView?.plainView.bounds.height)!)
+        /*
+         guard !selecting else{
+         chordSelectButton.isEnabled = false
+         return
+         }
+         */
+        chordDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.chordSelectButton.title = item
-            self.chordViewData.append(self.generateChord(chord: item))
+            self.variationDropDown.dataSource = ["\(item)", "\(item)m", "\(item)7", "\(item)M7", "\(item)m7"]
+            self.variationSelectButton.isEnabled = true
+            self.variationDropDown.show()
+        }
+    }
+    
+    
+    func setupVariationSelectButton(){
+        
+        variationDropDown.anchorView = variationSelectButton
+        variationDropDown.bottomOffset = CGPoint(x: 0, y: (variationDropDown.anchorView?.plainView.bounds.height)!)
+        
+        variationDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.variationSelectButton.title = item
+            self.chordViewData.append(self.guitarChords.generateChord(chord: item))
             self.collectionView!.insertItems(at: [IndexPath(row: self.chordViewData.count - 1, section: 0)])
-            print(self.chordViewData.count)
+            self.resetSelectButtons()
         }
     }
     
@@ -82,17 +99,19 @@ class ChordsViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChordCell", for: indexPath) as! ChordViewCell
-        chordViewData[indexPath.row].frame = CGRect(x: 0, y: 0, width: cell.bounds.width, height: cell.bounds.height)
-        cell.chordView.addSubview(self.chordViewData[indexPath.row])
+        chordViewData[indexPath.row].frame = CGRect(x: 0, y: 20, width: cell.bounds.width, height: cell.bounds.height-20)
+        let bannerView = setupChordBannerView(bannerWidth: cell.bounds.width, chord: variationSelectButton.title!)
+        cell.chordView.addSubview(bannerView)
+        cell.chordView.insertSubview(self.chordViewData[indexPath.row], belowSubview: bannerView)
+        
         return cell
     }
-   /*
+    
     override func collectionView(_ collectionView: UICollectionView,
                                  shouldSelectItemAt indexPath: IndexPath) -> Bool {
         guard !selecting else {
             return true
         }
-        
         return false
     }
     
@@ -100,58 +119,43 @@ class ChordsViewController: UICollectionViewController {
         guard selecting else {
             return
         }
-        print("did select item")
         
-        let selectedCell = [collectionView.cellForItem(at: indexPath)]
-  
-        //selectedChords.append(selectedCell)
-        
+        let selectedChord = collectionView.cellForItem(at: indexPath)
+        print(selectedChord)
+        selectedChords.append(selectedChord as! ChordViewCell)
         updateEditingChordCount()
-
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         guard selecting else{
             return
         }
+        
+        let selectedChord = collectionView.cellForItem(at: indexPath)
+        
+        if let index = selectedChords.index(of: selectedChord as! ChordViewCell){
+            selectedChords.remove(at: index)
+            updateEditingChordCount()
+        }
     }
     
-    func updateEditingChordCount(){
-        editTextLabel.textColor = themeColor
-        editTextLabel.text = "\(selectedChords.count) selected"
-        editTextLabel.sizeToFit()
+    override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let temp = chordViewData[sourceIndexPath.row]
+        chordViewData[sourceIndexPath.row] = chordViewData[destinationIndexPath.row]
+        chordViewData[destinationIndexPath.row] = temp
     }
-  */
-    func generateChord(chord: String) -> OCChordView {
-        
-        var cv: OCChordView!
-        cv = OCChordView()
-        
-        switch chord {
-        case "c", "C":
-            cv.chordArray = [0, 1, 0, 2, 3, 0]
-            cv.tuningArray = [ "", "", "", "", "", "X"]
-        case "d", "D":
-            cv.chordArray = [0, 0, 0, 2, 3, 2]
-            cv.tuningArray = ["X", "X", "", "", "", ""]
-        case "e", "E":
-            cv.chordArray = [0, 2, 2, 1, 0, 0]
-        default:
-            print("meh")
-        }
-        return cv
-    }
-
+    
     //MARK: - Button Actions
-
     
     @IBAction func chordSelectButtonPressed(_ sender: AnyObject) {
-        dropDown1.show()
+        chordDropDown.show()
+    }
+    @IBAction func variationButtonPressed(_ sender: AnyObject) {
+        variationDropDown.show()
     }
     
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-    /*
-        guard cellCounter > 1 else {
+        guard chordViewData.count > 0 else {
             print("cell counter guard")
             return
         }
@@ -161,14 +165,47 @@ class ChordsViewController: UICollectionViewController {
             return
         }
         
+        
         guard selecting else  {
             return
         }
- */
         return
- }
- 
- 
+    }
+    
+}
+
+extension ChordsViewController {
+    
+    func updateEditingChordCount(){
+        editTextLabel.textColor = themeColor
+        editTextLabel.text = "\(selectedChords.count) selected"
+        editTextLabel.sizeToFit()
+    }
+    
+    func resetSelectButtons() {
+        chordSelectButton.title = "Key"
+        variationSelectButton.title = "select"
+        variationSelectButton.isEnabled = false
+    }
+
+    func setupChordBannerView(bannerWidth: CGFloat, chord: String) -> UIView{
+        let banner = UIView()
+        
+        banner.frame = CGRect(x: 0, y: 0, width: bannerWidth, height: 20)
+        banner.backgroundColor = UIColor.cyan
+        
+        let bannerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 15))
+        bannerLabel.textColor = UIColor.white
+        bannerLabel.backgroundColor = UIColor.gray
+        bannerLabel.text = "\(chord)"
+        bannerLabel.sizeToFit()
+        bannerLabel.center = banner.center
+        banner.addSubview(bannerLabel)
+        
+        return banner
+    }
+    
+    
 }
 
 
