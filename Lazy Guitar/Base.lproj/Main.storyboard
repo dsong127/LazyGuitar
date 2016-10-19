@@ -12,19 +12,19 @@
         <scene sceneID="Kin-9N-ZXf">
             <objects>
                 <collectionViewController id="rzb-rb-E2z" customClass="ChordsViewController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FvD-jr-Emi">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FvD-jr-Emi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.89019607840000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yuO-cB-mml">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="yuO-cB-mml">
                             <size key="itemSize" width="147" height="152"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChordCell" id="fTv-ZY-vTj" customClass="ChordViewCell" customModule="Lazy_Guitar" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="147" height="152"/>
+                                <rect key="frame" x="20" y="10" width="147" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="147" height="152"/>
@@ -65,16 +65,22 @@
                                     <action selector="variationButtonPressed:" destination="rzb-rb-E2z" id="XFN-Ej-Tnd"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem systemItem="trash" id="zzB-R3-XUG">
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="rzb-rb-E2z" id="xOy-u6-4pk"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="w3c-TX-IEH">
+                        <barButtonItem key="rightBarButtonItem" title="Select" id="w3c-TX-IEH">
                             <connections>
-                                <action selector="editButtonPressed:" destination="rzb-rb-E2z" id="eNW-hX-kEy"/>
+                                <action selector="selectButtonPressed:" destination="rzb-rb-E2z" id="eNW-hX-kEy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chordSelectButton" destination="CvO-LW-FV0" id="kLF-r1-VtA"/>
-                        <outlet property="editButton" destination="w3c-TX-IEH" id="vBf-1c-bDS"/>
+                        <outlet property="deleteButton" destination="zzB-R3-XUG" id="1Nn-qu-JEZ"/>
+                        <outlet property="selectButton" destination="w3c-TX-IEH" id="vBf-1c-bDS"/>
                         <outlet property="variationSelectButton" destination="RWp-il-HNo" id="lJp-C2-0go"/>
                     </connections>
                 </collectionViewController>

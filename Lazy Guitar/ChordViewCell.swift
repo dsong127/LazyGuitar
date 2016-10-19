@@ -12,6 +12,11 @@ import UIKit
 class ChordViewCell: UICollectionViewCell{
     @IBOutlet weak var chordView: OCChordView!
 
+
+
+
+    
+    
     override var isSelected: Bool{
         didSet{
             chordView.layer.borderWidth = isSelected ? 1 : 0
@@ -24,5 +29,8 @@ class ChordViewCell: UICollectionViewCell{
         isSelected = false
     }
 
+    func blurChordView(){
+        
+    }
     
 }

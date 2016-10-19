@@ -12,8 +12,8 @@ class ChordsViewController: UICollectionViewController {
     
     @IBOutlet weak var chordSelectButton: UIBarButtonItem!
     @IBOutlet weak var variationSelectButton: UIBarButtonItem!
-    
-    @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
+    @IBOutlet weak var selectButton: UIBarButtonItem!
     
     let chordDropDown = DropDown()
     let variationDropDown = DropDown()
@@ -24,25 +24,27 @@ class ChordsViewController: UICollectionViewController {
     var chordViewData = [OCChordView]()
     
     
+    
+    
     var selecting: Bool = false {
         didSet {
             collectionView?.allowsMultipleSelection = selecting
             collectionView?.selectItem(at: nil, animated: true, scrollPosition: UICollectionViewScrollPosition())
             selectedChords.removeAll(keepingCapacity: false)
             
-            guard let editButton = self.navigationItem.rightBarButtonItems?.first else {
+            guard let selectButton = self.navigationItem.rightBarButtonItems?.first else {
                 return
             }
             
             guard selecting else {
-                navigationItem.setRightBarButtonItems([editButton], animated: true)
+                navigationItem.setRightBarButtonItems([selectButton], animated: true)
                 return
             }
             
             updateEditingChordCount()
             
             let editingDetailItem = UIBarButtonItem(customView: editTextLabel)
-            navigationItem.setRightBarButtonItems([editButton,editingDetailItem], animated: true)
+            navigationItem.setRightBarButtonItems([selectButton,editingDetailItem], animated: true)
         }
     }
     
@@ -63,12 +65,8 @@ class ChordsViewController: UICollectionViewController {
         chordDropDown.anchorView = chordSelectButton
         chordDropDown.dataSource = ["C", "D", "E", "F", "G", "A", "B"]
         chordDropDown.bottomOffset = CGPoint(x: 0, y:(chordDropDown.anchorView?.plainView.bounds.height)!)
-        /*
-         guard !selecting else{
-         chordSelectButton.isEnabled = false
-         return
-         }
-         */
+    
+    
         chordDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.chordSelectButton.title = item
             self.variationDropDown.dataSource = ["\(item)", "\(item)m", "\(item)7", "\(item)M7", "\(item)m7"]
@@ -119,9 +117,8 @@ class ChordsViewController: UICollectionViewController {
         guard selecting else {
             return
         }
-        
-        let selectedChord = collectionView.cellForItem(at: indexPath)
-        print(selectedChord)
+    
+        let selectedChord = collectionView.cellForItem(at: indexPath)!
         selectedChords.append(selectedChord as! ChordViewCell)
         updateEditingChordCount()
     }
@@ -132,9 +129,9 @@ class ChordsViewController: UICollectionViewController {
         }
         
         let selectedChord = collectionView.cellForItem(at: indexPath)
-        
         if let index = selectedChords.index(of: selectedChord as! ChordViewCell){
             selectedChords.remove(at: index)
+    
             updateEditingChordCount()
         }
     }
@@ -143,7 +140,11 @@ class ChordsViewController: UICollectionViewController {
         let temp = chordViewData[sourceIndexPath.row]
         chordViewData[sourceIndexPath.row] = chordViewData[destinationIndexPath.row]
         chordViewData[destinationIndexPath.row] = temp
+        print(chordViewData)
     }
+    
+    
+
     
     //MARK: - Button Actions
     
@@ -154,22 +155,28 @@ class ChordsViewController: UICollectionViewController {
         variationDropDown.show()
     }
     
-    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func selectButtonPressed(_ sender: UIBarButtonItem) {
+        
+        
         guard chordViewData.count > 0 else {
-            print("cell counter guard")
             return
         }
         
-        guard !selectedChords.isEmpty else {
-            selecting = !selecting
-            return
-        }
-        
-        
+        selecting = !selecting
+        selectButtonName(selecting)
+
         guard selecting else  {
             return
         }
+
         return
+    }
+    @IBAction func deleteButtonPressed(_ sender: AnyObject) {
+        let indexPath = collectionView?.indexPathsForSelectedItems
+        print(indexPath)
+        chordViewData.remove(at: 0)
+        collectionView?.deleteItems(at: indexPath!)
+        collectionView?.reloadData()
     }
     
 }
@@ -187,7 +194,17 @@ extension ChordsViewController {
         variationSelectButton.title = "select"
         variationSelectButton.isEnabled = false
     }
+    
+    func selectButtonName(_: Bool) {
+        if selecting {
+            selectButton.title = "Cancel"
+        }
+        else {
+            selectButton.title = "Select"
+        }
+    }
 
+    
     func setupChordBannerView(bannerWidth: CGFloat, chord: String) -> UIView{
         let banner = UIView()
         
