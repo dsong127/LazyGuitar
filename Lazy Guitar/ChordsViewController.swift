@@ -22,10 +22,7 @@ class ChordsViewController: UICollectionViewController {
     var selectedChords = [ChordViewCell]()
     let editTextLabel = UILabel()
     var chordViewData = [OCChordView]()
-    
-    
-    
-    
+    let backgroundImage: UIImage = #imageLiteral(resourceName: "background")
     var selecting: Bool = false {
         didSet {
             collectionView?.allowsMultipleSelection = selecting
@@ -45,6 +42,9 @@ class ChordsViewController: UICollectionViewController {
             
             let editingDetailItem = UIBarButtonItem(customView: editTextLabel)
             navigationItem.setRightBarButtonItems([selectButton,editingDetailItem], animated: true)
+            
+            deleteButton.isEnabled = true
+            
         }
     }
     
@@ -52,6 +52,7 @@ class ChordsViewController: UICollectionViewController {
         super.viewDidLoad()
         setupChordSelectButton()
         setupVariationSelectButton()
+        
         navigationController?.hidesBarsOnSwipe = true
     }
     
@@ -172,11 +173,26 @@ class ChordsViewController: UICollectionViewController {
         return
     }
     @IBAction func deleteButtonPressed(_ sender: AnyObject) {
-        let indexPath = collectionView?.indexPathsForSelectedItems
-        print(indexPath)
-        chordViewData.remove(at: 0)
-        collectionView?.deleteItems(at: indexPath!)
-        collectionView?.reloadData()
+        let selectedIndexPaths: [IndexPath] = self.collectionView!.indexPathsForSelectedItems!
+        
+        var newChordViewData = [OCChordView]()
+        for i in 0..<self.chordViewData.count{
+            var found: Bool = false
+            for indexPath in selectedIndexPaths{
+                if indexPath.row == i {
+                    found = true
+                    break
+                }
+            }
+            if found == false{
+                newChordViewData.append(self.chordViewData[i])
+            }
+        }
+        self.chordViewData = newChordViewData
+        self.collectionView!.deleteItems(at: selectedIndexPaths)
+        
+        selectButton.title = "Select"
+        selecting = !selecting
     }
     
 }
@@ -209,11 +225,11 @@ extension ChordsViewController {
         let banner = UIView()
         
         banner.frame = CGRect(x: 0, y: 0, width: bannerWidth, height: 20)
-        banner.backgroundColor = UIColor.cyan
+        banner.backgroundColor = themeColor
         
         let bannerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 15))
         bannerLabel.textColor = UIColor.white
-        bannerLabel.backgroundColor = UIColor.gray
+        //bannerLabel.backgroundColor = UIColor.gray
         bannerLabel.text = "\(chord)"
         bannerLabel.sizeToFit()
         bannerLabel.center = banner.center

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-let themeColor = UIColor(red: 0.01, green: 0.22, blue: 0.42, alpha: 1.0)
+let themeColor = UIColor(red: 0.42, green: 0.22, blue: 0.22, alpha: 1.0)
 let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
 
 
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window?.tintColor = themeColor
-
+        
         DropDown.startListeningToKeyboard()
         
 
