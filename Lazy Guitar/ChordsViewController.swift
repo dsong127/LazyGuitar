@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ChordsViewController: UICollectionViewController {
     
@@ -22,7 +23,10 @@ class ChordsViewController: UICollectionViewController {
     var selectedChords = [ChordViewCell]()
     let editTextLabel = UILabel()
     var chordViewData = [OCChordView]()
-    let backgroundImage: UIImage = #imageLiteral(resourceName: "background")
+    var savedChordViewData = [NSManagedObject]()
+    
+
+    
     var selecting: Bool = false {
         didSet {
             collectionView?.allowsMultipleSelection = selecting
@@ -39,35 +43,28 @@ class ChordsViewController: UICollectionViewController {
             }
             
             updateEditingChordCount()
-            
             let editingDetailItem = UIBarButtonItem(customView: editTextLabel)
             navigationItem.setRightBarButtonItems([selectButton,editingDetailItem], animated: true)
-            
-            deleteButton.isEnabled = true
-            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupChordSelectButton()
-        setupVariationSelectButton()
-        
         navigationController?.hidesBarsOnSwipe = true
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewDidAppear(_ animated: Bool) {
+        setupChordSelectButton()
+        setupVariationSelectButton()
     }
-    
+
     //MARK: - Setup
     
     func setupChordSelectButton(){
         chordDropDown.anchorView = chordSelectButton
         chordDropDown.dataSource = ["C", "D", "E", "F", "G", "A", "B"]
         chordDropDown.bottomOffset = CGPoint(x: 0, y:(chordDropDown.anchorView?.plainView.bounds.height)!)
-    
-    
+
         chordDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.chordSelectButton.title = item
             self.variationDropDown.dataSource = ["\(item)", "\(item)m", "\(item)7", "\(item)M7", "\(item)m7"]
@@ -122,6 +119,7 @@ class ChordsViewController: UICollectionViewController {
         let selectedChord = collectionView.cellForItem(at: indexPath)!
         selectedChords.append(selectedChord as! ChordViewCell)
         updateEditingChordCount()
+        print(chordViewData)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -144,9 +142,7 @@ class ChordsViewController: UICollectionViewController {
         print(chordViewData)
     }
     
-    
 
-    
     //MARK: - Button Actions
     
     @IBAction func chordSelectButtonPressed(_ sender: AnyObject) {
@@ -157,15 +153,15 @@ class ChordsViewController: UICollectionViewController {
     }
     
     @IBAction func selectButtonPressed(_ sender: UIBarButtonItem) {
-        
-        
         guard chordViewData.count > 0 else {
             return
         }
         
         selecting = !selecting
         selectButtonName(selecting)
-
+        
+        deleteButton.isEnabled = selecting ? true : false
+        
         guard selecting else  {
             return
         }
@@ -173,6 +169,11 @@ class ChordsViewController: UICollectionViewController {
         return
     }
     @IBAction func deleteButtonPressed(_ sender: AnyObject) {
+        
+        guard !selectedChords.isEmpty else{
+            return
+        }
+        
         let selectedIndexPaths: [IndexPath] = self.collectionView!.indexPathsForSelectedItems!
         
         var newChordViewData = [OCChordView]()
@@ -192,7 +193,13 @@ class ChordsViewController: UICollectionViewController {
         self.collectionView!.deleteItems(at: selectedIndexPaths)
         
         selectButton.title = "Select"
+        deleteButton.isEnabled = false
         selecting = !selecting
+    }
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+
+        navigationController?.popViewController(animated: true)
+        
     }
     
 }
@@ -220,7 +227,6 @@ extension ChordsViewController {
         }
     }
 
-    
     func setupChordBannerView(bannerWidth: CGFloat, chord: String) -> UIView{
         let banner = UIView()
         
@@ -229,7 +235,6 @@ extension ChordsViewController {
         
         let bannerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 15))
         bannerLabel.textColor = UIColor.white
-        //bannerLabel.backgroundColor = UIColor.gray
         bannerLabel.text = "\(chord)"
         bannerLabel.sizeToFit()
         bannerLabel.center = banner.center
@@ -237,9 +242,4 @@ extension ChordsViewController {
         
         return banner
     }
-    
-    
 }
-
-
-
