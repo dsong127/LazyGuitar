@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1778CA1DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C1778C81DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld */; };
 		5C212DC11DBAE64200041E7F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C212DC01DBAE64200041E7F /* TableViewController.swift */; };
 		5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */; };
 		5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311A1DA5C538007690CE /* AppDelegate.swift */; };
 		5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311C1DA5C538007690CE /* ChordsViewController.swift */; };
 		5C3431201DA5C538007690CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C34311E1DA5C538007690CE /* Main.storyboard */; };
-		5C3431231DA5C538007690CE /* Lazy_Guitar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C3431211DA5C538007690CE /* Lazy_Guitar.xcdatamodeld */; };
 		5C3431251DA5C538007690CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431241DA5C538007690CE /* Assets.xcassets */; };
 		5C3431281DA5C538007690CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431261DA5C538007690CE /* LaunchScreen.storyboard */; };
-		5C3431321DA5C551007690CE /* OCChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3431311DA5C551007690CE /* OCChordView.m */; };
+		5C3431321DA5C551007690CE /* OCChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3431311DA5C551007690CE /* OCChordView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5C39F18E1DA734CD004DA2AE /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F1841DA734CD004DA2AE /* DPDConstants.swift */; };
 		5C39F18F1DA734CD004DA2AE /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F1851DA734CD004DA2AE /* DPDKeyboardListener.swift */; };
 		5C39F1901DA734CD004DA2AE /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F1861DA734CD004DA2AE /* DPDUIView+Extension.swift */; };
@@ -24,17 +24,18 @@
 		5C39F1931DA734CD004DA2AE /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18B1DA734CD004DA2AE /* DropDown+Appearance.swift */; };
 		5C39F1941DA734CD004DA2AE /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18C1DA734CD004DA2AE /* DropDown.swift */; };
 		5C39F1951DA734CD004DA2AE /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */; };
+		5CD1F8501DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */; };
 		5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C1778C91DC016230052DBCE /* lazyGuitarDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lazyGuitarDataModel.xcdatamodel; sourceTree = "<group>"; };
 		5C212DC01DBAE64200041E7F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordViewCell.swift; sourceTree = "<group>"; };
 		5C3431171DA5C538007690CE /* Lazy Guitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Guitar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C34311A1DA5C538007690CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C34311C1DA5C538007690CE /* ChordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
 		5C34311F1DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5C3431221DA5C538007690CE /* Lazy_Guitar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lazy_Guitar.xcdatamodel; sourceTree = "<group>"; };
 		5C3431241DA5C538007690CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C3431271DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C3431291DA5C538007690CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		5C39F18B1DA734CD004DA2AE /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
 		5C39F18C1DA734CD004DA2AE /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
+		5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCollectionHeaderView.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarChords.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,13 +88,15 @@
 				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
 				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
 				5C212DC01DBAE64200041E7F /* TableViewController.swift */,
-				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
 				5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */,
+				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
+				5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */,
+				5C1778C81DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld */,
+				5C4323EB1DBD88AD00BE8F32 /* Model */,
 				5C34311E1DA5C538007690CE /* Main.storyboard */,
 				5C3431261DA5C538007690CE /* LaunchScreen.storyboard */,
 				5C3431241DA5C538007690CE /* Assets.xcassets */,
 				5C3431291DA5C538007690CE /* Info.plist */,
-				5C3431211DA5C538007690CE /* Lazy_Guitar.xcdatamodeld */,
 				5C39F1811DA734CD004DA2AE /* DropDown */,
 				5C3431331DA5C558007690CE /* OCChordView */,
 			);
@@ -147,6 +151,13 @@
 				5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		5C4323EB1DBD88AD00BE8F32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,15 +236,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1778CA1DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld in Sources */,
 				5C39F1951DA734CD004DA2AE /* DropDownCell.swift in Sources */,
 				5C39F1941DA734CD004DA2AE /* DropDown.swift in Sources */,
+				5CD1F8501DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift in Sources */,
 				5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */,
 				5C39F18E1DA734CD004DA2AE /* DPDConstants.swift in Sources */,
 				5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */,
 				5C212DC11DBAE64200041E7F /* TableViewController.swift in Sources */,
 				5C3431321DA5C551007690CE /* OCChordView.m in Sources */,
 				5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */,
-				5C3431231DA5C538007690CE /* Lazy_Guitar.xcdatamodeld in Sources */,
 				5C39F1901DA734CD004DA2AE /* DPDUIView+Extension.swift in Sources */,
 				5C39F18F1DA734CD004DA2AE /* DPDKeyboardListener.swift in Sources */,
 				5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */,
@@ -409,13 +421,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5C3431211DA5C538007690CE /* Lazy_Guitar.xcdatamodeld */ = {
+		5C1778C81DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5C3431221DA5C538007690CE /* Lazy_Guitar.xcdatamodel */,
+				5C1778C91DC016230052DBCE /* lazyGuitarDataModel.xcdatamodel */,
 			);
-			currentVersion = 5C3431221DA5C538007690CE /* Lazy_Guitar.xcdatamodel */;
-			path = Lazy_Guitar.xcdatamodeld;
+			currentVersion = 5C1778C91DC016230052DBCE /* lazyGuitarDataModel.xcdatamodel */;
+			path = lazyGuitarDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

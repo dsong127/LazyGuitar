@@ -18,13 +18,13 @@
                         <color key="backgroundColor" red="0.95861436355211127" green="0.93194023295728479" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="yuO-cB-mml">
                             <size key="itemSize" width="147" height="152"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="30"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="20" minY="2" maxX="20" maxY="10"/>
+                            <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChordCell" id="fTv-ZY-vTj" customClass="ChordViewCell" customModule="Lazy_Guitar" customModuleProvider="target">
-                                <rect key="frame" x="20" y="2" width="147" height="152"/>
+                                <rect key="frame" x="20" y="40" width="147" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="147" height="152"/>
@@ -48,6 +48,24 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="AxB-co-7VC" customClass="TitleCollectionHeaderView" customModule="Lazy_Guitar" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRD-xP-etZ">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="fRD-xP-etZ" firstAttribute="centerY" secondItem="AxB-co-7VC" secondAttribute="centerY" id="Adf-lD-IMq"/>
+                                <constraint firstItem="fRD-xP-etZ" firstAttribute="centerX" secondItem="AxB-co-7VC" secondAttribute="centerX" id="Cf5-qA-pFR"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="headerLabel" destination="fRD-xP-etZ" id="bCn-xP-pNW"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="rzb-rb-E2z" id="SE3-vH-Qe3"/>
                             <outlet property="delegate" destination="rzb-rb-E2z" id="G55-wr-fCc"/>
@@ -91,7 +109,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCn-pO-3uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482" y="-338"/>
+            <point key="canvasLocation" x="1480.8" y="-338.68065967016497"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2OA-2n-Cpz">

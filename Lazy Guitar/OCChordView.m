@@ -12,6 +12,7 @@
 @synthesize chordArray;
 @synthesize tuningArray;
 @synthesize fingerArray;
+@synthesize chordName;
 
 @synthesize fillColor;
 
@@ -27,6 +28,7 @@
         self.chordArray = nil;
         self.tuningArray = nil;
         self.fingerArray = nil;
+        self.chordName = nil;
     }
     return self;
 }
@@ -36,6 +38,7 @@
     self.chordArray = nil;
     self.tuningArray = nil;
     self.fingerArray = nil;
+    self.chordName = nil;
 }
 
 

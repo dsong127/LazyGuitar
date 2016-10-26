@@ -10,60 +10,56 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var notesData = [[String:String]]()
+    var notesData = [OCChordView]()
+    var notesTitle = [[String : String]]()
     var selectedIndex = -1
     
-    
+    var chordGenerator = GuitarChords()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+            }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notesData.count
+        return 1
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "TableCell")!
         
-        tableCell.textLabel!.text = notesData[indexPath.row]["title"]
-        
+        tableCell.textLabel!.text = "test"
         
         return tableCell
     }
     
     @IBAction func addButtonPressed(_ sender: AnyObject) {
-        let newDict = ["title" : "Test Title", "body" : "Test Body"]
-        notesData.insert(newDict, at: 0)
+        self.selectedIndex = 0
         self.tableView.reloadData()
-        //performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
+        performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         self.selectedIndex = indexPath.row
         performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let chordsVC = segue.destination as! ChordsViewController
+
+        chordsVC.headerTitle = "test"
     
+    }
+    
+
+    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -99,11 +95,7 @@ class TableViewController: UITableViewController {
     }
     */
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let chordsVC = segue.destination as! ChordsViewController
-        
-        
-    }
+
  
 
 }
