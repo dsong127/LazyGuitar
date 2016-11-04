@@ -23,7 +23,7 @@ class TableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getTableData()
+        //getTableData()
 
     }
 
@@ -58,7 +58,7 @@ class TableViewController: UITableViewController {
                                        handler: { (action:UIAlertAction) -> Void in
                                         
                                         let textField = alert.textFields!.first
-                                        self.saveTitle(textField!.text!)
+                                        //self.saveTitle(textField!.text!)
                                         self.tableView.reloadData()
                                         self.performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
 
@@ -95,7 +95,7 @@ class TableViewController: UITableViewController {
         chordsVC.noteIndexPath = selectedIndex
 
     }
-    
+   /*
     func saveTitle(_ name: String) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Title", in: context)
@@ -136,7 +136,7 @@ class TableViewController: UITableViewController {
         }
     }
     
-    
+    */
     
 
 
