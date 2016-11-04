@@ -23,5 +23,7 @@ class ChordViewCell: UICollectionViewCell{
         chordView.layer.borderColor = UIColor(red: 0.22, green: 0.22, blue: 0.46, alpha: 1.0).cgColor
         isSelected = false
     }
+
+
     
 }

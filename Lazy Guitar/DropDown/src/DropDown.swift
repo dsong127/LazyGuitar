@@ -480,11 +480,11 @@ extension DropDown {
 		heightConstraint.constant = layout.visibleHeight
 
 		tableView.isScrollEnabled = layout.offscreenHeight > 0
-
+/*
 		DispatchQueue.main.async { [unowned self] in
 			self.tableView.flashScrollIndicators()
 		}
-
+*/
 		super.updateConstraints()
 	}
 

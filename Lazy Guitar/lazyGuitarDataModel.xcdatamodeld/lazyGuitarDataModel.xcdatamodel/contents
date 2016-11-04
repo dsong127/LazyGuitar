@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Chord" representedClassName="Chord" syncable="YES" codeGenerationType="class">
         <attribute name="chordName" attributeType="Transformable" indexed="YES" syncable="YES"/>
+        <attribute name="noteTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="title" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Title" inverseName="chord" inverseEntity="Title" syncable="YES"/>
+    </entity>
+    <entity name="Title" representedClassName="Title" syncable="YES" codeGenerationType="class">
+        <attribute name="titleName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Chord" inverseName="title" inverseEntity="Chord" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Chord" positionX="-54" positionY="-9" width="128" height="60"/>
+        <element name="Chord" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Title" positionX="-54" positionY="0" width="128" height="75"/>
     </elements>
 </model>

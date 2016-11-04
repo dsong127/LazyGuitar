@@ -20,12 +20,14 @@ class ChordsViewController: UICollectionViewController {
     let variationDropDown = DropDown()
     let guitarChords = GuitarChords()
     
-    var headerTitle: String = "test"
+    var headerTitle: String = "TESSSSSSTT WOAH"
     
     var selectedChords = [ChordViewCell]()
     let editTextLabel = UILabel()
     var chordViewData = [OCChordView]()
     var chordNameData = [String]()
+    
+    var noteIndexPath = -1
     
     
     var selecting: Bool = false {
@@ -50,24 +52,23 @@ class ChordsViewController: UICollectionViewController {
     }
     
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewdidLoad")
         navigationController?.hidesBarsOnSwipe = true
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
 
-        getData()
-
+        //getData()
         collectionView?.reloadData()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         setupChordSelectButton()
         setupVariationSelectButton()
-        
     }
     
 
@@ -109,7 +110,6 @@ class ChordsViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChordCell", for: indexPath) as! ChordViewCell
         
-        
         let bannerView = setupChordBannerView(bannerWidth: cell.bounds.width, chord: variationSelectButton.title!)
         cell.chordView.addSubview(bannerView)
         cell.chordView.insertSubview(self.chordViewData[indexPath.row], belowSubview: bannerView)
@@ -119,7 +119,6 @@ class ChordsViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath) as! TitleCollectionHeaderView
-        
         
         header.headerLabel.text = headerTitle
         header.headerLabel.textColor = UIColor.white
@@ -165,7 +164,6 @@ class ChordsViewController: UICollectionViewController {
         let temp = chordViewData[sourceIndexPath.row]
         chordViewData[sourceIndexPath.row] = chordViewData[destinationIndexPath.row]
         chordViewData[destinationIndexPath.row] = temp
-        print(chordViewData)
     }
     
     //MARK: - Button Actions
@@ -220,11 +218,12 @@ class ChordsViewController: UICollectionViewController {
         selectButton.title = "Select"
         deleteButton.isEnabled = false
         selecting = !selecting
-        print("chordViewData after delete: \(chordViewData.count)")
+        
     }
+    
     @IBAction func backButtonPressed(_ sender: AnyObject) {
-        deleteData()
-        saveChords()
+        //deleteData()
+        //saveChords()
         _ = navigationController?.popViewController(animated: true)
     }
     
@@ -252,7 +251,7 @@ extension ChordsViewController {
             selectButton.title = "Select"
         }
     }
-
+/*
     func saveChords() {
       /*
         guard !chordViewData.isEmpty else {
@@ -265,8 +264,6 @@ extension ChordsViewController {
 
         
         let newChords = NSManagedObject(entity: entity!, insertInto: context)
-        print(chordNameData.count)
-        print(chordViewData.count)
         
         
         chordNameData = []
@@ -276,31 +273,36 @@ extension ChordsViewController {
         
         
         newChords.setValue(chordNameData, forKey: "chordName")
-
+        newChords.setValue(headerTitle, forKey: "noteTitle")
         
         do {
             try context.save()
             
-            //print("chord names saved: \(newChords.value(forKey: "chordName"))")
+        
             
         } catch let error as NSError {
             print("could not save \(error), \(error.userInfo)")
         }
     }
 
+
     
     func getData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request: NSFetchRequest<Chord> = Chord.fetchRequest()
+
+        
         chordNameData = []
         
         do {
             let result = try context.fetch(request)
-            for item in result {
             
+            for item in result {
+                
                 chordViewData = []
                 chordNameData = item.value(forKey: "chordName") as! [String]
-        }
+                print("saved title: \(item.value(forKey: "noteTitle"))")
+            }
             print("chordNameData retrieved: \(chordNameData.count)")
             
         } catch let error as NSError {
@@ -310,8 +312,9 @@ extension ChordsViewController {
         for name in chordNameData {
             chordViewData.append(self.guitarChords.generateChord(chord: name))
         }
-        
     }
+
+    
     
     func deleteData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -322,17 +325,13 @@ extension ChordsViewController {
             print("number of elements in result after fetch: \(result.count)")
             for item in result {
                 context.delete(item)
-                
             }
 
         } catch let error as NSError {
             print("could not delete data \(error), \(error.userInfo)")
         }
     }
-    
-
-    
-
+    */
 
     func setupChordBannerView(bannerWidth: CGFloat, chord: String) -> UIView{
         let banner = UIView()
@@ -343,7 +342,7 @@ extension ChordsViewController {
         let bannerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 15))
         bannerLabel.textColor = UIColor.white
         bannerLabel.text = "\(chord)"
-        
+   
         bannerLabel.sizeToFit()
         bannerLabel.center = banner.center
         banner.addSubview(bannerLabel)

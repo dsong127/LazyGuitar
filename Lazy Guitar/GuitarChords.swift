@@ -25,7 +25,6 @@ class GuitarChords {
         case "Cm":
             cv.chordArray = [3, 3, 5, 5, 4, 3]
             cv.chordName = chord
-            cv.chordName = chord
         case "C7":
             cv.chordArray = [0, 3, 2, 3, 1, 0]
             cv.tuningArray = ["X", "", "", "", "", "O"]
