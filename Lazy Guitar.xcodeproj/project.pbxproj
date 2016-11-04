@@ -27,6 +27,10 @@
 		5C53090F1DCC2B5E00E5C22C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */; };
 		5CD1F8501DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */; };
 		5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */; };
+		5CD6D1F81DCC4DAA004380F4 /* Title+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6D1F41DCC4DAA004380F4 /* Title+CoreDataClass.swift */; };
+		5CD6D1F91DCC4DAA004380F4 /* Title+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6D1F51DCC4DAA004380F4 /* Title+CoreDataProperties.swift */; };
+		5CD6D1FA1DCC4DAA004380F4 /* Chord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6D1F61DCC4DAA004380F4 /* Chord+CoreDataClass.swift */; };
+		5CD6D1FB1DCC4DAA004380F4 /* Chord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6D1F71DCC4DAA004380F4 /* Chord+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCollectionHeaderView.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarChords.swift; sourceTree = "<group>"; };
+		5CD6D1F41DCC4DAA004380F4 /* Title+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Title+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5CD6D1F51DCC4DAA004380F4 /* Title+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Title+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5CD6D1F61DCC4DAA004380F4 /* Chord+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5CD6D1F71DCC4DAA004380F4 /* Chord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 		5C3431191DA5C538007690CE /* Lazy Guitar */ = {
 			isa = PBXGroup;
 			children = (
+				5CD6D1FC1DCC4DB0004380F4 /* DataModel */,
 				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
 				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
 				5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */,
@@ -153,6 +162,17 @@
 				5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		5CD6D1FC1DCC4DB0004380F4 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				5CD6D1F41DCC4DAA004380F4 /* Title+CoreDataClass.swift */,
+				5CD6D1F51DCC4DAA004380F4 /* Title+CoreDataProperties.swift */,
+				5CD6D1F61DCC4DAA004380F4 /* Chord+CoreDataClass.swift */,
+				5CD6D1F71DCC4DAA004380F4 /* Chord+CoreDataProperties.swift */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +257,14 @@
 				5C39F1941DA734CD004DA2AE /* DropDown.swift in Sources */,
 				5CD1F8501DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift in Sources */,
 				5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */,
+				5CD6D1FA1DCC4DAA004380F4 /* Chord+CoreDataClass.swift in Sources */,
 				5C39F18E1DA734CD004DA2AE /* DPDConstants.swift in Sources */,
 				5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */,
+				5CD6D1FB1DCC4DAA004380F4 /* Chord+CoreDataProperties.swift in Sources */,
 				5C212DC11DBAE64200041E7F /* TableViewController.swift in Sources */,
 				5C3431321DA5C551007690CE /* OCChordView.m in Sources */,
+				5CD6D1F91DCC4DAA004380F4 /* Title+CoreDataProperties.swift in Sources */,
+				5CD6D1F81DCC4DAA004380F4 /* Title+CoreDataClass.swift in Sources */,
 				5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */,
 				5C39F1901DA734CD004DA2AE /* DPDUIView+Extension.swift in Sources */,
 				5C39F18F1DA734CD004DA2AE /* DPDKeyboardListener.swift in Sources */,
