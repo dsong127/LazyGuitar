@@ -11,20 +11,23 @@ import CoreData
 
 class TableViewController: UITableViewController {
 
+    @IBOutlet weak var editButton: UIBarButtonItem!
     var moc:NSManagedObjectContext!
     var selectedIndex = -1
     var noteTitles = [Title]()
     
-
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        isEditing = false
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        navigationController?.hidesBarsOnSwipe = false
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-
+        
         loadData()
         self.tableView.reloadData()
 
@@ -99,6 +102,23 @@ class TableViewController: UITableViewController {
         
     }
     
+    func loadData() {
+        noteTitles = []
+        noteTitles = CoreDataHelper.fetchEntities(entity: "Title", managedObjectContext: self.moc, predicate: nil) as! [Title]
+        
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        //isEditing = !isEditing
+        
+        if let isEditing = self.tableView?.isEditing {
+            self.tableView?.setEditing(!isEditing, animated: true)
+            editButton = editButtonItem
+        }
+ 
+ 
+    
+    }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
         performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
@@ -111,28 +131,18 @@ class TableViewController: UITableViewController {
     }
    
     
-    func loadData() {
-        noteTitles = []
-        noteTitles = CoreDataHelper.fetchEntities(entity: "Title", managedObjectContext: self.moc, predicate: nil) as! [Title]
-        
-        
-    }
-    
-
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+ 
 
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let managedObject:NSManagedObject = noteTitles[indexPath.row]
         
         if editingStyle == .delete {
-            // Delete the row from the data source
             self.moc.delete(managedObject)
             loadData()
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -145,20 +155,25 @@ class TableViewController: UITableViewController {
     }
     
 
-    /*
-    // Override to support rearranging the table view.
+    
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        
+        let itemToMove = noteTitles[fromIndexPath.row]
+        noteTitles.remove(at: fromIndexPath.row)
+        noteTitles.insert(itemToMove, at: fromIndexPath.row)
+        do {
+            try self.moc.save()
+        } catch let error as NSError {
+            print("could not save \(error), \(error.userInfo)")
+        }
     }
- */
+ 
 
-    /*
-    // Override to support conditional rearranging of the table view.
+    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+ 
     
 
  

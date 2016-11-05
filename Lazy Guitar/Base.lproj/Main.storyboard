@@ -15,7 +15,7 @@
         <scene sceneID="Kin-9N-ZXf">
             <objects>
                 <collectionViewController id="rzb-rb-E2z" customClass="ChordsViewController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FvD-jr-Emi">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FvD-jr-Emi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95861436355211127" green="0.93194023295728479" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,18 +114,22 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCn-pO-3uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.8" y="-338.68065967016497"/>
+            <point key="canvasLocation" x="1474" y="-357"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2OA-2n-Cpz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QCk-rx-VNv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="QCk-rx-VNv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A3L-FB-E8n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="761-hL-lG6">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="SgR-du-Old" kind="relationship" relationship="rootViewController" id="0fo-bG-R2P"/>
                     </connections>
@@ -157,14 +161,23 @@
                             <outlet property="delegate" destination="SgR-du-Old" id="p17-yF-kCY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Rt5-up-s0K">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dsd-pP-tBj">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="5aQ-xR-K3s"/>
+                        <barButtonItem systemItem="add" id="dsd-pP-tBj">
                             <connections>
                                 <action selector="addButtonPressed:" destination="SgR-du-Old" id="OfV-27-2KH"/>
                             </connections>
                         </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Rt5-up-s0K">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Jgt-xF-khQ">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="SgR-du-Old" id="pwQ-BO-XnZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="Jgt-xF-khQ" id="ZEh-fl-htQ"/>
                         <segue destination="rzb-rb-E2z" kind="show" identifier="ShowEditorSegue" id="Qlk-CC-M8p"/>
                     </connections>
                 </tableViewController>

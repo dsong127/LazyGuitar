@@ -97,8 +97,8 @@
 			children = (
 				5CD6D1FC1DCC4DB0004380F4 /* DataModel */,
 				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
-				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
 				5C212DC01DBAE64200041E7F /* TableViewController.swift */,
+				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
 				5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */,
 				5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */,
 				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
