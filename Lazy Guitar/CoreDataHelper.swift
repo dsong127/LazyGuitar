@@ -11,17 +11,24 @@ import CoreData
 
 class CoreDataHelper: NSObject {
 
-    class func insertManagedObject(className: String, managedObjectContext: NSManagedObjectContext) -> AnyObject {
-        let managedObject = NSEntityDescription.insertNewObject(forEntityName: className, into: managedObjectContext) as NSManagedObject
+    class func insertManagedObject(entity: String, managedObjectContext: NSManagedObjectContext) -> AnyObject {
+        let managedObject = NSEntityDescription.insertNewObject(forEntityName: entity, into: managedObjectContext) as NSManagedObject
         
         return managedObject
     }
     
-    class func fetchEntities(className: String, managedObjectContext: NSManagedObjectContext, predicate: NSPredicate?) {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: className)
-        let entityDescription = NSEntityDescription.entity(forEntityName: className, in: managedObjectContext)
+    class func fetchEntities(entity: String, managedObjectContext: NSManagedObjectContext, predicate: NSPredicate?) -> [Any]  {
         
-        fetchRequest.entity = entityDescription
+        var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        var result = [Any]()
+        
+        if entity == "Title" {
+            
+            fetchRequest = Title.fetchRequest()
+        }
+        else{
+            fetchRequest = Chord.fetchRequest()
+        }
         
         if predicate != nil {
             fetchRequest.predicate = predicate!
@@ -29,7 +36,18 @@ class CoreDataHelper: NSObject {
         
         fetchRequest.returnsObjectsAsFaults = false
         
-   
+        do {
+            try result = managedObjectContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("could not fetch \(error), \(error.userInfo)")
+        }
+        
+        return result
+    }
+
+    class func deleteObject(entity: String, managedObjectContext: NSManagedObjectContext, indexPath: IndexPath) {
+        
+        
     }
     
 }

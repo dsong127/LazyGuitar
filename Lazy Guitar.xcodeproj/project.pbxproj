@@ -98,12 +98,11 @@
 				5CD6D1FC1DCC4DB0004380F4 /* DataModel */,
 				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
 				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
-				5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */,
 				5C212DC01DBAE64200041E7F /* TableViewController.swift */,
+				5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */,
 				5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */,
 				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
 				5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */,
-				5C1778C81DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld */,
 				5C34311E1DA5C538007690CE /* Main.storyboard */,
 				5C3431261DA5C538007690CE /* LaunchScreen.storyboard */,
 				5C3431241DA5C538007690CE /* Assets.xcassets */,
@@ -171,6 +170,7 @@
 				5CD6D1F51DCC4DAA004380F4 /* Title+CoreDataProperties.swift */,
 				5CD6D1F61DCC4DAA004380F4 /* Chord+CoreDataClass.swift */,
 				5CD6D1F71DCC4DAA004380F4 /* Chord+CoreDataProperties.swift */,
+				5C1778C81DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";

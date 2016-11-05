@@ -11,19 +11,22 @@ import CoreData
 
 class TableViewController: UITableViewController {
 
-    
-    var noteArray = [[String : String]]()
+    var moc:NSManagedObjectContext!
     var selectedIndex = -1
-    var noteTitles = NSMutableArray()
+    var noteTitles = [Title]()
     
-    var chordGenerator = GuitarChords()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //getTableData()
+        
+        moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+
+        loadData()
+        self.tableView.reloadData()
 
     }
 
@@ -42,12 +45,14 @@ class TableViewController: UITableViewController {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "TableCell")!
         //let note = noteTitles[(indexPath as NSIndexPath).row]
         
-        tableCell.textLabel!.text = "test"
+        tableCell.textLabel!.text = noteTitles[indexPath.row].titleName
         return tableCell
     }
     
     @IBAction func addButtonPressed(_ sender: AnyObject) {
         self.selectedIndex = 0
+        
+
         
         let alert = UIAlertController(title: "New Name",
                                       message: "Add a new name",
@@ -58,9 +63,21 @@ class TableViewController: UITableViewController {
                                        handler: { (action:UIAlertAction) -> Void in
                                         
                                         let textField = alert.textFields!.first
-                                        //self.saveTitle(textField!.text!)
+                                        let title = CoreDataHelper.insertManagedObject(entity: "Title", managedObjectContext: self.moc) as! Title
+                                    
+                                        title.titleName = textField?.text
+                                        
+                                        do{
+                                            try self.moc.save()
+                                        } catch let error as NSError {
+                                            print("could not save \(error), \(error.userInfo)")
+
+                                        }
+                                        self.loadData()
                                         self.tableView.reloadData()
+
                                         self.performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
+
 
         })
         
@@ -79,10 +96,7 @@ class TableViewController: UITableViewController {
         present(alert,
                 animated: true,
                 completion: nil)
-
-
-    
-
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,51 +109,15 @@ class TableViewController: UITableViewController {
         chordsVC.noteIndexPath = selectedIndex
 
     }
-   /*
-    func saveTitle(_ name: String) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Title", in: context)
-
-        let title = NSManagedObject(entity: entity!, insertInto: context)
+   
+    
+    func loadData() {
+        noteTitles = []
+        noteTitles = CoreDataHelper.fetchEntities(entity: "Title", managedObjectContext: self.moc, predicate: nil) as! [Title]
         
-        title.setValue(name, forKey: "titleName")
-        
-        do{
-            try context.save()
-        } catch let error as NSError{
-            print("could not save \(error), \(error.userInfo)")
-        }
-
         
     }
     
-    
-    func getTableData(){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let request: NSFetchRequest<Title> = Title.fetchRequest()
-        noteTitles.removeAllObjects()
-        
-        do{
-            let result = try context.fetch(request)
-            if result.count > 0 {
-                for item in result {
-                    let chordTitleFetched = item.titleName
-                    
-                    let newDict:NSArray = [chordTitleFetched]
-                    
-                    noteTitles.add(newDict)
-                }
-            }
-            
-        } catch let error as NSError {
-            print("could not get data \(error), \(error.userInfo)")
-        }
-    }
-    
-    */
-    
-
-
 
     /*
     // Override to support conditional editing of the table view.
@@ -149,24 +127,30 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let managedObject:NSManagedObject = noteTitles[indexPath.row]
+        
         if editingStyle == .delete {
             // Delete the row from the data source
+            self.moc.delete(managedObject)
+            loadData()
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            self.tableView.reloadData()
+
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    */
+ */
 
     /*
     // Override to support conditional rearranging of the table view.
