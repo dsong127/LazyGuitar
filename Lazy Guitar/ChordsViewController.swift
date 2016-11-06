@@ -20,7 +20,7 @@ class ChordsViewController: UICollectionViewController {
     let variationDropDown = DropDown()
     let guitarChords = GuitarChords()
     
-    var headerTitle: String = "TESSSSSSTT WOAH"
+    var headerTitle = String()
     
     var selectedChords = [ChordViewCell]()
     let editTextLabel = UILabel()
@@ -54,21 +54,22 @@ class ChordsViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.hidesBarsOnSwipe = true
-
+        self.navigationController?.hidesBarsOnSwipe = true
+        self.collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "background"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
 
         //getData()
         collectionView?.reloadData()
-
+   
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         setupChordSelectButton()
         setupVariationSelectButton()
+      
     }
     
 
@@ -77,7 +78,7 @@ class ChordsViewController: UICollectionViewController {
     func setupChordSelectButton(){
         chordDropDown.anchorView = chordSelectButton
         chordDropDown.dataSource = ["C", "D", "E", "F", "G", "A", "B"]
-        chordDropDown.bottomOffset = CGPoint(x: 0, y:(chordDropDown.anchorView?.plainView.bounds.height)!)
+        chordDropDown.topOffset = CGPoint(x: 0, y: -(chordDropDown.anchorView?.plainView.bounds.height)!)
 
         chordDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.chordSelectButton.title = item
@@ -220,6 +221,7 @@ class ChordsViewController: UICollectionViewController {
         selecting = !selecting
         
     }
+   
     
     @IBAction func backButtonPressed(_ sender: AnyObject) {
         //deleteData()
@@ -250,6 +252,10 @@ extension ChordsViewController {
         else {
             selectButton.title = "Select"
         }
+    }
+    
+    func dismissVC() {
+        _ = self.navigationController?.popViewController(animated: true)
     }
 /*
     func saveChords() {
