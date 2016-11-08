@@ -12,9 +12,9 @@ import CoreData
 class TableViewController: UITableViewController {
 
     var moc:NSManagedObjectContext!
-    var selectedIndex = -1
     var noteTitles = [Title]()
-
+    var selectedIndex = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,10 +53,7 @@ class TableViewController: UITableViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: AnyObject) {
-        self.selectedIndex = 0
-        
-
-        
+        selectedIndex = noteTitles.count
         let alert = UIAlertController(title: "New Name",
                                       message: "Add a new name",
                                       preferredStyle: .alert)
@@ -67,6 +64,10 @@ class TableViewController: UITableViewController {
                                         
                                         let textField = alert.textFields!.first
                                         let title = CoreDataHelper.insertManagedObject(entity: "Title", managedObjectContext: self.moc) as! Title
+                                        
+                                        let chord = CoreDataHelper.insertManagedObject(entity: "ChordView", managedObjectContext: self.moc) as! ChordView
+                                        
+                                        chord.chordName = [String]()
                                     
                                         title.titleName = textField?.text
                                         
@@ -115,7 +116,9 @@ class TableViewController: UITableViewController {
     }
  */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         self.selectedIndex = indexPath.row
+        
         performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
     }
     
@@ -156,15 +159,17 @@ class TableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let chordsVC = segue.destination as! ChordsViewController
-        chordsVC.noteIndexPath = selectedIndex
-        chordsVC.headerTitle = noteTitles[selectedIndex].titleName!
+        if segue.identifier == "ShowEditorSegue" {
+            let chordsVC = segue.destination as! ChordsViewController
+                    chordsVC.noteIndexPath = selectedIndex
+                    chordsVC.headerTitle = noteTitles[selectedIndex].titleName!
+                }
     }
     
     func loadData() {
         noteTitles = []
         noteTitles = CoreDataHelper.fetchEntities(entity: "Title", managedObjectContext: self.moc, predicate: nil) as! [Title]
-        noteTitles.reverse()
+        
         
     }
     

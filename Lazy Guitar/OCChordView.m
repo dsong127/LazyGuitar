@@ -87,13 +87,15 @@
         
         int fretDisplayDifference = maxDisplayFret - minDisplayFret + 1;
         
-        float stringLabelYOrigin = 5.f;
         
         float fretLineHeight = 1.f;
         
+        //Chord Name
+        float namePositionYOrigin = floorf(self.frame.origin.y);
+        float nameHeight = floorf(self.frame.size.height*0.15);
         
         //Nut
-        float nutPositionYOrigin = floorf(self.frame.size.height*0.2f);
+        float nutPositionYOrigin = floorf(nameHeight*2);
         
         float nutSize = (minDisplayFret == 1) ? floorf(self.frame.size.height*0.05f) : fretLineHeight;
         
@@ -114,20 +116,43 @@
         //Strings
         float stringSpacing = floorf(fretXWidth / 5.f);
         
-        
-        
-        float stringWidth = 1.f;
+        float stringLabelYOrigin = (nameHeight + 5.f)  ;
+
+    
+        float stringWidth = 1.0f;
         
         float circleRadius = floorf(MIN(stringSpacing, fretScreenYSpacing)*0.4f);
         
+        //Prepare the label font
+        UIFont *chordLabelFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:floorf(self.frame.size.height*0.08f)];
+        
+        //Draw Chord name
+
+        
+        self.fillColor = [UIColor colorWithRed:0.42 green:0.22 blue:0.22 alpha:1.0];
+        CGRect nameRect = CGRectMake(self.frame.origin.x, namePositionYOrigin, self.frame.size.width, nameHeight);
+        [self.fillColor setFill];
+        UIRectFill(nameRect);
+        
+        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        style.alignment = NSTextAlignmentCenter;
+        
+        UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:floorf(self.frame.size.height*0.1f)];
+
+        NSString *name = chordName;
+        [name drawInRect:nameRect withAttributes:@{ NSFontAttributeName: nameFont, NSParagraphStyleAttributeName: style, NSForegroundColorAttributeName: [UIColor whiteColor] }];
+        
+        
+        
+        self.fillColor = [UIColor blackColor];
+
         //Draw Nut
         CGRect nutRect = CGRectMake(fretBoardXOrigin, nutPositionYOrigin, fretXWidth + stringWidth, nutSize);
         [self.fillColor setFill];
         UIRectFill(nutRect);
         
         
-        //Prepare the label font
-        UIFont *chordLabelFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:floorf(self.frame.size.height*0.08f)];
+     
         
         
         

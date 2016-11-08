@@ -27,7 +27,7 @@ class CoreDataHelper: NSObject {
             fetchRequest = Title.fetchRequest()
         }
         else{
-            fetchRequest = Chord.fetchRequest()
+            fetchRequest = ChordView.fetchRequest()
         }
         
         if predicate != nil {
@@ -45,9 +45,31 @@ class CoreDataHelper: NSObject {
         return result
     }
 
-    class func deleteObject(entity: String, managedObjectContext: NSManagedObjectContext, indexPath: IndexPath) {
+    class func deleteObject(managedObjectContext: NSManagedObjectContext) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ChordView")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try managedObjectContext.execute(deleteRequest)
+        } catch let error as NSError {
+            print(error)
+        }
         
         
     }
+    
+    class func deleteTableView(managedObjectContext: NSManagedObjectContext) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Title")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try managedObjectContext.execute(deleteRequest)
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        
+    }
+
     
 }

@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +14,7 @@
         <scene sceneID="Kin-9N-ZXf">
             <objects>
                 <collectionViewController id="rzb-rb-E2z" customClass="ChordsViewController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FvD-jr-Emi">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FvD-jr-Emi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="yuO-cB-mml">
@@ -76,6 +75,11 @@
                         </connections>
                     </collectionView>
                     <toolbarItems>
+                        <barButtonItem enabled="NO" systemItem="trash" id="zzB-R3-XUG">
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="rzb-rb-E2z" id="xOy-u6-4pk"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="TVF-IA-XmK"/>
                         <barButtonItem title="Key" id="CvO-LW-FV0">
                             <connections>
@@ -94,18 +98,11 @@
                                 <action selector="backButtonPressed:" destination="rzb-rb-E2z" id="dZV-Wc-MIW"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Select" id="w3c-TX-IEH">
-                                <connections>
-                                    <action selector="selectButtonPressed:" destination="rzb-rb-E2z" id="eNW-hX-kEy"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem enabled="NO" systemItem="trash" id="zzB-R3-XUG">
-                                <connections>
-                                    <action selector="deleteButtonPressed:" destination="rzb-rb-E2z" id="xOy-u6-4pk"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Select" id="w3c-TX-IEH">
+                            <connections>
+                                <action selector="selectButtonPressed:" destination="rzb-rb-E2z" id="eNW-hX-kEy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chordSelectButton" destination="CvO-LW-FV0" id="kLF-r1-VtA"/>
@@ -155,7 +152,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4hs-g2-ihU" id="yBk-h3-bYn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

@@ -17,14 +17,18 @@ let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var moc: NSManagedObjectContext!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
         [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
   
         window?.tintColor = themeColor
         DropDown.startListeningToKeyboard()
+        moc = persistentContainer.viewContext
         
+        CoreDataHelper.deleteObject(managedObjectContext: moc)
+        CoreDataHelper.deleteTableView(managedObjectContext: moc)
         return true
     }
 

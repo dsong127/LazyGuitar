@@ -14,7 +14,7 @@ class GuitarChords {
         
         var cv: OCChordView!
         
-        cv = OCChordView(frame: CGRect(x: 0, y: 20, width: 147, height: 132))
+        cv = OCChordView(frame: CGRect(x: 0, y: 0, width: 147, height: 152))
         
             
         switch chord {
