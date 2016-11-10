@@ -13,7 +13,9 @@ class TableViewController: UITableViewController {
 
     var moc:NSManagedObjectContext!
     var noteTitles = [Title]()
+    var chordArray = [ChordView]()
     var selectedIndex = -1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,14 @@ class TableViewController: UITableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         setEditing(false, animated: false)
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        guard !noteTitles.isEmpty else {
+            return
+        }
+        
+        super.setEditing(editing, animated: true)
     }
 
     // MARK: - Table view data source
@@ -62,7 +72,14 @@ class TableViewController: UITableViewController {
                                        style: .default,
                                        handler: { (action:UIAlertAction) -> Void in
                                         
+                                    
                                         let textField = alert.textFields!.first
+                                        
+                                        guard !(textField?.text == "") else {
+                                            
+                                            return
+                                        }
+                                        
                                         let title = CoreDataHelper.insertManagedObject(entity: "Title", managedObjectContext: self.moc) as! Title
                                         
                                         let chord = CoreDataHelper.insertManagedObject(entity: "ChordView", managedObjectContext: self.moc) as! ChordView
@@ -88,33 +105,23 @@ class TableViewController: UITableViewController {
                                          style: .default) { (action: UIAlertAction) -> Void in
         }
         
+        alert.addTextField(configurationHandler: {(textField: UITextField) in
+                                textField.addTarget(self, action: #selector(self.textFieldDidChange),
+                           for: .editingChanged)
+            
+        })
         
-        alert.addTextField {
-            (textField: UITextField) -> Void in
-        }
-        
-        alert.addAction(saveAction)
         alert.addAction(cancelAction)
+        alert.addAction(saveAction)
+        
+        (alert.actions[1] as UIAlertAction).isEnabled = false
         
         present(alert,
                 animated: true,
                 completion: nil)
         
     }
-       /*
-    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        
-        print(noteTitles)
-        guard !noteTitles.isEmpty else {
-            print("Guard: Note Title Data is empty")
-            return
-        }
-        
-        if let isEditing = self.tableView?.isEditing {
-            self.tableView?.setEditing(!isEditing, animated: true)
-        }
-    }
- */
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.selectedIndex = indexPath.row
@@ -132,6 +139,7 @@ class TableViewController: UITableViewController {
         
         if editingStyle == .delete {
             self.moc.delete(managedObject)
+            deleteNoteContents(at: indexPath.row)
             loadData()
             tableView.deleteRows(at: [indexPath], with: .fade)
             
@@ -170,7 +178,9 @@ class TableViewController: UITableViewController {
         noteTitles = []
         noteTitles = CoreDataHelper.fetchEntities(entity: "Title", managedObjectContext: self.moc, predicate: nil) as! [Title]
         
-        
+        //keep track of the chords to check if there are any existing chords for the deleted note
+        chordArray = []
+        chordArray = CoreDataHelper.fetchEntities(entity: "ChordView", managedObjectContext: self.moc, predicate: nil) as! [ChordView]
     }
     
     func initUI() {
@@ -179,6 +189,26 @@ class TableViewController: UITableViewController {
         self.tableView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "background"))
         self.navigationController?.hidesBarsOnSwipe = false
     }
- 
-
+    
+    func deleteNoteContents(at: Int) {
+        //check if there are chord data to delete
+        guard !chordArray.isEmpty else {
+            return
+        }
+        
+        let managedObjectChord:NSManagedObject = chordArray[at]
+        
+        self.moc.delete(managedObjectChord)
+    }
+    
+    func textFieldDidChange(sender: AnyObject) {
+        let tf = sender as! UITextField
+        var resp: UIResponder = tf
+        while !(resp is UIAlertController) {
+            resp = resp.next!
+        }
+        let alert = resp as! UIAlertController
+        (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
+        
+    }
 }

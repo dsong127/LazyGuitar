@@ -271,8 +271,7 @@ extension ChordsViewController {
             print("no change made")
             return
         }
-        print("these about to from chordViewData to chordNameData")
-        print(chordViewData)
+
         chordNameData = []
         
         for item in 0..<chordViewData.count {
@@ -301,8 +300,8 @@ extension ChordsViewController {
             return
         }
         chordNameData = fetchedData[noteIndexPath].chordName!
-        print("what just got fetched \(chordNameData)")
-        print("\nand this is what's in coreData\(fetchedData)")
+        print("what just got fetched\n \(chordNameData)")
+        print("\nand this is what's in coreData\n\(fetchedData)")
         for name in chordNameData {
             chordViewData.append(guitarChords.generateChord(chord: name))
         }
