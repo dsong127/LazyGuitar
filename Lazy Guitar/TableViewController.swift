@@ -26,7 +26,8 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
+        self.navigationController?.hidesBarsOnSwipe = false
+
         loadData()
         self.tableView.reloadData()
     }
@@ -187,7 +188,6 @@ class TableViewController: UITableViewController {
         isEditing = false
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.tableView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "background"))
-        self.navigationController?.hidesBarsOnSwipe = false
     }
     
     func deleteNoteContents(at: Int) {

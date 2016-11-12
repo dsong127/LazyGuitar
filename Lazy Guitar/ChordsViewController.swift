@@ -31,7 +31,6 @@ class ChordsViewController: UICollectionViewController {
         didSet {
             changeMade = true
         }
-        
     }
     var chordNameData = [String]()
 
@@ -61,7 +60,6 @@ class ChordsViewController: UICollectionViewController {
         }
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.hidesBarsOnSwipe = true
@@ -69,11 +67,9 @@ class ChordsViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadChords()
         //collectionView?.reloadData()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -228,14 +224,11 @@ class ChordsViewController: UICollectionViewController {
         selecting = !selecting
     }
    
-    
     @IBAction func backButtonPressed(_ sender: AnyObject) {
+        selecting = !selecting
         saveChords()
-        
         _ = navigationController?.popViewController(animated: true)
-        
     }
-    
 }
 
 extension ChordsViewController {
@@ -305,9 +298,6 @@ extension ChordsViewController {
         for name in chordNameData {
             chordViewData.append(guitarChords.generateChord(chord: name))
         }
-        
-        
-        
     }
     
   }
