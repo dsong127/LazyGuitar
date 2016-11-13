@@ -16,17 +16,16 @@ class TableViewController: UITableViewController {
     var chordArray = [ChordView]()
     var selectedIndex = -1
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        self.navigationController?.hidesBarsOnSwipe = false
+        
+        //self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.hidesBarsOnTap = false
 
         loadData()
         self.tableView.reloadData()

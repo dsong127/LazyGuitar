@@ -62,7 +62,8 @@ class ChordsViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.hidesBarsOnSwipe = true
+        //self.navigationController?.hidesBarsOnSwipe = true
+        self.navigationController?.hidesBarsOnTap = true
         self.collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "background"))
     }
     
