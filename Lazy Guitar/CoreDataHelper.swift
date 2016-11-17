@@ -54,7 +54,7 @@ class CoreDataHelper: NSObject {
         }
     }
     
-    // Need to call this if you're deleting a row from the TableView
+    // Call this in delete note content function. This will delete the contents from coredata
     
     class func deleteTableView(managedObjectContext: NSManagedObjectContext) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Title")

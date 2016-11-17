@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class ChordsViewController: UICollectionViewController {
+final class ChordsViewController: UICollectionViewController {
     
     @IBOutlet weak var chordSelectButton: UIBarButtonItem!
     @IBOutlet weak var variationSelectButton: UIBarButtonItem!
@@ -70,22 +70,12 @@ class ChordsViewController: UICollectionViewController {
         super.viewWillDisappear(animated)
     }
     
-    
-    
-
-    
     override func viewDidAppear(_ animated: Bool) {
         setupChordSelectButton()
         setupVariationSelectButton()
         changeMade = false
     }
     
-    
-    
-
-    
-    
-
     //MARK: - Setup
     
     func setupChordSelectButton(){
@@ -208,6 +198,7 @@ class ChordsViewController: UICollectionViewController {
         
         let selectedIndexPaths: [IndexPath] = self.collectionView!.indexPathsForSelectedItems!
         
+        //Find all the selected chords that are to be deleted
         var newChordViewData = [OCChordView]()
         for i in 0..<self.chordViewData.count{
             var found: Bool = false
@@ -268,19 +259,21 @@ extension ChordsViewController {
     }
     
     func saveChords() {
-    
+        
+        //Check if there has been any changes made
         guard changeMade else {
             return
         }
-
+        
         chordNameData = []
         
+        //get names of all the chords into chordNameData
         for item in 0..<chordViewData.count {
             chordNameData.append(chordViewData[item].chordName)
         }
         
         let fetchedData = CoreDataHelper.fetchEntities(entity: "ChordView", managedObjectContext: self.moc, predicate: nil) as! [ChordView]
-        
+        //replace chordNameData with new one
         fetchedData[noteIndexPath].chordName! = chordNameData
         
         do {

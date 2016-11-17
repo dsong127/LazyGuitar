@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController {
+final class TableViewController: UITableViewController {
     
     var moc:NSManagedObjectContext!
     var noteTitles = [Title]()
