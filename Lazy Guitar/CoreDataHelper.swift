@@ -1,10 +1,8 @@
-//
-//  CoreDataHelper.swift
-//  Lazy Guitar
-//
-//  Created by Daniel Song on 11/3/16.
-//  Copyright © 2016 Daniel Song. All rights reserved.
-//
+/*******************
+ *
+ *  CoreData helper functions for fetching/saving/deleting data
+ *
+ ******************/
 
 import UIKit
 import CoreData
@@ -54,9 +52,9 @@ class CoreDataHelper: NSObject {
         } catch let error as NSError {
             print(error)
         }
-        
-        
     }
+    
+    // Need to call this if you're deleting a row from the TableView
     
     class func deleteTableView(managedObjectContext: NSManagedObjectContext) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Title")

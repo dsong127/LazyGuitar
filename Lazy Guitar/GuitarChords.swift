@@ -1,10 +1,9 @@
-//
-//  ChordGenerator.swift
-//  Lazy Guitar
-//
-//  Created by Daniel Song on 10/15/16.
-//  Copyright © 2016 Daniel Song. All rights reserved.
-//
+/********
+ *
+ *  This class helps with generating chord views using OCChordView
+ *
+ *************/
+
 
 import Foundation
 

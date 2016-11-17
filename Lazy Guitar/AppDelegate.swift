@@ -1,16 +1,8 @@
-//
-//  AppDelegate.swift
-//  Lazy Guitar
-//
-//  Created by Daniel Song on 10/5/16.
-//  Copyright © 2016 Daniel Song. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 let themeColor = UIColor(red: 0.42, green: 0.22, blue: 0.22, alpha: 1.0)
-let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
+//let themeColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0)
 
 
 @UIApplicationMain
@@ -22,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
         [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
           
-        window?.tintColor = themeColor
         DropDown.startListeningToKeyboard()
+
         moc = persistentContainer.viewContext
         
         CoreDataHelper.deleteObject(managedObjectContext: moc)

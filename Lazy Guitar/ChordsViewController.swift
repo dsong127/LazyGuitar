@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Lazy Guitar
-//
-//  Created by Daniel Song on 10/5/16.
-//  Copyright © 2016 Daniel Song. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
@@ -57,27 +49,42 @@ class ChordsViewController: UICollectionViewController {
             updateEditingChordCount()
             let editingDetailItem = UIBarButtonItem(customView: editTextLabel)
             navigationItem.setRightBarButtonItems([selectButton,editingDetailItem], animated: true)
+            
+            self.navigationController?.hidesBarsOnTap = false
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.hidesBarsOnSwipe = true
-        self.navigationController?.hidesBarsOnTap = true
-        self.collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "background"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadChords()
-        //collectionView?.reloadData()
+        self.navigationController?.hidesBarsOnTap = true
+        super.viewWillAppear(animated)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.hidesBarsOnTap = false
+        super.viewWillDisappear(animated)
+    }
+    
+    
+    
+
     
     override func viewDidAppear(_ animated: Bool) {
         setupChordSelectButton()
         setupVariationSelectButton()
         changeMade = false
     }
+    
+    
+    
+
+    
+    
 
     //MARK: - Setup
     
@@ -125,9 +132,7 @@ class ChordsViewController: UICollectionViewController {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath) as! TitleCollectionHeaderView
         
         header.headerLabel.text = headerTitle
-        header.headerLabel.textColor = UIColor.white
-        
-        header.backgroundColor = themeColor
+        header.headerLabel.clipsToBounds = true
         header.headerLabel.sizeToFit()
         
         return header        
@@ -188,7 +193,8 @@ class ChordsViewController: UICollectionViewController {
         selectButtonName(selecting)
         
         deleteButton.isEnabled = selecting ? true : false
-        
+        self.navigationController?.hidesBarsOnTap = selecting ? false : true
+
         guard selecting else  {
             return
         }
@@ -218,24 +224,26 @@ class ChordsViewController: UICollectionViewController {
         
         self.chordViewData = newChordViewData
         self.collectionView!.deleteItems(at: selectedIndexPaths)
-        print("array after deleting")
-        print(chordViewData)
+
         selectButton.title = "Select"
         deleteButton.isEnabled = false
-        selecting = !selecting
+        
+        selecting = false
+        self.navigationController?.hidesBarsOnTap = true
+
     }
    
     @IBAction func backButtonPressed(_ sender: AnyObject) {
-        selecting = !selecting
+        selecting = false
         saveChords()
-        _ = navigationController?.popViewController(animated: true)
+        dismissVC()
     }
 }
 
 extension ChordsViewController {
     
     func updateEditingChordCount(){
-        editTextLabel.textColor = themeColor
+        editTextLabel.textColor = UIColor.white
         editTextLabel.text = "\(selectedChords.count) selected"
         editTextLabel.sizeToFit()
     }
@@ -262,7 +270,6 @@ extension ChordsViewController {
     func saveChords() {
     
         guard changeMade else {
-            print("no change made")
             return
         }
 
@@ -293,9 +300,9 @@ extension ChordsViewController {
             print("nothing to load")
             return
         }
+        
         chordNameData = fetchedData[noteIndexPath].chordName!
-        print("what just got fetched\n \(chordNameData)")
-        print("\nand this is what's in coreData\n\(fetchedData)")
+        
         for name in chordNameData {
             chordViewData.append(guitarChords.generateChord(chord: name))
         }

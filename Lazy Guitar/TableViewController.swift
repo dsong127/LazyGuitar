@@ -1,16 +1,8 @@
-//
-//  TableViewController.swift
-//  Lazy Guitar
-//
-//  Created by Daniel Song on 10/21/16.
-//  Copyright © 2016 Daniel Song. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 class TableViewController: UITableViewController {
-
+    
     var moc:NSManagedObjectContext!
     var noteTitles = [Title]()
     var chordArray = [ChordView]()
@@ -24,16 +16,22 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        //self.navigationController?.hidesBarsOnSwipe = false
-        self.navigationController?.hidesBarsOnTap = false
-
         loadData()
         self.tableView.reloadData()
+        
+        super.viewWillAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         setEditing(false, animated: false)
+        super.viewWillAppear(animated)
     }
+    
+    override func viewDidLayoutSubviews() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        super.viewDidLayoutSubviews()
+    }
+    
     
     override func setEditing(_ editing: Bool, animated: Bool) {
         guard !noteTitles.isEmpty else {
@@ -42,9 +40,11 @@ class TableViewController: UITableViewController {
         
         super.setEditing(editing, animated: true)
     }
-
+    
+    
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -52,12 +52,11 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return noteTitles.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "TableCell")!
-
-        tableCell.backgroundView = UIImageView(image: UIImage(named: "background"))
+        
         tableCell.textLabel!.text = noteTitles[indexPath.row].titleName
         return tableCell
     }
@@ -72,7 +71,7 @@ class TableViewController: UITableViewController {
                                        style: .default,
                                        handler: { (action:UIAlertAction) -> Void in
                                         
-                                    
+                                        
                                         let textField = alert.textFields!.first
                                         
                                         guard !(textField?.text == "") else {
@@ -85,20 +84,20 @@ class TableViewController: UITableViewController {
                                         let chord = CoreDataHelper.insertManagedObject(entity: "ChordView", managedObjectContext: self.moc) as! ChordView
                                         
                                         chord.chordName = [String]()
-                                    
+                                        
                                         title.titleName = textField?.text
                                         
                                         do{
                                             try self.moc.save()
                                         } catch let error as NSError {
                                             print("could not save \(error), \(error.userInfo)")
-
+                                            
                                         }
                                         self.loadData()
                                         self.tableView.reloadData()
-
+                                        
                                         self.performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
-
+                                        
         })
         
         let cancelAction = UIAlertAction(title: "Cancel",
@@ -106,11 +105,12 @@ class TableViewController: UITableViewController {
         }
         
         alert.addTextField(configurationHandler: {(textField: UITextField) in
-                                textField.addTarget(self, action: #selector(self.textFieldDidChange),
-                           for: .editingChanged)
+            textField.addTarget(self, action: #selector(self.textFieldDidChange),
+                                for: .editingChanged)
             
         })
         
+        alert.view.tintColor = themeColor
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
         
@@ -119,13 +119,10 @@ class TableViewController: UITableViewController {
         present(alert,
                 animated: true,
                 completion: nil)
-        
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         self.selectedIndex = indexPath.row
-        
         performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
     }
     
@@ -133,21 +130,21 @@ class TableViewController: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return true
     }
- 
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let managedObject:NSManagedObject = noteTitles[indexPath.row]
         
         if editingStyle == .delete {
             self.moc.delete(managedObject)
-            deleteNoteContents(at: indexPath.row)
+            deleteNoteContents(atIndex: indexPath.row)
             loadData()
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             self.tableView.reloadData()
-
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -161,7 +158,7 @@ class TableViewController: UITableViewController {
             print("could not save \(error), \(error.userInfo)")
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -169,9 +166,9 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEditorSegue" {
             let chordsVC = segue.destination as! ChordsViewController
-                    chordsVC.noteIndexPath = selectedIndex
-                    chordsVC.headerTitle = noteTitles[selectedIndex].titleName!
-                }
+            chordsVC.noteIndexPath = selectedIndex
+            chordsVC.headerTitle = noteTitles[selectedIndex].titleName!
+        }
     }
     
     func loadData() {
@@ -186,16 +183,17 @@ class TableViewController: UITableViewController {
     func initUI() {
         isEditing = false
         self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.tableView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "background"))
+        editButtonItem.tintColor = UIColor.white
+        self.navigationController?.toolbar.clipsToBounds = true
     }
     
-    func deleteNoteContents(at: Int) {
+    func deleteNoteContents(atIndex: Int) {
         //check if there are chord data to delete
         guard !chordArray.isEmpty else {
             return
         }
         
-        let managedObjectChord:NSManagedObject = chordArray[at]
+        let managedObjectChord:NSManagedObject = chordArray[atIndex]
         
         self.moc.delete(managedObjectChord)
     }
