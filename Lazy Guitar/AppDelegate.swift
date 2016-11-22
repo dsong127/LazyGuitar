@@ -18,8 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         moc = persistentContainer.viewContext
         
+        
+    // Deletes all data stored in CoreData when the app starts for debugging purposes.
+    /*
         CoreDataHelper.deleteObject(managedObjectContext: moc)
         CoreDataHelper.deleteTableView(managedObjectContext: moc)
+    */
         return true
     }
 

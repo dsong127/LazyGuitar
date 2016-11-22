@@ -26,7 +26,7 @@ final class TableViewController: UITableViewController {
         setEditing(false, animated: false)
         super.viewWillAppear(animated)
     }
-    
+ 
     override func viewDidLayoutSubviews() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         super.viewDidLayoutSubviews()
@@ -34,11 +34,9 @@ final class TableViewController: UITableViewController {
     
     
     override func setEditing(_ editing: Bool, animated: Bool) {
-        guard !noteTitles.isEmpty else {
-            return
-        }
         
         super.setEditing(editing, animated: true)
+        
     }
     
     
@@ -50,6 +48,7 @@ final class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return noteTitles.count
     }
     
@@ -61,9 +60,11 @@ final class TableViewController: UITableViewController {
         return tableCell
     }
     
+    
+    
     @IBAction func addButtonPressed(_ sender: AnyObject) {
         selectedIndex = noteTitles.count
-        let alert = UIAlertController(title: "New Name",
+        let alert = UIAlertController(title: "New Note",
                                       message: "Add a new name",
                                       preferredStyle: .alert)
         
@@ -127,7 +128,6 @@ final class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
     
@@ -141,6 +141,11 @@ final class TableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             self.tableView.reloadData()
+            
+            if self.tableView.numberOfRows(inSection: 0) == 0 {
+                self.setEditing(false, animated: true)
+            }
+    
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -162,13 +167,20 @@ final class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEditorSegue" {
             let chordsVC = segue.destination as! ChordsViewController
             chordsVC.noteIndexPath = selectedIndex
             chordsVC.headerTitle = noteTitles[selectedIndex].titleName!
         }
+    }
+    
+    func initUI() {
+        isEditing = false
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        editButtonItem.tintColor = UIColor.white
+        self.navigationController?.toolbar.clipsToBounds = true
     }
     
     func loadData() {
@@ -180,12 +192,6 @@ final class TableViewController: UITableViewController {
         chordArray = CoreDataHelper.fetchEntities(entity: "ChordView", managedObjectContext: self.moc, predicate: nil) as! [ChordView]
     }
     
-    func initUI() {
-        isEditing = false
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-        editButtonItem.tintColor = UIColor.white
-        self.navigationController?.toolbar.clipsToBounds = true
-    }
     
     func deleteNoteContents(atIndex: Int) {
         //check if there are chord data to delete
@@ -206,6 +212,5 @@ final class TableViewController: UITableViewController {
         }
         let alert = resp as! UIAlertController
         (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
-        
     }
 }

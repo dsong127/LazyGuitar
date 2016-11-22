@@ -30,6 +30,8 @@ final class ChordsViewController: UICollectionViewController {
     
     var noteIndexPath = -1
     
+
+    
     
     var selecting: Bool = false {
         didSet {
@@ -50,7 +52,7 @@ final class ChordsViewController: UICollectionViewController {
             let editingDetailItem = UIBarButtonItem(customView: editTextLabel)
             navigationItem.setRightBarButtonItems([selectButton,editingDetailItem], animated: true)
             
-            self.navigationController?.hidesBarsOnTap = false
+            //self.navigationController?.hidesBarsOnTap = false
         }
     }
     
@@ -61,12 +63,12 @@ final class ChordsViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadChords()
-        self.navigationController?.hidesBarsOnTap = true
+        //self.navigationController?.hidesBarsOnTap = true
         super.viewWillAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.hidesBarsOnTap = false
+        //self.navigationController?.hidesBarsOnTap = false
         super.viewWillDisappear(animated)
     }
     
@@ -183,7 +185,7 @@ final class ChordsViewController: UICollectionViewController {
         selectButtonName(selecting)
         
         deleteButton.isEnabled = selecting ? true : false
-        self.navigationController?.hidesBarsOnTap = selecting ? false : true
+        //self.navigationController?.hidesBarsOnTap = selecting ? false : true
 
         guard selecting else  {
             return
@@ -220,7 +222,7 @@ final class ChordsViewController: UICollectionViewController {
         deleteButton.isEnabled = false
         
         selecting = false
-        self.navigationController?.hidesBarsOnTap = true
+        //self.navigationController?.hidesBarsOnTap = true
 
     }
    
