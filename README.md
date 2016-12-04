@@ -7,7 +7,12 @@ LazyGuitar is an app on the App Store tha thelps users look up guitar chords.
 
 Add chords by choosing from the menu
 
+<img src="./images/demo1.gif" />
+
 Delete chords by using the "select" button
+
+<img src="./images/demo2.gif" />
 
 Rearrange chords by holding and dragging
 
+<img src="./images/demo3.gif" />
