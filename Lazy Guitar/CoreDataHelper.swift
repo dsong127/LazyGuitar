@@ -15,6 +15,7 @@ class CoreDataHelper: NSObject {
         return managedObject
     }
     
+    
     class func fetchEntities(entity: String, managedObjectContext: NSManagedObjectContext, predicate: NSPredicate?) -> [Any]  {
         
         var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)

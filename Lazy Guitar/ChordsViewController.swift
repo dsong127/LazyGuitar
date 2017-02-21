@@ -256,7 +256,7 @@ extension ChordsViewController {
         }
     }
     
-    func dismissVC() {
+    func dismissVC(){
         _ = self.navigationController?.popViewController(animated: true)
     }
     

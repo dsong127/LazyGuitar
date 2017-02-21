@@ -34,9 +34,7 @@ final class TableViewController: UITableViewController {
     
     
     override func setEditing(_ editing: Bool, animated: Bool) {
-        
-        super.setEditing(editing, animated: true)
-        
+            super.setEditing(editing, animated: true)
     }
     
     
@@ -54,9 +52,9 @@ final class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "TableCell")!
+        let tableCell = Bundle.main.loadNibNamed("ListTableViewCell", owner: self, options: nil)?.first as! ListTableViewCell
         
-        tableCell.textLabel!.text = noteTitles[indexPath.row].titleName
+        tableCell.titleLabel!.text = noteTitles[indexPath.row].titleName
         return tableCell
     }
     

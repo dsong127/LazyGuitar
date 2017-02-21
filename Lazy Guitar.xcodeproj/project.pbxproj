@@ -25,6 +25,8 @@
 		5C39F1941DA734CD004DA2AE /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18C1DA734CD004DA2AE /* DropDown.swift */; };
 		5C39F1951DA734CD004DA2AE /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */; };
 		5C53090F1DCC2B5E00E5C22C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */; };
+		5CA8E1221E5BFBE200CE3565 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8E1201E5BFBE200CE3565 /* ListTableViewCell.swift */; };
+		5CA8E1231E5BFBE200CE3565 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA8E1211E5BFBE200CE3565 /* ListTableViewCell.xib */; };
 		5CB5A08A1DD1666A0028F54A /* ChordView+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A0881DD1666A0028F54A /* ChordView+CoreDataClass.swift */; };
 		5CB5A08B1DD1666A0028F54A /* ChordView+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A0891DD1666A0028F54A /* ChordView+CoreDataProperties.swift */; };
 		5CD1F8501DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */; };
@@ -57,6 +59,8 @@
 		5C39F18C1DA734CD004DA2AE /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		5CA8E1201E5BFBE200CE3565 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		5CA8E1211E5BFBE200CE3565 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		5CB5A0881DD1666A0028F54A /* ChordView+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChordView+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5CB5A0891DD1666A0028F54A /* ChordView+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChordView+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -97,12 +101,10 @@
 			children = (
 				5CD6D1FC1DCC4DB0004380F4 /* DataModel */,
 				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
-				5C212DC01DBAE64200041E7F /* TableViewController.swift */,
-				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
-				5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */,
-				5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */,
-				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
-				5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */,
+				5CA8E1251E5BFC3D00CE3565 /* ViewControllers */,
+				5CA8E1241E5BFC2E00CE3565 /* Views */,
+				5CA8E1261E5BFC5800CE3565 /* ChordController */,
+				5CA8E1211E5BFBE200CE3565 /* ListTableViewCell.xib */,
 				5C34311E1DA5C538007690CE /* Main.storyboard */,
 				5C3431261DA5C538007690CE /* LaunchScreen.storyboard */,
 				5C3431241DA5C538007690CE /* Assets.xcassets */,
@@ -161,6 +163,34 @@
 				5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		5CA8E1241E5BFC2E00CE3565 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5CA8E1201E5BFBE200CE3565 /* ListTableViewCell.swift */,
+				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
+				5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5CA8E1251E5BFC3D00CE3565 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C212DC01DBAE64200041E7F /* TableViewController.swift */,
+				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5CA8E1261E5BFC5800CE3565 /* ChordController */ = {
+			isa = PBXGroup;
+			children = (
+				5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */,
+				5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */,
+			);
+			name = ChordController;
 			sourceTree = "<group>";
 		};
 		5CD6D1FC1DCC4DB0004380F4 /* DataModel */ = {
@@ -237,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C39F1911DA734CD004DA2AE /* Info.plist in Resources */,
+				5CA8E1231E5BFBE200CE3565 /* ListTableViewCell.xib in Resources */,
 				5C3431281DA5C538007690CE /* LaunchScreen.storyboard in Resources */,
 				5C3431251DA5C538007690CE /* Assets.xcassets in Resources */,
 				5C39F1921DA734CD004DA2AE /* DropDownCell.xib in Resources */,
@@ -260,6 +291,7 @@
 				5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */,
 				5C39F18E1DA734CD004DA2AE /* DPDConstants.swift in Sources */,
 				5CB5A08B1DD1666A0028F54A /* ChordView+CoreDataProperties.swift in Sources */,
+				5CA8E1221E5BFBE200CE3565 /* ListTableViewCell.swift in Sources */,
 				5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */,
 				5C212DC11DBAE64200041E7F /* TableViewController.swift in Sources */,
 				5C3431321DA5C551007690CE /* OCChordView.m in Sources */,
