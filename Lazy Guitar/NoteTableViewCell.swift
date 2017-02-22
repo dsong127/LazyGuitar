@@ -13,6 +13,9 @@ class NoteTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var noteBackground: UIView!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dateContainer: UIView!
     
     var title: Title! {
         didSet{
@@ -32,6 +35,9 @@ class NoteTableViewCell: UITableViewCell {
         
         noteBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
         noteBackground.layer.shadowOpacity = 0.8
+        
+        
+   
     }
     
 

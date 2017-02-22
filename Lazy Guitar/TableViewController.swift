@@ -11,15 +11,20 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
         loadData()
         self.tableView.reloadData()
-        
         super.viewWillAppear(animated)
+        
+        if TableViewHelper.isDataEmpty(data: noteTitles){
+            TableViewHelper.emptyMessage(message: "There aren't any notes to show.\n Use the plus button to create one", viewController: self)
+        } else {
+            tableView.backgroundView = nil
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -37,23 +42,25 @@ class TableViewController: UITableViewController {
             super.setEditing(editing, animated: true)
     }
     
-    
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return noteTitles.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
          let tableCell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
-        
-        
-        
+
         tableCell.titleLabel!.text = noteTitles[indexPath.row].titleName
+        tableCell.dayLabel.text = noteTitles[indexPath.row].titleDate?.dayOfTheWeek()
+        tableCell.dateLabel.text = noteTitles[indexPath.row].titleDate?.mediumStyleDate()
+        
+        tableCell.dateContainer.layer.borderWidth = 3
+        tableCell.dateContainer.layer.borderColor = UIColor(red: 237/255.0, green: 102/255.0, blue: 78/255.0, alpha: 1.0).cgColor
         
         
-        tableCell.titleLabel.sizeToFit()
+        tableCell.dateLabel.sizeToFit()
+
+
         return tableCell
     }
 
@@ -76,7 +83,7 @@ class TableViewController: UITableViewController {
                                             return
                                         }
                                         
-                                        var noteDate = NSDate()
+                                        let noteDate = NSDate()
                                         
                                         
                                         let title = CoreDataHelper.insertManagedObject(entity: "Title", managedObjectContext: self.moc) as! Title
@@ -86,6 +93,7 @@ class TableViewController: UITableViewController {
                                         chord.chordName = [String]()
                                         
                                         title.titleName = textField?.text
+                                        title.titleDate = noteDate
                                         
                                         do{
                                             try self.moc.save()
@@ -110,7 +118,7 @@ class TableViewController: UITableViewController {
             
         })
         
-        alert.view.tintColor = UIColor(red: 230/255.0, green: 52/255.0, blue: 33/255.0, alpha: 1.0)
+        alert.view.tintColor = UIColor(red: 230/255.0, green: 52/255.0, blue: 33/255.0, alpha: 0.7)
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
         
@@ -139,10 +147,16 @@ class TableViewController: UITableViewController {
             loadData()
             tableView.deleteRows(at: [indexPath], with: .fade)
             
-            self.tableView.reloadData()
+            tableView.reloadData()
             
             if self.tableView.numberOfRows(inSection: 0) == 0 {
                 self.setEditing(false, animated: true)
+            }
+            
+            if TableViewHelper.isDataEmpty(data: noteTitles){
+                TableViewHelper.emptyMessage(message: "You have no notes yet\n They will appear here", viewController: self)
+            } else {
+                tableView.backgroundView = nil
             }
     
             
@@ -213,12 +227,21 @@ class TableViewController: UITableViewController {
         let alert = resp as! UIAlertController
         (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
     }
+
+    
 }
+
 
 extension NSDate {
     func dayOfTheWeek() -> String? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EE"
+        return dateFormatter.string(from: self as Date)
+    }
+    
+    func mediumStyleDate() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
         return dateFormatter.string(from: self as Date)
     }
 }

@@ -9,5 +9,6 @@ extension Title {
     }
 
     @NSManaged public var titleName: String?
+    @NSManaged public var titleDate: NSDate?
 
 }
