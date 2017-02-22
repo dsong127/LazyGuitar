@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-final class TableViewController: UITableViewController {
+class TableViewController: UITableViewController {
     
     var moc:NSManagedObjectContext!
     var noteTitles = [Title]()
@@ -38,13 +38,7 @@ final class TableViewController: UITableViewController {
     }
     
     
-    
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return noteTitles.count
@@ -52,13 +46,17 @@ final class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let tableCell = Bundle.main.loadNibNamed("ListTableViewCell", owner: self, options: nil)?.first as! ListTableViewCell
+         let tableCell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
+        
+        
         
         tableCell.titleLabel!.text = noteTitles[indexPath.row].titleName
+        
+        
+        tableCell.titleLabel.sizeToFit()
         return tableCell
     }
-    
-    
+
     
     @IBAction func addButtonPressed(_ sender: AnyObject) {
         selectedIndex = noteTitles.count
@@ -77,6 +75,9 @@ final class TableViewController: UITableViewController {
                                             
                                             return
                                         }
+                                        
+                                        var noteDate = NSDate()
+                                        
                                         
                                         let title = CoreDataHelper.insertManagedObject(entity: "Title", managedObjectContext: self.moc) as! Title
                                         
@@ -109,7 +110,7 @@ final class TableViewController: UITableViewController {
             
         })
         
-        alert.view.tintColor = themeColor
+        alert.view.tintColor = UIColor(red: 230/255.0, green: 52/255.0, blue: 33/255.0, alpha: 1.0)
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
         
@@ -179,6 +180,7 @@ final class TableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         editButtonItem.tintColor = UIColor.white
         self.navigationController?.toolbar.clipsToBounds = true
+        tableView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
     }
     
     func loadData() {
@@ -210,5 +212,13 @@ final class TableViewController: UITableViewController {
         }
         let alert = resp as! UIAlertController
         (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
+    }
+}
+
+extension NSDate {
+    func dayOfTheWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EE"
+        return dateFormatter.string(from: self as Date)
     }
 }

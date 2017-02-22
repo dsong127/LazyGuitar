@@ -129,7 +129,7 @@
         //Draw Chord name
 
         
-        self.fillColor = [UIColor colorWithRed:0.60 green:0.40 blue:0.20 alpha:1.0];
+        self.fillColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];
         CGRect nameRect = CGRectMake(self.frame.origin.x, namePositionYOrigin, self.frame.size.width, nameHeight);
         [self.fillColor setFill];
         UIRectFill(nameRect);
@@ -141,7 +141,7 @@
         UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:floorf(self.frame.size.height*0.1f)];
 
         NSString *name = chordName;
-        [name drawInRect:nameRect withAttributes:@{ NSFontAttributeName: nameFont, NSParagraphStyleAttributeName: style, NSForegroundColorAttributeName: [UIColor whiteColor] }];
+        [name drawInRect:nameRect withAttributes:@{ NSFontAttributeName: nameFont, NSParagraphStyleAttributeName: style, NSForegroundColorAttributeName: [UIColor blackColor] }];
         
         
         
