@@ -228,6 +228,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Rt5-up-s0K"/>
                     <connections>
+                        <outlet property="tableView" destination="fBN-xY-Bh4" id="LlK-A3-2R3"/>
                         <segue destination="rzb-rb-E2z" kind="show" identifier="ShowEditorSegue" id="Qlk-CC-M8p"/>
                     </connections>
                 </tableViewController>

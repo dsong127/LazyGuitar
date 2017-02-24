@@ -4,6 +4,8 @@ import UIKit
 class ChordViewCell: UICollectionViewCell{
     @IBOutlet weak var chordView: OCChordView!
 
+    
+    // Creates border when a chord is selected
     override var isSelected: Bool{
         didSet{
             chordView.layer.borderWidth = isSelected ? 3 : 0

@@ -1,27 +1,29 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController {
+class TableViewController: UIViewController {
     
     var moc:NSManagedObjectContext!
     var noteTitles = [Title]()
     var chordArray = [ChordView]()
     var selectedIndex = -1
     
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         loadData()
-        self.tableView.reloadData()
+        tableView.reloadData()
         super.viewWillAppear(animated)
         
+        //Display message in the background view if there is no data to show
         if TableViewHelper.isDataEmpty(data: noteTitles){
-            TableViewHelper.emptyMessage(message: "There aren't any notes to show.\n Use the plus button to create one", viewController: self)
+            TableViewHelper.emptyMessage(message: "There aren't any notes to show.\n Use the plus button to create one", viewController: self, tableView: tableView)
         } else {
             tableView.backgroundView = nil
         }
@@ -32,38 +34,11 @@ class TableViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
  
-    override func viewDidLayoutSubviews() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        super.viewDidLayoutSubviews()
-    }
-    
-    
     override func setEditing(_ editing: Bool, animated: Bool) {
-            super.setEditing(editing, animated: true)
+        super.setEditing(editing, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return noteTitles.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-         let tableCell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
-
-        tableCell.titleLabel!.text = noteTitles[indexPath.row].titleName
-        tableCell.dayLabel.text = noteTitles[indexPath.row].titleDate?.dayOfTheWeek()
-        tableCell.dateLabel.text = noteTitles[indexPath.row].titleDate?.mediumStyleDate()
-        
-        tableCell.dateContainer.layer.borderWidth = 3
-        tableCell.dateContainer.layer.borderColor = UIColor(red: 237/255.0, green: 102/255.0, blue: 78/255.0, alpha: 1.0).cgColor
-        
-        
-        tableCell.dateLabel.sizeToFit()
-
-
-        return tableCell
-    }
-
+   
     
     @IBAction func addButtonPressed(_ sender: AnyObject) {
         selectedIndex = noteTitles.count
@@ -75,16 +50,12 @@ class TableViewController: UITableViewController {
                                        style: .default,
                                        handler: { (action:UIAlertAction) -> Void in
                                         
-                                        
                                         let textField = alert.textFields!.first
-                                        
-                                        guard !(textField?.text == "") else {
-                                            
-                                            return
-                                        }
-                                        
                                         let noteDate = NSDate()
                                         
+                                        guard !(textField?.text == "") else {
+                                            return
+                                        }
                                         
                                         let title = CoreDataHelper.insertManagedObject(entity: "Title", managedObjectContext: self.moc) as! Title
                                         
@@ -95,7 +66,7 @@ class TableViewController: UITableViewController {
                                         title.titleName = textField?.text
                                         title.titleDate = noteDate
                                         
-                                        do{
+                                        do {
                                             try self.moc.save()
                                         } catch let error as NSError {
                                             print("could not save \(error), \(error.userInfo)")
@@ -122,6 +93,7 @@ class TableViewController: UITableViewController {
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
         
+        // Save button is disabled by default
         (alert.actions[1] as UIAlertAction).isEnabled = false
         
         present(alert,
@@ -129,16 +101,91 @@ class TableViewController: UITableViewController {
                 completion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowEditorSegue" {
+            let chordsVC = segue.destination as! ChordsViewController
+            chordsVC.noteIndexPath = selectedIndex
+            chordsVC.headerTitle = noteTitles[selectedIndex].titleName!
+        }
+    }
+    
+    func initUI() {
+        isEditing = false
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        editButtonItem.tintColor = .white
+        self.navigationController?.toolbar.clipsToBounds = true
+        tableView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
+    }
+    
+    // Fetch the data from core data
+    func loadData() {
+        noteTitles = []
+        noteTitles = CoreDataHelper.fetchEntities(entity: "Title", managedObjectContext: self.moc, predicate: nil) as! [Title]
+        
+        //keep track of the chords to check if there are any existing chords for the deleted note
+        chordArray = []
+        chordArray = CoreDataHelper.fetchEntities(entity: "ChordView", managedObjectContext: self.moc, predicate: nil) as! [ChordView]
+    }
+    
+    // Delete the contents of a note
+    func deleteNoteContents(atIndex: Int) {
+        //check if there are chord data to delete
+        guard !chordArray.isEmpty else {
+            return
+        }
+        
+        let managedObjectChord:NSManagedObject = chordArray[atIndex]
+        self.moc.delete(managedObjectChord)
+    }
+    
+    //This method will enable the "save" button if the user starts writing in the text field
+    func textFieldDidChange(sender: AnyObject) {
+        let tf = sender as! UITextField
+        var resp: UIResponder = tf
+        while !(resp is UIAlertController) {
+            resp = resp.next!
+        }
+        let alert = resp as! UIAlertController
+        (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
+    }
+}
+
+extension TableViewController: UITableViewDataSource{
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return noteTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
+        
+        tableCell.titleLabel!.text = noteTitles[indexPath.row].titleName
+        tableCell.dayLabel.text = noteTitles[indexPath.row].titleDate?.dayOfTheWeek()
+        tableCell.dateLabel.text = noteTitles[indexPath.row].titleDate?.mediumStyleDate()
+        
+        tableCell.dateContainer.layer.borderWidth = 3
+        tableCell.dateContainer.layer.borderColor = UIColor.themeColor.cgColor
+        
+        tableCell.dateLabel.sizeToFit()
+        
+        return tableCell
+    }
+}
+
+extension TableViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
         performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let managedObject:NSManagedObject = noteTitles[indexPath.row]
         
         if editingStyle == .delete {
@@ -154,94 +201,10 @@ class TableViewController: UITableViewController {
             }
             
             if TableViewHelper.isDataEmpty(data: noteTitles){
-                TableViewHelper.emptyMessage(message: "You have no notes yet\n They will appear here", viewController: self)
+                TableViewHelper.emptyMessage(message: "You have no notes yet\n They will appear here", viewController: self, tableView: tableView)
             } else {
                 tableView.backgroundView = nil
             }
-    
-            
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
-        let itemToMove = noteTitles[fromIndexPath.row]
-        noteTitles.remove(at: fromIndexPath.row)
-        noteTitles.insert(itemToMove, at: fromIndexPath.row)
-        do {
-            try self.moc.save()
-        } catch let error as NSError {
-            print("could not save \(error), \(error.userInfo)")
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-        
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowEditorSegue" {
-            let chordsVC = segue.destination as! ChordsViewController
-            chordsVC.noteIndexPath = selectedIndex
-            chordsVC.headerTitle = noteTitles[selectedIndex].titleName!
-        }
-    }
-    
-    func initUI() {
-        isEditing = false
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-        editButtonItem.tintColor = UIColor.white
-        self.navigationController?.toolbar.clipsToBounds = true
-        tableView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
-    }
-    
-    func loadData() {
-        noteTitles = []
-        noteTitles = CoreDataHelper.fetchEntities(entity: "Title", managedObjectContext: self.moc, predicate: nil) as! [Title]
-        
-        //keep track of the chords to check if there are any existing chords for the deleted note
-        chordArray = []
-        chordArray = CoreDataHelper.fetchEntities(entity: "ChordView", managedObjectContext: self.moc, predicate: nil) as! [ChordView]
-    }
-    
-    
-    func deleteNoteContents(atIndex: Int) {
-        //check if there are chord data to delete
-        guard !chordArray.isEmpty else {
-            return
-        }
-        
-        let managedObjectChord:NSManagedObject = chordArray[atIndex]
-        
-        self.moc.delete(managedObjectChord)
-    }
-    
-    func textFieldDidChange(sender: AnyObject) {
-        let tf = sender as! UITextField
-        var resp: UIResponder = tf
-        while !(resp is UIAlertController) {
-            resp = resp.next!
-        }
-        let alert = resp as! UIAlertController
-        (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
-    }
-
-    
-}
-
-
-extension NSDate {
-    func dayOfTheWeek() -> String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EE"
-        return dateFormatter.string(from: self as Date)
-    }
-    
-    func mediumStyleDate() -> String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        return dateFormatter.string(from: self as Date)
     }
 }

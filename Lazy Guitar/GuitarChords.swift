@@ -1,6 +1,6 @@
 /********
  *
- *  This class helps with generating chord views using OCChordView
+ *  This class takes user's chord input as parameter and returns a generated chord view.
  *
  *************/
 
