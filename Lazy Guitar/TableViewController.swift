@@ -55,7 +55,7 @@ class TableViewController: UITableViewController {
         tableCell.dateLabel.text = noteTitles[indexPath.row].titleDate?.mediumStyleDate()
         
         tableCell.dateContainer.layer.borderWidth = 3
-        tableCell.dateContainer.layer.borderColor = UIColor(red: 237/255.0, green: 102/255.0, blue: 78/255.0, alpha: 1.0).cgColor
+        tableCell.dateContainer.layer.borderColor = UIColor.themeColor.cgColor
         
         
         tableCell.dateLabel.sizeToFit()
@@ -229,19 +229,4 @@ class TableViewController: UITableViewController {
     }
 
     
-}
-
-
-extension NSDate {
-    func dayOfTheWeek() -> String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EE"
-        return dateFormatter.string(from: self as Date)
-    }
-    
-    func mediumStyleDate() -> String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        return dateFormatter.string(from: self as Date)
-    }
 }

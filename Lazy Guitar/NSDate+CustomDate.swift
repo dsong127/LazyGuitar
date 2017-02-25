@@ -1,9 +1,15 @@
-//
-//  NSDate+CustomDate.swift
-//  Lazy Guitar
-//
-//  Created by Daniel Song on 2/24/17.
-//  Copyright © 2017 Daniel Song. All rights reserved.
-//
-
 import Foundation
+
+extension NSDate {
+    func dayOfTheWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EE"
+        return dateFormatter.string(from: self as Date)
+    }
+    
+    func mediumStyleDate() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from: self as Date)
+    }
+}
