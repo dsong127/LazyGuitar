@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -48,19 +50,10 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
-  a:link {
+  .hr-custom {
     color: white;
-}
+  }
 
-/* mouse over link */
-a:hover {
-    color: #f44b42;
-}
-
-/* selected link */
-a:active {
-    color: blue;
-}
   </style>
 </head>
 <body>
@@ -76,15 +69,14 @@ a:active {
       </button>
       <a class="navbar-brand" href="https://github.com/danielsongh">Daniel Song</a>
     </div>
-<!--
+
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">A</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-  -->
+
   </div>
 </nav>
 
@@ -102,7 +94,8 @@ a:active {
 
 
 
-<div class="container-fluid bg-3 text-center">    
+<div id='features' class="container-fluid bg-3 text-center">   
+<h1 class="margin">Features</h1>
   <div class="row">
     <div class="col-sm-4">
       <p>Add notes by using the plus button</p>
@@ -123,8 +116,40 @@ a:active {
   </div>
 </div>
 
- <footer class="container-fluid bg-4 text-center">
-  <p> <a href="mailto:dan.songh@gmail.com">dan.songh@gmail.com</a></p> 
+ <footer id='contact'>
+ <div class="container bg-4">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                      <h1 class="margin"> Contact </h1>
+                       <li>
+                            <a href="https://linkedin.com/in/daniel-song-0aa53654">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/danielsongh">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="mailto:dan.songh@gmail.com">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
 </footer>
 
 </body>
