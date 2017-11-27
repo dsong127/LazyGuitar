@@ -1,0 +1,21 @@
+PODS:
+  - DropDown (2)
+
+DEPENDENCIES:
+  - DropDown (from `https://github.com/AssistoLab/DropDown.git`)
+
+EXTERNAL SOURCES:
+  DropDown:
+    :git: https://github.com/AssistoLab/DropDown.git
+
+CHECKOUT OPTIONS:
+  DropDown:
+    :commit: f326a13d490a7a51586b6e3feb005405f1383aee
+    :git: https://github.com/AssistoLab/DropDown.git
+
+SPEC CHECKSUMS:
+  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
+
+PODFILE CHECKSUM: eb6332256a6d73b7779716257ac28fd820b6da53
+
+COCOAPODS: 1.1.1
