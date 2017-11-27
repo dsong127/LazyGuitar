@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController {
+class NoteListViewController: UITableViewController {
     
     var moc:NSManagedObjectContext!
     var noteTitles = [Title]()
@@ -11,7 +11,6 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,11 +19,11 @@ class TableViewController: UITableViewController {
         self.tableView.reloadData()
         super.viewWillAppear(animated)
         
-        if TableViewHelper.isDataEmpty(data: noteTitles){
-            TableViewHelper.emptyMessage(message: "There aren't any notes to show.\n Use the plus button to create one", viewController: self)
-        } else {
-            tableView.backgroundView = nil
+        guard !noteTitles.isEmpty else {
+            displayEmptyData(message: "There are no item to show!", on: self)
+            return
         }
+        self.tableView.backgroundView = nil
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -139,7 +138,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let managedObject:NSManagedObject = noteTitles[indexPath.row]
+        let managedObject = noteTitles[indexPath.row]
         
         if editingStyle == .delete {
             self.moc.delete(managedObject)
@@ -153,12 +152,11 @@ class TableViewController: UITableViewController {
                 self.setEditing(false, animated: true)
             }
             
-            if TableViewHelper.isDataEmpty(data: noteTitles){
-                TableViewHelper.emptyMessage(message: "You have no notes yet\n They will appear here", viewController: self)
-            } else {
-                tableView.backgroundView = nil
+            guard !noteTitles.isEmpty else {
+                displayEmptyData(message: "There are no item to show!", on: self)
+                return
             }
-    
+            self.tableView.backgroundView = nil
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -218,7 +216,7 @@ class TableViewController: UITableViewController {
         self.moc.delete(managedObjectChord)
     }
     
-    func textFieldDidChange(sender: AnyObject) {
+    @objc func textFieldDidChange(sender: AnyObject) {
         let tf = sender as! UITextField
         var resp: UIResponder = tf
         while !(resp is UIAlertController) {
@@ -227,6 +225,4 @@ class TableViewController: UITableViewController {
         let alert = resp as! UIAlertController
         (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
     }
-
-    
 }

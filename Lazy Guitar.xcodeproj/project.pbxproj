@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5C1778CA1DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C1778C81DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld */; };
-		5C212DC11DBAE64200041E7F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C212DC01DBAE64200041E7F /* TableViewController.swift */; };
+		5C212DC11DBAE64200041E7F /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C212DC01DBAE64200041E7F /* NoteListViewController.swift */; };
 		5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */; };
-		5C33018B1E610C8700781582 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33018A1E610C8700781582 /* UIColor+CustomColor.swift */; };
+		5C33018B1E610C8700781582 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33018A1E610C8700781582 /* Extensions.swift */; };
 		5C33018D1E610C9700781582 /* NSDate+CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33018C1E610C9700781582 /* NSDate+CustomDate.swift */; };
 		5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311A1DA5C538007690CE /* AppDelegate.swift */; };
 		5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311C1DA5C538007690CE /* ChordsViewController.swift */; };
@@ -27,7 +27,6 @@
 		5C39F1941DA734CD004DA2AE /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18C1DA734CD004DA2AE /* DropDown.swift */; };
 		5C39F1951DA734CD004DA2AE /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */; };
 		5C3E922E1E5CFDFA001D757E /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E922D1E5CFDFA001D757E /* NoteTableViewCell.swift */; };
-		5C3E92301E5D36EE001D757E /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E922F1E5D36EE001D757E /* TableViewHelper.swift */; };
 		5C53090F1DCC2B5E00E5C22C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */; };
 		5CB5A08A1DD1666A0028F54A /* ChordView+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A0881DD1666A0028F54A /* ChordView+CoreDataClass.swift */; };
 		5CB5A08B1DD1666A0028F54A /* ChordView+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A0891DD1666A0028F54A /* ChordView+CoreDataProperties.swift */; };
@@ -39,9 +38,9 @@
 
 /* Begin PBXFileReference section */
 		5C1778C91DC016230052DBCE /* lazyGuitarDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lazyGuitarDataModel.xcdatamodel; sourceTree = "<group>"; };
-		5C212DC01DBAE64200041E7F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5C212DC01DBAE64200041E7F /* NoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordViewCell.swift; sourceTree = "<group>"; };
-		5C33018A1E610C8700781582 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
+		5C33018A1E610C8700781582 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5C33018C1E610C9700781582 /* NSDate+CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+CustomDate.swift"; sourceTree = "<group>"; };
 		5C3431171DA5C538007690CE /* Lazy Guitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Guitar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C34311A1DA5C538007690CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +62,6 @@
 		5C39F18C1DA734CD004DA2AE /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		5C39F18D1DA734CD004DA2AE /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		5C3E922D1E5CFDFA001D757E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
-		5C3E922F1E5D36EE001D757E /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		5CB5A0881DD1666A0028F54A /* ChordView+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChordView+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5CB5A0891DD1666A0028F54A /* ChordView+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChordView+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -104,9 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
-				5C33018A1E610C8700781582 /* UIColor+CustomColor.swift */,
+				5C33018A1E610C8700781582 /* Extensions.swift */,
 				5C33018C1E610C9700781582 /* NSDate+CustomDate.swift */,
-				5C3E922F1E5D36EE001D757E /* TableViewHelper.swift */,
 				5CA8E1251E5BFC3D00CE3565 /* ViewControllers */,
 				5CA8E1241E5BFC2E00CE3565 /* Views */,
 				5CA8E1261E5BFC5800CE3565 /* ChordController */,
@@ -184,7 +181,7 @@
 		5CA8E1251E5BFC3D00CE3565 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5C212DC01DBAE64200041E7F /* TableViewController.swift */,
+				5C212DC01DBAE64200041E7F /* NoteListViewController.swift */,
 				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -238,13 +235,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Daniel Song";
 				TargetAttributes = {
 					5C3431161DA5C538007690CE = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q89K2W93JC;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -288,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C53090F1DCC2B5E00E5C22C /* CoreDataHelper.swift in Sources */,
-				5C3E92301E5D36EE001D757E /* TableViewHelper.swift in Sources */,
 				5CB5A08A1DD1666A0028F54A /* ChordView+CoreDataClass.swift in Sources */,
 				5C1778CA1DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld in Sources */,
 				5C3E922E1E5CFDFA001D757E /* NoteTableViewCell.swift in Sources */,
@@ -299,14 +295,14 @@
 				5C39F18E1DA734CD004DA2AE /* DPDConstants.swift in Sources */,
 				5CB5A08B1DD1666A0028F54A /* ChordView+CoreDataProperties.swift in Sources */,
 				5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */,
-				5C212DC11DBAE64200041E7F /* TableViewController.swift in Sources */,
+				5C212DC11DBAE64200041E7F /* NoteListViewController.swift in Sources */,
 				5C3431321DA5C551007690CE /* OCChordView.m in Sources */,
 				5CD6D1F91DCC4DAA004380F4 /* Title+CoreDataProperties.swift in Sources */,
 				5CD6D1F81DCC4DAA004380F4 /* Title+CoreDataClass.swift in Sources */,
 				5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */,
 				5C39F1901DA734CD004DA2AE /* DPDUIView+Extension.swift in Sources */,
 				5C33018D1E610C9700781582 /* NSDate+CustomDate.swift in Sources */,
-				5C33018B1E610C8700781582 /* UIColor+CustomColor.swift in Sources */,
+				5C33018B1E610C8700781582 /* Extensions.swift in Sources */,
 				5C39F18F1DA734CD004DA2AE /* DPDKeyboardListener.swift in Sources */,
 				5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */,
 				5C39F1931DA734CD004DA2AE /* DropDown+Appearance.swift in Sources */,
@@ -344,7 +340,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -352,7 +350,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -395,7 +397,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -403,7 +407,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -444,7 +452,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lazy Guitar/Lazy Guitar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -461,7 +470,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.danielsongh.Lazy-Guitar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lazy Guitar/Lazy Guitar-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
