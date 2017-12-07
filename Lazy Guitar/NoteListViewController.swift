@@ -27,7 +27,6 @@ class NoteListViewController: UITableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        setEditing(false, animated: false)
         super.viewWillAppear(animated)
     }
  
@@ -36,10 +35,6 @@ class NoteListViewController: UITableViewController {
         super.viewDidLayoutSubviews()
     }
     
-    
-    override func setEditing(_ editing: Bool, animated: Bool) {
-            super.setEditing(editing, animated: true)
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return noteTitles.count
@@ -133,9 +128,7 @@ class NoteListViewController: UITableViewController {
         performSegue(withIdentifier: "ShowEditorSegue", sender: nil)
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
+
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let managedObject = noteTitles[indexPath.row]
@@ -148,37 +141,14 @@ class NoteListViewController: UITableViewController {
             
             tableView.reloadData()
             
-            if self.tableView.numberOfRows(inSection: 0) == 0 {
-                self.setEditing(false, animated: true)
-            }
-            
             guard !noteTitles.isEmpty else {
                 displayEmptyData(message: "There are no item to show!", on: self)
                 return
             }
             self.tableView.backgroundView = nil
-            
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-    
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
-        let itemToMove = noteTitles[fromIndexPath.row]
-        noteTitles.remove(at: fromIndexPath.row)
-        noteTitles.insert(itemToMove, at: fromIndexPath.row)
-        do {
-            try self.moc.save()
-        } catch let error as NSError {
-            print("could not save \(error), \(error.userInfo)")
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-        
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEditorSegue" {
             let chordsVC = segue.destination as! ChordsViewController
@@ -188,8 +158,6 @@ class NoteListViewController: UITableViewController {
     }
     
     func initUI() {
-        isEditing = false
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
         editButtonItem.tintColor = UIColor.white
         self.navigationController?.toolbar.clipsToBounds = true
         tableView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
@@ -214,6 +182,12 @@ class NoteListViewController: UITableViewController {
         let managedObjectChord:NSManagedObject = chordArray[atIndex]
         
         self.moc.delete(managedObjectChord)
+        
+        do {
+            try moc.save()
+        } catch let error as NSError {
+            print(error)
+        }
     }
     
     @objc func textFieldDidChange(sender: AnyObject) {
