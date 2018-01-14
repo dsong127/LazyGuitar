@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5C1778CA1DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C1778C81DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld */; };
-		5C212DC11DBAE64200041E7F /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C212DC01DBAE64200041E7F /* NoteListViewController.swift */; };
 		5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */; };
 		5C33018B1E610C8700781582 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33018A1E610C8700781582 /* Extensions.swift */; };
-		5C33018D1E610C9700781582 /* NSDate+CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33018C1E610C9700781582 /* NSDate+CustomDate.swift */; };
 		5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311A1DA5C538007690CE /* AppDelegate.swift */; };
-		5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311C1DA5C538007690CE /* ChordsViewController.swift */; };
 		5C3431201DA5C538007690CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C34311E1DA5C538007690CE /* Main.storyboard */; };
 		5C3431251DA5C538007690CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431241DA5C538007690CE /* Assets.xcassets */; };
 		5C3431281DA5C538007690CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431261DA5C538007690CE /* LaunchScreen.storyboard */; };
 		5C3431321DA5C551007690CE /* OCChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3431311DA5C551007690CE /* OCChordView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5C3E922E1E5CFDFA001D757E /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E922D1E5CFDFA001D757E /* NoteTableViewCell.swift */; };
 		5C53090F1DCC2B5E00E5C22C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */; };
+		5C8734AE200B273D00A22F2F /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A7200B273D00A22F2F /* ChordsViewController.swift */; };
+		5C8734AF200B273D00A22F2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A8200B273D00A22F2F /* MainViewController.swift */; };
+		5C8734B0200B273D00A22F2F /* MetronomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A9200B273D00A22F2F /* MetronomeViewController.swift */; };
+		5C8734B1200B273D00A22F2F /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734AA200B273D00A22F2F /* NoteListViewController.swift */; };
+		5C8734B2200B273D00A22F2F /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734AB200B273D00A22F2F /* NoteViewController.swift */; };
+		5C8734B3200B273D00A22F2F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734AC200B273D00A22F2F /* PageViewController.swift */; };
+		5C8734B4200B273D00A22F2F /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734AD200B273D00A22F2F /* TunerViewController.swift */; };
 		5CB5A08A1DD1666A0028F54A /* ChordView+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A0881DD1666A0028F54A /* ChordView+CoreDataClass.swift */; };
 		5CB5A08B1DD1666A0028F54A /* ChordView+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5A0891DD1666A0028F54A /* ChordView+CoreDataProperties.swift */; };
 		5CD1F8501DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */; };
@@ -33,13 +37,10 @@
 		1237468CFF4733C2BAE1C09D /* Pods-Lazy Guitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lazy Guitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.debug.xcconfig"; sourceTree = "<group>"; };
 		36896EE1967431B8F4976419 /* Pods-Lazy Guitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lazy Guitar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.release.xcconfig"; sourceTree = "<group>"; };
 		5C1778C91DC016230052DBCE /* lazyGuitarDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lazyGuitarDataModel.xcdatamodel; sourceTree = "<group>"; };
-		5C212DC01DBAE64200041E7F /* NoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordViewCell.swift; sourceTree = "<group>"; };
 		5C33018A1E610C8700781582 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		5C33018C1E610C9700781582 /* NSDate+CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+CustomDate.swift"; sourceTree = "<group>"; };
 		5C3431171DA5C538007690CE /* Lazy Guitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Guitar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C34311A1DA5C538007690CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C34311C1DA5C538007690CE /* ChordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
 		5C34311F1DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C3431241DA5C538007690CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C3431271DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,13 @@
 		5C3431311DA5C551007690CE /* OCChordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCChordView.m; sourceTree = "<group>"; };
 		5C3E922D1E5CFDFA001D757E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		5C8734A7200B273D00A22F2F /* ChordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
+		5C8734A8200B273D00A22F2F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5C8734A9200B273D00A22F2F /* MetronomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeViewController.swift; sourceTree = "<group>"; };
+		5C8734AA200B273D00A22F2F /* NoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		5C8734AB200B273D00A22F2F /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		5C8734AC200B273D00A22F2F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		5C8734AD200B273D00A22F2F /* TunerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunerViewController.swift; sourceTree = "<group>"; };
 		5CB5A0881DD1666A0028F54A /* ChordView+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChordView+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5CB5A0891DD1666A0028F54A /* ChordView+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChordView+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -93,8 +101,7 @@
 			children = (
 				5C34311A1DA5C538007690CE /* AppDelegate.swift */,
 				5C33018A1E610C8700781582 /* Extensions.swift */,
-				5C33018C1E610C9700781582 /* NSDate+CustomDate.swift */,
-				5CA8E1251E5BFC3D00CE3565 /* ViewControllers */,
+				5C8734A6200B273D00A22F2F /* ViewControllers */,
 				5CA8E1241E5BFC2E00CE3565 /* Views */,
 				5CA8E1261E5BFC5800CE3565 /* ChordController */,
 				5CD6D1FC1DCC4DB0004380F4 /* DataModel */,
@@ -117,6 +124,20 @@
 			name = OCChordView;
 			sourceTree = "<group>";
 		};
+		5C8734A6200B273D00A22F2F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C8734A7200B273D00A22F2F /* ChordsViewController.swift */,
+				5C8734A8200B273D00A22F2F /* MainViewController.swift */,
+				5C8734A9200B273D00A22F2F /* MetronomeViewController.swift */,
+				5C8734AA200B273D00A22F2F /* NoteListViewController.swift */,
+				5C8734AB200B273D00A22F2F /* NoteViewController.swift */,
+				5C8734AC200B273D00A22F2F /* PageViewController.swift */,
+				5C8734AD200B273D00A22F2F /* TunerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		5CA8E1241E5BFC2E00CE3565 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,15 +146,6 @@
 				5CD1F84F1DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		5CA8E1251E5BFC3D00CE3565 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				5C212DC01DBAE64200041E7F /* NoteListViewController.swift */,
-				5C34311C1DA5C538007690CE /* ChordsViewController.swift */,
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		5CA8E1261E5BFC5800CE3565 /* ChordController */ = {
@@ -303,16 +315,20 @@
 				5CB5A08A1DD1666A0028F54A /* ChordView+CoreDataClass.swift in Sources */,
 				5C1778CA1DC016230052DBCE /* lazyGuitarDataModel.xcdatamodeld in Sources */,
 				5C3E922E1E5CFDFA001D757E /* NoteTableViewCell.swift in Sources */,
+				5C8734B2200B273D00A22F2F /* NoteViewController.swift in Sources */,
+				5C8734B4200B273D00A22F2F /* TunerViewController.swift in Sources */,
 				5CD1F8501DBC6D8200BDFFB7 /* TitleCollectionHeaderView.swift in Sources */,
 				5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */,
 				5CB5A08B1DD1666A0028F54A /* ChordView+CoreDataProperties.swift in Sources */,
-				5C34311D1DA5C538007690CE /* ChordsViewController.swift in Sources */,
-				5C212DC11DBAE64200041E7F /* NoteListViewController.swift in Sources */,
 				5C3431321DA5C551007690CE /* OCChordView.m in Sources */,
 				5CD6D1F91DCC4DAA004380F4 /* Title+CoreDataProperties.swift in Sources */,
+				5C8734AF200B273D00A22F2F /* MainViewController.swift in Sources */,
+				5C8734B1200B273D00A22F2F /* NoteListViewController.swift in Sources */,
 				5CD6D1F81DCC4DAA004380F4 /* Title+CoreDataClass.swift in Sources */,
 				5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */,
-				5C33018D1E610C9700781582 /* NSDate+CustomDate.swift in Sources */,
+				5C8734B3200B273D00A22F2F /* PageViewController.swift in Sources */,
+				5C8734AE200B273D00A22F2F /* ChordsViewController.swift in Sources */,
+				5C8734B0200B273D00A22F2F /* MetronomeViewController.swift in Sources */,
 				5C33018B1E610C8700781582 /* Extensions.swift in Sources */,
 				5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */,
 			);

@@ -1,3 +1,4 @@
+/*
 import UIKit
 import CoreData
 
@@ -134,13 +135,14 @@ class NoteListViewController: UITableViewController {
         let managedObject = noteTitles[indexPath.row]
         
         if editingStyle == .delete {
+    
             self.moc.delete(managedObject)
             deleteNoteContents(atIndex: indexPath.row)
             loadData()
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             tableView.reloadData()
-            
+        
             guard !noteTitles.isEmpty else {
                 displayEmptyData(message: "There are no item to show!", on: self)
                 return
@@ -200,3 +202,4 @@ class NoteListViewController: UITableViewController {
         (alert.actions[1] as UIAlertAction).isEnabled = (tf.text != "")
     }
 }
+ */
