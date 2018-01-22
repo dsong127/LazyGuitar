@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lPg-ka-4Vv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5A4-uH-fbs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,15 +35,24 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-UX-FZN">
                                                     <rect key="frame" x="15" y="8" width="345" height="123.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jan. 02 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-Pp-qFc">
+                                                            <rect key="frame" x="8" y="94" width="150" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FUCK this man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-nB-BnP">
+                                                            <rect key="frame" x="8" y="20" width="223" height="66"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-nB-BnP">
-                                                    <rect key="frame" x="109" y="37" width="156" height="65"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FEa-UX-FZN" firstAttribute="top" secondItem="RS6-Y6-UvA" secondAttribute="top" constant="8" id="Nuu-yN-hvV"/>
@@ -86,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuU-j4-tOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776.8" y="369.26536731634184"/>
+            <point key="canvasLocation" x="2116" y="369.26536731634184"/>
         </scene>
         <!--Chords View Controller-->
         <scene sceneID="yE9-RC-351">
@@ -101,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B70-fc-R57">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TC0-Jm-1AY">
                                     <size key="itemSize" width="163" height="171"/>
@@ -110,53 +119,52 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChordCell" id="FWG-z7-7VV">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChordCell" id="FWG-z7-7VV" customClass="ChordCell" customModule="Lazy_Guitar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="163" height="171"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="163" height="171"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11z-Tx-Lj4" customClass="FretboardView" customModule="Fretboard">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="171"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="11z-Tx-Lj4" secondAttribute="bottom" id="Un9-qM-FgU"/>
+                                            <constraint firstItem="11z-Tx-Lj4" firstAttribute="leading" secondItem="FWG-z7-7VV" secondAttribute="leading" id="cdN-nA-h6S"/>
+                                            <constraint firstAttribute="trailing" secondItem="11z-Tx-Lj4" secondAttribute="trailing" id="h1R-tA-msW"/>
+                                            <constraint firstItem="11z-Tx-Lj4" firstAttribute="top" secondItem="FWG-z7-7VV" secondAttribute="top" id="znH-m3-uC5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="chordView" destination="11z-Tx-Lj4" id="PUn-MW-Yzs"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="B70-fc-R57" firstAttribute="top" secondItem="UTo-02-NRy" secondAttribute="bottom" id="Gwk-C6-Cqr"/>
-                            <constraint firstAttribute="trailing" secondItem="B70-fc-R57" secondAttribute="trailing" id="HCw-UA-Ydq"/>
-                            <constraint firstItem="BaO-ab-Wxm" firstAttribute="top" secondItem="B70-fc-R57" secondAttribute="bottom" id="aTL-GW-DnL"/>
-                            <constraint firstItem="B70-fc-R57" firstAttribute="leading" secondItem="aFN-Ep-cBw" secondAttribute="leading" id="kns-dd-1dN"/>
+                            <constraint firstAttribute="bottom" secondItem="B70-fc-R57" secondAttribute="bottom" id="IiQ-Zh-GEW"/>
+                            <constraint firstAttribute="trailing" secondItem="B70-fc-R57" secondAttribute="trailing" id="QDU-mp-iCI"/>
+                            <constraint firstItem="B70-fc-R57" firstAttribute="leading" secondItem="aFN-Ep-cBw" secondAttribute="leading" id="YRU-Ko-RXk"/>
+                            <constraint firstItem="B70-fc-R57" firstAttribute="top" secondItem="aFN-Ep-cBw" secondAttribute="top" id="btg-pe-UYW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chordCollectionView" destination="B70-fc-R57" id="U7c-x1-jHd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa1-T6-m3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2775" y="369"/>
+            <point key="canvasLocation" x="3112.5" y="367.5"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="smE-rW-uzB">
-            <objects>
-                <viewController id="lPg-ka-4Vv" customClass="PageViewController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XSo-Kc-Uax"/>
-                        <viewControllerLayoutGuide type="bottom" id="LJ9-cI-2Af"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h45-nV-BqC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uMR-on-CPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="246" y="334"/>
-        </scene>
-        <!--Metronome View Controller-->
+        <!--Item-->
         <scene sceneID="2fG-cQ-6VN">
             <objects>
-                <viewController storyboardIdentifier="MetronomeVC" id="COy-20-vec" customClass="MetronomeViewController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="COy-20-vec" customClass="MetronomeViewController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gwX-fM-vTU"/>
                         <viewControllerLayoutGuide type="bottom" id="0Oh-mR-Sje"/>
@@ -175,6 +183,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.85262101889999997" green="0.42218321559999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8dN-kh-4o6">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMX-qw-Ccq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,12 +210,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLD-rm-AOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="369"/>
+            <point key="canvasLocation" x="1312.8" y="368.36581709145429"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="U45-t7-i9l">
             <objects>
-                <viewController storyboardIdentifier="TunerVC" id="ZUZ-M4-01i" sceneMemberID="viewController">
+                <viewController id="ZUZ-M4-01i" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="goC-ZI-MSl"/>
                         <viewControllerLayoutGuide type="bottom" id="Rzv-bJ-TzV"/>
@@ -223,10 +234,32 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="e1y-8h-DvY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDt-x2-yNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976" y="1107"/>
+        </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="0JC-tl-W75">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5A4-uH-fbs" customClass="CustomTabBarController" customModule="Lazy_Guitar" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="72H-Ie-TbU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="COy-20-vec" kind="relationship" relationship="viewControllers" id="vW8-dl-HYF"/>
+                        <segue destination="SHS-iQ-MqQ" kind="relationship" relationship="viewControllers" id="7bl-XL-kAQ"/>
+                        <segue destination="ZUZ-M4-01i" kind="relationship" relationship="viewControllers" id="fRa-HY-xAO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyk-0D-KC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="349"/>
         </scene>
     </scenes>
 </document>

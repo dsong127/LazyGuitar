@@ -9,9 +9,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mainTableView.backgroundColor = .white
-        
+            
         // Setup TableView
         mainTableView.delegate = self
         mainTableView.dataSource = self
@@ -23,7 +21,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func createNewNote(_ sender: Any) {
-        performSegue(withIdentifier: "ViewNoteSegue", sender: nil)
+        performSegue(withIdentifier: "ViewChordsSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,6 +39,7 @@ extension MainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         mainTableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ViewChordsSegue", sender: nil)
     }
 }
 

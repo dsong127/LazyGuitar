@@ -1,6 +1,9 @@
 build/
 DerivedData/
 
+Gemfile
+Gemfile.lock
+
 ## Various settings
 *.pbxuser
 !default.pbxuser

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FB4EFC01809E9033CD14717232D0BBFE"
+               BlueprintIdentifier = "FE4550CB186B0F1B31B8E9CA2A619D8C"
                BuildableName = "Pods_Lazy_Guitar.framework"
                BlueprintName = "Pods-Lazy Guitar"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FB4EFC01809E9033CD14717232D0BBFE"
+            BlueprintIdentifier = "FE4550CB186B0F1B31B8E9CA2A619D8C"
             BuildableName = "Pods_Lazy_Guitar.framework"
             BlueprintName = "Pods-Lazy Guitar"
             ReferencedContainer = "container:Pods.xcodeproj">

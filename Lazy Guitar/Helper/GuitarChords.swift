@@ -3,7 +3,7 @@
  *  This class helps with generating chord views using OCChordView
  *
  *************/
-
+/*
 import Foundation
 
 class GuitarChords {
@@ -157,3 +157,4 @@ class GuitarChords {
     
     
 }
+ */

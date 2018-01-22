@@ -1,6 +1,6 @@
 {
   "name": "DropDown",
-  "version": "2",
+  "version": "2.3.1",
   "summary": "A Material Design drop down",
   "description": "This drop down is to overcome the loss of usability and user experience due to the UIPickerView. Material Design did a good job there so this drop down is very inspired by it. It appears at the right location instead of the bottom of the screen as default with UIPickerView and if possible, all options are displayed at once.",
   "homepage": "https://github.com/AssistoLab/DropDown",
@@ -21,7 +21,7 @@
   },
   "source": {
     "git": "https://github.com/AssistoLab/DropDown.git",
-    "tag": "v2"
+    "tag": "v2.3.1"
   },
   "source_files": [
     "DropDown/src",

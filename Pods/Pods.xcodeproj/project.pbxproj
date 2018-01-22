@@ -7,75 +7,186 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F78AD46C3EA95AF209EC78945087CB /* DropDown.swift */; };
-		098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D37211BC57875D653C48FA14B7290 /* DropDownCell.swift */; };
-		2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82676D8AB38A522947A8F6616A4349C3 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4E2625A9E4E77EF7F4DCD686D27DA9A /* DropDownCell.xib */; };
-		442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A28E18F4A2F1250D1761C93EA77567 /* DropDown+Appearance.swift */; };
-		46D087DF91C2B956242CB54CE394C6C5 /* Pods-Lazy Guitar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B75128E73AB88AE0C8B67D70FABB37D /* Pods-Lazy Guitar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AE7A3CE38A4BA61D8DA9D6D7549A74B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7464F803CE6D2F05834D41AA661483F /* DPDKeyboardListener.swift */; };
-		9DAA4939B8EADFC46CD301E82D16D378 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5510E266AEF0B40B48A80E3CB91544D3 /* DPDUIView+Extension.swift */; };
-		A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51896A0D47CD56B426530E2C5A69DD3C /* DPDConstants.swift */; };
-		AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF56E50E6281A0C18B36A351F6656909 /* DropDown-dummy.m */; };
-		C28800E1748028AFE0C5048688E97BFC /* Pods-Lazy Guitar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 109955BED3E8F9AF6E22AB6417E9ED76 /* Pods-Lazy Guitar-dummy.m */; };
+		02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE1B3947B99695D7DEEFBEB45D2791 /* DropDown.swift */; };
+		078D001FAEAF0FB4CE491CD1E3E01184 /* Fretboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4137747030471EDB1637ABCC8D2BFD1E /* Fretboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF921942ECBA1F3EACC66F8D520A0E /* DropDownCell.swift */; };
+		0DE9C5A07838D2CA4408A46B00DA0938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923FDC15EF25632F559B91F0B6B198D8 /* Foundation.framework */; };
+		14420EFE24183F56BA40AD44DBBF4185 /* MusicTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551269898925169E86BDA6516F41C154 /* MusicTheory.swift */; };
+		1691A071842D3735B9C5B45E8236ED79 /* CenterTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60E0D688AEAFE3E93D45400691F9B35 /* CenterTextLayer.swift */; };
+		1F15F10F3797BCA01F135D8FE66CAADE /* Fretboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FD6DDAA10A0F5572AA4A923B4A4019 /* Fretboard-dummy.m */; };
+		2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 974A958BF1816B70222B969EE292595B /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E9CD6F441E6B30601549781F5DB2D12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923FDC15EF25632F559B91F0B6B198D8 /* Foundation.framework */; };
+		2FEE9A0C6266D3E3AED92A8F872D0B53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923FDC15EF25632F559B91F0B6B198D8 /* Foundation.framework */; };
+		36C758E1DECF4D1DE29202B7FE44AA31 /* Fretboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08B5BA24FF4FF5451650B0CEE8251A /* Fretboard.swift */; };
+		37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538FF4711F09D095D3E7C8F2DE733D0B /* DropDownCell.xib */; };
+		42A189C068DC6EB47EBED1D36CA27EE3 /* MusicTheorySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ED31D8A3D67207631679F1F50115A5 /* MusicTheorySwift-dummy.m */; };
+		442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88665959180A19F44A712EED05CA9234 /* DropDown+Appearance.swift */; };
+		4ECBE13DA7CC822AEA64C283D64EF4E3 /* MusicTheorySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078F7887AA2474B4C22D6B6DAF3FDE42 /* MusicTheorySwift.framework */; };
+		584E630F12BB05D983E77A774D521E44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923FDC15EF25632F559B91F0B6B198D8 /* Foundation.framework */; };
+		647CDD8558855FF13BB2E33F30354FC5 /* FretboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA3E0EF937D9EF355F7F4DF3B08D44 /* FretboardView.swift */; };
+		74050DBA40D7B79D1126BB6F1BF132FC /* Pods-Lazy Guitar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B75128E73AB88AE0C8B67D70FABB37D /* Pods-Lazy Guitar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BB1A1C694440BD08DF6497457FD67A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923FDC15EF25632F559B91F0B6B198D8 /* Foundation.framework */; };
+		7D954DD9D0AF590EF85ABED6349368AE /* MusicTheorySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE91043C49CCC326D92F6C9C2940176 /* MusicTheorySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F81185481DB50982C4094AF91675D1E /* FretboardTuning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B448432DFBC2717983B0EA0F4B5071A /* FretboardTuning.swift */; };
+		9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F7FEEA6FC8AB9BBF93FF43A3FEAE9 /* DPDKeyboardListener.swift */; };
+		A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F70F85E52AC6E127289274E655FB4 /* DPDUIView+Extension.swift */; };
+		A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F30B83D9AB33D8F4BEA19C6A1DB711 /* DPDConstants.swift */; };
+		A87B376B713F8D01579463EFACA087CE /* CenterTextLayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 151E0882AD0BA22FF9C2A82AAC3B9009 /* CenterTextLayer-dummy.m */; };
+		AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3288005F861262391BC0B397E42CDE58 /* DropDown-dummy.m */; };
+		B79100180D0FFBDF36203B178C844E19 /* Pods-Lazy Guitar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 109955BED3E8F9AF6E22AB6417E9ED76 /* Pods-Lazy Guitar-dummy.m */; };
+		C6B5BFF8CAE2A2B06ADF5551C490CE89 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D02AF580BCDDF7A69F478CBCE4C3B4 /* Scale.swift */; };
+		C975AC4CCA793D1F7AAF1D1D641A6601 /* CenterTextLayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C72BAC3782F62ABBF1FE7DF50398D1B5 /* CenterTextLayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D876CF24DA4AB8637CC7C505B0E4D741 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94402F5B71F21CCCC9EB3ED75A87BD4A /* Chord.swift */; };
+		E33FE78FEC1C583B161F19601F8E4C8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC52F6935C7ED966F2C9911237848A6 /* Extensions.swift */; };
+		FD388014707351863A7FD381D1D8FBAD /* CenterTextLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A892F693FA79AD20D9DCEE551F63B3BC /* CenterTextLayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1D1D9B437C94778C9515DDDFA27FB01C /* PBXContainerItemProxy */ = {
+		082DBACBB22E1D99DFBBEB0869307DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97A91C6D09C0E750010FB952BEAC766B;
+			remoteInfo = MusicTheorySwift;
+		};
+		89D7719B97818E4B6A17BE69CD6E7070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B75197CD63D1B85E73F72A6DD5E45D6D;
+			remoteInfo = CenterTextLayer;
+		};
+		9B796D59263952B897AC94D9AD41C4CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B75197CD63D1B85E73F72A6DD5E45D6D;
+			remoteInfo = CenterTextLayer;
+		};
+		C9983F3CEF406F53FEBE81142479731F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97A91C6D09C0E750010FB952BEAC766B;
+			remoteInfo = MusicTheorySwift;
+		};
+		E1966DC002AB3F8819670EB7802AF99B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5168099F2EBFC99A707C03C9EADE01A5;
 			remoteInfo = DropDown;
 		};
+		F797AA852C6BBE3C0518C8D262C2474A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A53CF0ECA9CE8D7DD106ED9CA665B16;
+			remoteInfo = Fretboard;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0104D1F5BD2F2957EDD3BFD3671D6D90 /* Pods-Lazy Guitar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Lazy Guitar.modulemap"; sourceTree = "<group>"; };
-		07C801656D4C6735F57FC0FC28DF9B8E /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		06B33995BB46857AE5DC0462B3284337 /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
+		078F7887AA2474B4C22D6B6DAF3FDE42 /* MusicTheorySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicTheorySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC1C14D48C0E8AEABE3087A4E226532 /* Pods-Lazy Guitar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lazy Guitar-resources.sh"; sourceTree = "<group>"; };
-		0E2BA843E4CA854B1ED8958DD29727E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		109955BED3E8F9AF6E22AB6417E9ED76 /* Pods-Lazy Guitar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lazy Guitar-dummy.m"; sourceTree = "<group>"; };
-		1E616D8B073E2F5BE68D7719AA1D1B3F /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
-		21A28E18F4A2F1250D1761C93EA77567 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		11F30B83D9AB33D8F4BEA19C6A1DB711 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		12BBD99972F3209535DAE27F83C66DDB /* CenterTextLayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CenterTextLayer.xcconfig; sourceTree = "<group>"; };
+		151E0882AD0BA22FF9C2A82AAC3B9009 /* CenterTextLayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CenterTextLayer-dummy.m"; sourceTree = "<group>"; };
+		1BFC794BCF9C68048812A4EAC6DDA90A /* MusicTheorySwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MusicTheorySwift-prefix.pch"; sourceTree = "<group>"; };
+		1C1AE398B9A22AD487F5AC51F1495B54 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AF921942ECBA1F3EACC66F8D520A0E /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		2B9841F7283E604FE16416BB44449BC5 /* CenterTextLayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CenterTextLayer.modulemap; sourceTree = "<group>"; };
+		3288005F861262391BC0B397E42CDE58 /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		36A47C8A6EA5448FAEC97353E815937B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39FA3E0EF937D9EF355F7F4DF3B08D44 /* FretboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FretboardView.swift; path = Source/FretboardView.swift; sourceTree = "<group>"; };
+		4137747030471EDB1637ABCC8D2BFD1E /* Fretboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fretboard-umbrella.h"; sourceTree = "<group>"; };
 		4D2F703BB71F9D187147C76C8E5B94E2 /* Pods-Lazy Guitar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Lazy Guitar-acknowledgements.markdown"; sourceTree = "<group>"; };
-		51896A0D47CD56B426530E2C5A69DD3C /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		4E6F7FEEA6FC8AB9BBF93FF43A3FEAE9 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		538FF4711F09D095D3E7C8F2DE733D0B /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
 		53E9433C467C6C17E8B23BE82E0FD637 /* Pods-Lazy Guitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lazy Guitar.debug.xcconfig"; sourceTree = "<group>"; };
-		5510E266AEF0B40B48A80E3CB91544D3 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
-		594D37211BC57875D653C48FA14B7290 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
-		59D0D4EA81A89975D99D804E90E1698F /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		551269898925169E86BDA6516F41C154 /* MusicTheory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MusicTheory.swift; path = Source/MusicTheory.swift; sourceTree = "<group>"; };
+		5B448432DFBC2717983B0EA0F4B5071A /* FretboardTuning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FretboardTuning.swift; path = Source/FretboardTuning.swift; sourceTree = "<group>"; };
+		5F3F70F85E52AC6E127289274E655FB4 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		609A4FF5D6F47A25E120381EC40BED1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		684AB5BE091AE151CC007F70FB332F3C /* Pods-Lazy Guitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lazy Guitar.release.xcconfig"; sourceTree = "<group>"; };
-		82676D8AB38A522947A8F6616A4349C3 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		83AD969B0833D201CBE97A325CFAF195 /* CenterTextLayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CenterTextLayer-prefix.pch"; sourceTree = "<group>"; };
+		88665959180A19F44A712EED05CA9234 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		8B08B5BA24FF4FF5451650B0CEE8251A /* Fretboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fretboard.swift; path = Source/Fretboard.swift; sourceTree = "<group>"; };
 		8B75128E73AB88AE0C8B67D70FABB37D /* Pods-Lazy Guitar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Lazy Guitar-umbrella.h"; sourceTree = "<group>"; };
+		910773249DA31362734C5EDF7443F39B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		923FDC15EF25632F559B91F0B6B198D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		92ED4E0A23C9F5DFF9F56EB443BF93F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94402F5B71F21CCCC9EB3ED75A87BD4A /* Chord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chord.swift; path = Source/Chord.swift; sourceTree = "<group>"; };
+		974A958BF1816B70222B969EE292595B /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		99128DB573C376A64A67C2FF3E4CFD96 /* Fretboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fretboard.xcconfig; sourceTree = "<group>"; };
+		9D825090BD60083A946E0F0897C831B5 /* CenterTextLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CenterTextLayer.framework; path = CenterTextLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B430E4B8A636411BA4A40918C94206 /* Pods-Lazy Guitar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lazy Guitar-acknowledgements.plist"; sourceTree = "<group>"; };
 		A1E8ADC2ABCA9720DC64B82DD23E88FF /* Pods-Lazy Guitar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lazy Guitar-frameworks.sh"; sourceTree = "<group>"; };
-		A647C77372A76ACF5D512627C205B57F /* Pods_Lazy_Guitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Lazy_Guitar.framework; path = "Pods-Lazy Guitar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7464F803CE6D2F05834D41AA661483F /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DF56E50E6281A0C18B36A351F6656909 /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
-		E4E2625A9E4E77EF7F4DCD686D27DA9A /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
-		F414935D1870F9F2306A52FBEAA52178 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DropDown.modulemap; sourceTree = "<group>"; };
-		F8F78AD46C3EA95AF209EC78945087CB /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		A892F693FA79AD20D9DCEE551F63B3BC /* CenterTextLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CenterTextLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8FD6DDAA10A0F5572AA4A923B4A4019 /* Fretboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Fretboard-dummy.m"; sourceTree = "<group>"; };
+		AEE91043C49CCC326D92F6C9C2940176 /* MusicTheorySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MusicTheorySwift-umbrella.h"; sourceTree = "<group>"; };
+		B023E74CD7ED47BABF1BB61F5A230085 /* Pods_Lazy_Guitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Lazy_Guitar.framework; path = "Pods-Lazy Guitar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60E0D688AEAFE3E93D45400691F9B35 /* CenterTextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CenterTextLayer.swift; path = Source/CenterTextLayer.swift; sourceTree = "<group>"; };
+		B69B06D74C6DCF088D2B74D780F415EF /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		B9ED31D8A3D67207631679F1F50115A5 /* MusicTheorySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MusicTheorySwift-dummy.m"; sourceTree = "<group>"; };
+		BF9BC0AFCC18547FD08C8801F53F0CDC /* Fretboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fretboard-prefix.pch"; sourceTree = "<group>"; };
+		C08A5FBCF4DE84E522AE260B5C791B24 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DropDown.modulemap; sourceTree = "<group>"; };
+		C72BAC3782F62ABBF1FE7DF50398D1B5 /* CenterTextLayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CenterTextLayer-umbrella.h"; sourceTree = "<group>"; };
+		D8E9DC6B9B61B7A10506AC57BA02A548 /* MusicTheorySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MusicTheorySwift.modulemap; sourceTree = "<group>"; };
+		D8F0DEBD4F33DFE5752414A94FDB019F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9BE58E80B0A3F071029D752863A183F /* MusicTheorySwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MusicTheorySwift.xcconfig; sourceTree = "<group>"; };
+		DBCE1B3947B99695D7DEEFBEB45D2791 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		E19AED25311A9FD1570FA2B2C05D64A0 /* Fretboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Fretboard.modulemap; sourceTree = "<group>"; };
+		EBC52F6935C7ED966F2C9911237848A6 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
+		F63E4C69E0DC9A5EFD3D83C62A41A121 /* Fretboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Fretboard.framework; path = Fretboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D02AF580BCDDF7A69F478CBCE4C3B4 /* Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scale.swift; path = Source/Scale.swift; sourceTree = "<group>"; };
+		FC881DB2D1CAB7D8C3AB14F5C5AAD90E /* MusicTheorySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MusicTheorySwift.framework; path = MusicTheorySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		21579311C9FC333FF1A95F4121F55BBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD388014707351863A7FD381D1D8FBAD /* CenterTextLayer.framework in Frameworks */,
+				584E630F12BB05D983E77A774D521E44 /* Foundation.framework in Frameworks */,
+				4ECBE13DA7CC822AEA64C283D64EF4E3 /* MusicTheorySwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE28484C632D94C9779E4E74AE0BD29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DAA4939B8EADFC46CD301E82D16D378 /* Foundation.framework in Frameworks */,
+				2E9CD6F441E6B30601549781F5DB2D12 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A829DFDF85483161171B5B25090B48D /* Frameworks */ = {
+		40E4A4F28A462B54F9D5F42EF9F3D8C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AE7A3CE38A4BA61D8DA9D6D7549A74B /* Foundation.framework in Frameworks */,
+				0DE9C5A07838D2CA4408A46B00DA0938 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC905DDFACEAFF6D80025ECE100CB7F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FEE9A0C6266D3E3AED92A8F872D0B53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC929C74B93B9CC2C6C07DF6FEA5D0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB1A1C694440BD08DF6497457FD67A3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,64 +211,171 @@
 			path = "Target Support Files/Pods-Lazy Guitar";
 			sourceTree = "<group>";
 		};
-		4CED36F913E2A055D58D63F7F154578E /* DropDown */ = {
+		1178107E45FBC4C7698282EBD85F9DB1 /* Fretboard */ = {
 			isa = PBXGroup;
 			children = (
-				51896A0D47CD56B426530E2C5A69DD3C /* DPDConstants.swift */,
-				B7464F803CE6D2F05834D41AA661483F /* DPDKeyboardListener.swift */,
-				5510E266AEF0B40B48A80E3CB91544D3 /* DPDUIView+Extension.swift */,
-				F8F78AD46C3EA95AF209EC78945087CB /* DropDown.swift */,
-				21A28E18F4A2F1250D1761C93EA77567 /* DropDown+Appearance.swift */,
-				594D37211BC57875D653C48FA14B7290 /* DropDownCell.swift */,
-				F465362865FDD449A779C7B70F1B8D05 /* Resources */,
-				FA777870BE125FA6003F009FB920E7EB /* Support Files */,
+				EBC52F6935C7ED966F2C9911237848A6 /* Extensions.swift */,
+				8B08B5BA24FF4FF5451650B0CEE8251A /* Fretboard.swift */,
+				5B448432DFBC2717983B0EA0F4B5071A /* FretboardTuning.swift */,
+				39FA3E0EF937D9EF355F7F4DF3B08D44 /* FretboardView.swift */,
+				19254D7EEA5BE047D72CD8F742EA0482 /* Support Files */,
 			);
-			name = DropDown;
-			path = DropDown;
+			name = Fretboard;
+			path = Fretboard;
 			sourceTree = "<group>";
 		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+		141A3718B61E89AB7D7490C1FCA42402 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				6C845CAC54725FC66DFD7AB7EE7D51E0 /* CenterTextLayer */,
+				D5A2CB2A01C0FB4B5709E5453A3F9FAC /* DropDown */,
+				1178107E45FBC4C7698282EBD85F9DB1 /* Fretboard */,
+				2CE74C34B15739352A5FE253B956A52B /* MusicTheorySwift */,
 			);
-			name = iOS;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		19254D7EEA5BE047D72CD8F742EA0482 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E19AED25311A9FD1570FA2B2C05D64A0 /* Fretboard.modulemap */,
+				99128DB573C376A64A67C2FF3E4CFD96 /* Fretboard.xcconfig */,
+				A8FD6DDAA10A0F5572AA4A923B4A4019 /* Fretboard-dummy.m */,
+				BF9BC0AFCC18547FD08C8801F53F0CDC /* Fretboard-prefix.pch */,
+				4137747030471EDB1637ABCC8D2BFD1E /* Fretboard-umbrella.h */,
+				609A4FF5D6F47A25E120381EC40BED1E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Fretboard";
+			sourceTree = "<group>";
+		};
+		2CE74C34B15739352A5FE253B956A52B /* MusicTheorySwift */ = {
+			isa = PBXGroup;
+			children = (
+				94402F5B71F21CCCC9EB3ED75A87BD4A /* Chord.swift */,
+				551269898925169E86BDA6516F41C154 /* MusicTheory.swift */,
+				F7D02AF580BCDDF7A69F478CBCE4C3B4 /* Scale.swift */,
+				7CBB13C2D6045ADD73D2CCFB3104ECCE /* Support Files */,
+			);
+			name = MusicTheorySwift;
+			path = MusicTheorySwift;
+			sourceTree = "<group>";
+		};
+		5310F31B5DFF2644279E375A3484B386 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B9841F7283E604FE16416BB44449BC5 /* CenterTextLayer.modulemap */,
+				12BBD99972F3209535DAE27F83C66DDB /* CenterTextLayer.xcconfig */,
+				151E0882AD0BA22FF9C2A82AAC3B9009 /* CenterTextLayer-dummy.m */,
+				83AD969B0833D201CBE97A325CFAF195 /* CenterTextLayer-prefix.pch */,
+				C72BAC3782F62ABBF1FE7DF50398D1B5 /* CenterTextLayer-umbrella.h */,
+				36A47C8A6EA5448FAEC97353E815937B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CenterTextLayer";
+			sourceTree = "<group>";
+		};
+		6C845CAC54725FC66DFD7AB7EE7D51E0 /* CenterTextLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B60E0D688AEAFE3E93D45400691F9B35 /* CenterTextLayer.swift */,
+				5310F31B5DFF2644279E375A3484B386 /* Support Files */,
+			);
+			name = CenterTextLayer;
+			path = CenterTextLayer;
+			sourceTree = "<group>";
+		};
+		7A23D6DB6BFD24A859763EC40F8E408A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C08A5FBCF4DE84E522AE260B5C791B24 /* DropDown.modulemap */,
+				06B33995BB46857AE5DC0462B3284337 /* DropDown.xcconfig */,
+				3288005F861262391BC0B397E42CDE58 /* DropDown-dummy.m */,
+				B69B06D74C6DCF088D2B74D780F415EF /* DropDown-prefix.pch */,
+				974A958BF1816B70222B969EE292595B /* DropDown-umbrella.h */,
+				D8F0DEBD4F33DFE5752414A94FDB019F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
+			sourceTree = "<group>";
+		};
+		7CBB13C2D6045ADD73D2CCFB3104ECCE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				910773249DA31362734C5EDF7443F39B /* Info.plist */,
+				D8E9DC6B9B61B7A10506AC57BA02A548 /* MusicTheorySwift.modulemap */,
+				D9BE58E80B0A3F071029D752863A183F /* MusicTheorySwift.xcconfig */,
+				B9ED31D8A3D67207631679F1F50115A5 /* MusicTheorySwift-dummy.m */,
+				1BFC794BCF9C68048812A4EAC6DDA90A /* MusicTheorySwift-prefix.pch */,
+				AEE91043C49CCC326D92F6C9C2940176 /* MusicTheorySwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MusicTheorySwift";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				AF37559E98E039CD4708876B4A8B5553 /* Pods */,
-				89C9ED71B56704A9AEA6413D62CD4AA2 /* Products */,
+				A882C5F309549BD8C7AB3A5A15E6A0E8 /* Frameworks */,
+				141A3718B61E89AB7D7490C1FCA42402 /* Pods */,
+				B446E415459495293D72ED97DB33A05A /* Products */,
 				E286A4F281E15891A79FACD764475C16 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		89C9ED71B56704A9AEA6413D62CD4AA2 /* Products */ = {
+		93B9BAD380D74EF3B8CC5C71CB11FF0F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				59D0D4EA81A89975D99D804E90E1698F /* DropDown.framework */,
-				A647C77372A76ACF5D512627C205B57F /* Pods_Lazy_Guitar.framework */,
+				538FF4711F09D095D3E7C8F2DE733D0B /* DropDownCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A882C5F309549BD8C7AB3A5A15E6A0E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A892F693FA79AD20D9DCEE551F63B3BC /* CenterTextLayer.framework */,
+				078F7887AA2474B4C22D6B6DAF3FDE42 /* MusicTheorySwift.framework */,
+				D3245BC6D10AFB86A5D8A5E80236613B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B446E415459495293D72ED97DB33A05A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D825090BD60083A946E0F0897C831B5 /* CenterTextLayer.framework */,
+				1C1AE398B9A22AD487F5AC51F1495B54 /* DropDown.framework */,
+				F63E4C69E0DC9A5EFD3D83C62A41A121 /* Fretboard.framework */,
+				FC881DB2D1CAB7D8C3AB14F5C5AAD90E /* MusicTheorySwift.framework */,
+				B023E74CD7ED47BABF1BB61F5A230085 /* Pods_Lazy_Guitar.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF37559E98E039CD4708876B4A8B5553 /* Pods */ = {
+		D3245BC6D10AFB86A5D8A5E80236613B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4CED36F913E2A055D58D63F7F154578E /* DropDown */,
+				923FDC15EF25632F559B91F0B6B198D8 /* Foundation.framework */,
 			);
-			name = Pods;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		D5A2CB2A01C0FB4B5709E5453A3F9FAC /* DropDown */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				11F30B83D9AB33D8F4BEA19C6A1DB711 /* DPDConstants.swift */,
+				4E6F7FEEA6FC8AB9BBF93FF43A3FEAE9 /* DPDKeyboardListener.swift */,
+				5F3F70F85E52AC6E127289274E655FB4 /* DPDUIView+Extension.swift */,
+				DBCE1B3947B99695D7DEEFBEB45D2791 /* DropDown.swift */,
+				88665959180A19F44A712EED05CA9234 /* DropDown+Appearance.swift */,
+				26AF921942ECBA1F3EACC66F8D520A0E /* DropDownCell.swift */,
+				93B9BAD380D74EF3B8CC5C71CB11FF0F /* Resources */,
+				7A23D6DB6BFD24A859763EC40F8E408A /* Support Files */,
 			);
-			name = Frameworks;
+			name = DropDown;
+			path = DropDown;
 			sourceTree = "<group>";
 		};
 		E286A4F281E15891A79FACD764475C16 /* Targets Support Files */ = {
@@ -166,28 +384,6 @@
 				105A8809B8DB00DD2631B1BDAC0728DC /* Pods-Lazy Guitar */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F465362865FDD449A779C7B70F1B8D05 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E4E2625A9E4E77EF7F4DCD686D27DA9A /* DropDownCell.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		FA777870BE125FA6003F009FB920E7EB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F414935D1870F9F2306A52FBEAA52178 /* DropDown.modulemap */,
-				1E616D8B073E2F5BE68D7719AA1D1B3F /* DropDown.xcconfig */,
-				DF56E50E6281A0C18B36A351F6656909 /* DropDown-dummy.m */,
-				07C801656D4C6735F57FC0FC28DF9B8E /* DropDown-prefix.pch */,
-				82676D8AB38A522947A8F6616A4349C3 /* DropDown-umbrella.h */,
-				0E2BA843E4CA854B1ED8958DD29727E4 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DropDown";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +397,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C082E4C6191B410A3133012B56E42FD3 /* Headers */ = {
+		703E29F23FDC022620EFEA477ED7B6B3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D087DF91C2B956242CB54CE394C6C5 /* Pods-Lazy Guitar-umbrella.h in Headers */,
+				078D001FAEAF0FB4CE491CD1E3E01184 /* Fretboard-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5A43C72CB9243783DCDF79A8FC86E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C975AC4CCA793D1F7AAF1D1D641A6601 /* CenterTextLayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F580BA42EF4EBC3C26FD41873F9512D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74050DBA40D7B79D1126BB6F1BF132FC /* Pods-Lazy Guitar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CC97992DE4A39942016BB0F5D80288 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D954DD9D0AF590EF85ABED6349368AE /* MusicTheorySwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,25 +447,81 @@
 			);
 			name = DropDown;
 			productName = DropDown;
-			productReference = 59D0D4EA81A89975D99D804E90E1698F /* DropDown.framework */;
+			productReference = 1C1AE398B9A22AD487F5AC51F1495B54 /* DropDown.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FB4EFC01809E9033CD14717232D0BBFE /* Pods-Lazy Guitar */ = {
+		8A53CF0ECA9CE8D7DD106ED9CA665B16 /* Fretboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53FDCB478F175571AF1C1EBDA493A4E5 /* Build configuration list for PBXNativeTarget "Pods-Lazy Guitar" */;
+			buildConfigurationList = 29A16D873F13106DD34BC60CE5B5C592 /* Build configuration list for PBXNativeTarget "Fretboard" */;
 			buildPhases = (
-				D01C8D8FE6E2BBECCBBA38AB150F78C9 /* Sources */,
-				6A829DFDF85483161171B5B25090B48D /* Frameworks */,
-				C082E4C6191B410A3133012B56E42FD3 /* Headers */,
+				B97A7AAB62902095E9740EE5EBD08046 /* Sources */,
+				21579311C9FC333FF1A95F4121F55BBE /* Frameworks */,
+				703E29F23FDC022620EFEA477ED7B6B3 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4721E3E8C0A074AF2EB197790FAC565D /* PBXTargetDependency */,
+				959E43FAC5B1A09A8380B9F9ED9832C7 /* PBXTargetDependency */,
+				EDCBB0466F5A88F7B6EAE2120571A820 /* PBXTargetDependency */,
+			);
+			name = Fretboard;
+			productName = Fretboard;
+			productReference = F63E4C69E0DC9A5EFD3D83C62A41A121 /* Fretboard.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		97A91C6D09C0E750010FB952BEAC766B /* MusicTheorySwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0A78679D2AA1C82FF2D119999581417 /* Build configuration list for PBXNativeTarget "MusicTheorySwift" */;
+			buildPhases = (
+				1A58A41E37B93274D1EE28849372EE56 /* Sources */,
+				FC929C74B93B9CC2C6C07DF6FEA5D0AA /* Frameworks */,
+				A4CC97992DE4A39942016BB0F5D80288 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicTheorySwift;
+			productName = MusicTheorySwift;
+			productReference = FC881DB2D1CAB7D8C3AB14F5C5AAD90E /* MusicTheorySwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B75197CD63D1B85E73F72A6DD5E45D6D /* CenterTextLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86AE3E4F753DCED9D95E7A6DAB00001A /* Build configuration list for PBXNativeTarget "CenterTextLayer" */;
+			buildPhases = (
+				BF567A60DB066B2DBF8019FE3CC89256 /* Sources */,
+				40E4A4F28A462B54F9D5F42EF9F3D8C4 /* Frameworks */,
+				7A5A43C72CB9243783DCDF79A8FC86E3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CenterTextLayer;
+			productName = CenterTextLayer;
+			productReference = 9D825090BD60083A946E0F0897C831B5 /* CenterTextLayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FE4550CB186B0F1B31B8E9CA2A619D8C /* Pods-Lazy Guitar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D63BCFC6F2543C74BFB7E03004386BF /* Build configuration list for PBXNativeTarget "Pods-Lazy Guitar" */;
+			buildPhases = (
+				B38AAEA038476307DD2E47A03DE1639D /* Sources */,
+				FC905DDFACEAFF6D80025ECE100CB7F3 /* Frameworks */,
+				9F580BA42EF4EBC3C26FD41873F9512D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AED516944393D67D56DADFE7CBAE68E /* PBXTargetDependency */,
+				E27AFF07C04BAB77BD4A21BA4DBDF1F1 /* PBXTargetDependency */,
+				0FC6576825FC208927BAB910A19099F0 /* PBXTargetDependency */,
+				39D3CABC78D7670E85BFF28E0BE51109 /* PBXTargetDependency */,
 			);
 			name = "Pods-Lazy Guitar";
 			productName = "Pods-Lazy Guitar";
-			productReference = A647C77372A76ACF5D512627C205B57F /* Pods_Lazy_Guitar.framework */;
+			productReference = B023E74CD7ED47BABF1BB61F5A230085 /* Pods_Lazy_Guitar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +530,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -265,12 +541,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 89C9ED71B56704A9AEA6413D62CD4AA2 /* Products */;
+			productRefGroup = B446E415459495293D72ED97DB33A05A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				B75197CD63D1B85E73F72A6DD5E45D6D /* CenterTextLayer */,
 				5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */,
-				FB4EFC01809E9033CD14717232D0BBFE /* Pods-Lazy Guitar */,
+				8A53CF0ECA9CE8D7DD106ED9CA665B16 /* Fretboard */,
+				97A91C6D09C0E750010FB952BEAC766B /* MusicTheorySwift */,
+				FE4550CB186B0F1B31B8E9CA2A619D8C /* Pods-Lazy Guitar */,
 			);
 		};
 /* End PBXProject section */
@@ -287,11 +566,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D01C8D8FE6E2BBECCBBA38AB150F78C9 /* Sources */ = {
+		1A58A41E37B93274D1EE28849372EE56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28800E1748028AFE0C5048688E97BFC /* Pods-Lazy Guitar-dummy.m in Sources */,
+				D876CF24DA4AB8637CC7C505B0E4D741 /* Chord.swift in Sources */,
+				14420EFE24183F56BA40AD44DBBF4185 /* MusicTheory.swift in Sources */,
+				42A189C068DC6EB47EBED1D36CA27EE3 /* MusicTheorySwift-dummy.m in Sources */,
+				C6B5BFF8CAE2A2B06ADF5551C490CE89 /* Scale.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38AAEA038476307DD2E47A03DE1639D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B79100180D0FFBDF36203B178C844E19 /* Pods-Lazy Guitar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B97A7AAB62902095E9740EE5EBD08046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E33FE78FEC1C583B161F19601F8E4C8A /* Extensions.swift in Sources */,
+				1F15F10F3797BCA01F135D8FE66CAADE /* Fretboard-dummy.m in Sources */,
+				36C758E1DECF4D1DE29202B7FE44AA31 /* Fretboard.swift in Sources */,
+				7F81185481DB50982C4094AF91675D1E /* FretboardTuning.swift in Sources */,
+				647CDD8558855FF13BB2E33F30354FC5 /* FretboardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF567A60DB066B2DBF8019FE3CC89256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A87B376B713F8D01579463EFACA087CE /* CenterTextLayer-dummy.m in Sources */,
+				1691A071842D3735B9C5B45E8236ED79 /* CenterTextLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,243 +623,497 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4721E3E8C0A074AF2EB197790FAC565D /* PBXTargetDependency */ = {
+		0FC6576825FC208927BAB910A19099F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fretboard;
+			target = 8A53CF0ECA9CE8D7DD106ED9CA665B16 /* Fretboard */;
+			targetProxy = F797AA852C6BBE3C0518C8D262C2474A /* PBXContainerItemProxy */;
+		};
+		1AED516944393D67D56DADFE7CBAE68E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CenterTextLayer;
+			target = B75197CD63D1B85E73F72A6DD5E45D6D /* CenterTextLayer */;
+			targetProxy = 89D7719B97818E4B6A17BE69CD6E7070 /* PBXContainerItemProxy */;
+		};
+		39D3CABC78D7670E85BFF28E0BE51109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MusicTheorySwift;
+			target = 97A91C6D09C0E750010FB952BEAC766B /* MusicTheorySwift */;
+			targetProxy = C9983F3CEF406F53FEBE81142479731F /* PBXContainerItemProxy */;
+		};
+		959E43FAC5B1A09A8380B9F9ED9832C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CenterTextLayer;
+			target = B75197CD63D1B85E73F72A6DD5E45D6D /* CenterTextLayer */;
+			targetProxy = 9B796D59263952B897AC94D9AD41C4CB /* PBXContainerItemProxy */;
+		};
+		E27AFF07C04BAB77BD4A21BA4DBDF1F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DropDown;
 			target = 5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */;
-			targetProxy = 1D1D9B437C94778C9515DDDFA27FB01C /* PBXContainerItemProxy */;
+			targetProxy = E1966DC002AB3F8819670EB7802AF99B /* PBXContainerItemProxy */;
+		};
+		EDCBB0466F5A88F7B6EAE2120571A820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MusicTheorySwift;
+			target = 97A91C6D09C0E750010FB952BEAC766B /* MusicTheorySwift */;
+			targetProxy = 082DBACBB22E1D99DFBBEB0869307DE0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14BDAD806570132B20DC3F91135A3021 /* Release */ = {
+		04C1186E38878F400D4833758B319DD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E616D8B073E2F5BE68D7719AA1D1B3F /* DropDown.xcconfig */;
+			baseConfigurationReference = D9BE58E80B0A3F071029D752863A183F /* MusicTheorySwift.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MusicTheorySwift/MusicTheorySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MusicTheorySwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MusicTheorySwift/MusicTheorySwift.modulemap";
+				PRODUCT_NAME = MusicTheorySwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07BA0EC4B99503D61311EDBCB9CAA2CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684AB5BE091AE151CC007F70FB332F3C /* Pods-Lazy Guitar.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Lazy Guitar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lazy_Guitar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1207333B93979523B895F6AF2863814A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99128DB573C376A64A67C2FF3E4CFD96 /* Fretboard.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Fretboard/Fretboard-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Fretboard/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Fretboard/Fretboard.modulemap";
+				PRODUCT_NAME = Fretboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1238A2C742C66239E57299E37FA4FE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53E9433C467C6C17E8B23BE82E0FD637 /* Pods-Lazy Guitar.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Lazy Guitar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lazy_Guitar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1C3F30409149F7A5765B16C93233CB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B33995BB46857AE5DC0462B3284337 /* DropDown.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = DropDown;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+		229D6A8465E159A0DA40EDDADA014A77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12BBD99972F3209535DAE27F83C66DDB /* CenterTextLayer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CenterTextLayer/CenterTextLayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CenterTextLayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CenterTextLayer/CenterTextLayer.modulemap";
+				PRODUCT_NAME = CenterTextLayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6F9224530522DD3C735EC96CF142642E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		89742BB4FDDB4276CE75FF43CC156FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9BE58E80B0A3F071029D752863A183F /* MusicTheorySwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MusicTheorySwift/MusicTheorySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MusicTheorySwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MusicTheorySwift/MusicTheorySwift.modulemap";
+				PRODUCT_NAME = MusicTheorySwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91ECA41FC4AAEF27E3EEB9D13B7DC656 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12BBD99972F3209535DAE27F83C66DDB /* CenterTextLayer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CenterTextLayer/CenterTextLayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CenterTextLayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CenterTextLayer/CenterTextLayer.modulemap";
+				PRODUCT_NAME = CenterTextLayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		99F30834D5F0DE82F011B2005AC1533E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B33995BB46857AE5DC0462B3284337 /* DropDown.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		AE2E14BF21DE1DC4BF520F3848C182E2 /* Release */ = {
+		DE0F6770FE41F6BA29B3122CB0D82437 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 684AB5BE091AE151CC007F70FB332F3C /* Pods-Lazy Guitar.release.xcconfig */;
+			baseConfigurationReference = 99128DB573C376A64A67C2FF3E4CFD96 /* Fretboard.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Lazy Guitar/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Fretboard/Fretboard-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Fretboard/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Lazy_Guitar;
+				MODULEMAP_FILE = "Target Support Files/Fretboard/Fretboard.modulemap";
+				PRODUCT_NAME = Fretboard;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C0C40F759C84D0645E811DD3E66497ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53E9433C467C6C17E8B23BE82E0FD637 /* Pods-Lazy Guitar.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Lazy Guitar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Lazy_Guitar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D4C4F85BDB927B382B11B8F098703872 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E616D8B073E2F5BE68D7719AA1D1B3F /* DropDown.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29A16D873F13106DD34BC60CE5B5C592 /* Build configuration list for PBXNativeTarget "Fretboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1207333B93979523B895F6AF2863814A /* Debug */,
+				DE0F6770FE41F6BA29B3122CB0D82437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
-				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
+				6F9224530522DD3C735EC96CF142642E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -556,17 +1121,35 @@
 		45143614893062803984DA50AB90C1D5 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4C4F85BDB927B382B11B8F098703872 /* Debug */,
-				14BDAD806570132B20DC3F91135A3021 /* Release */,
+				99F30834D5F0DE82F011B2005AC1533E /* Debug */,
+				1C3F30409149F7A5765B16C93233CB54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53FDCB478F175571AF1C1EBDA493A4E5 /* Build configuration list for PBXNativeTarget "Pods-Lazy Guitar" */ = {
+		7D63BCFC6F2543C74BFB7E03004386BF /* Build configuration list for PBXNativeTarget "Pods-Lazy Guitar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0C40F759C84D0645E811DD3E66497ED /* Debug */,
-				AE2E14BF21DE1DC4BF520F3848C182E2 /* Release */,
+				1238A2C742C66239E57299E37FA4FE1E /* Debug */,
+				07BA0EC4B99503D61311EDBCB9CAA2CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86AE3E4F753DCED9D95E7A6DAB00001A /* Build configuration list for PBXNativeTarget "CenterTextLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91ECA41FC4AAEF27E3EEB9D13B7DC656 /* Debug */,
+				229D6A8465E159A0DA40EDDADA014A77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0A78679D2AA1C82FF2D119999581417 /* Build configuration list for PBXNativeTarget "MusicTheorySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89742BB4FDDB4276CE75FF43CC156FDD /* Debug */,
+				04C1186E38878F400D4833758B319DD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

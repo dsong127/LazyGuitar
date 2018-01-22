@@ -1,3 +1,5 @@
+import UIKit
+
 extension UITableView {
     
     func displayEmptyTableViewMessage(message: String, onVC viewController: UIViewController) {

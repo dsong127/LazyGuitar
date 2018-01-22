@@ -7,35 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C00802020152AB2001382C5 /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00801F20152AB2001382C5 /* ChordsViewController.swift */; };
 		5C008022201569CB001382C5 /* MetronomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C008021201569CB001382C5 /* MetronomeViewController.swift */; };
 		5C008024201569DA001382C5 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C008023201569DA001382C5 /* TunerViewController.swift */; };
-		5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */; };
+		5C00802620156D86001382C5 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00802520156D86001382C5 /* CustomTabBarController.swift */; };
+		5C00802A201572EC001382C5 /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C008029201572EC001382C5 /* ChordsViewController.swift */; };
+		5C00802C201574E2001382C5 /* ChordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00802B201574E2001382C5 /* ChordCell.swift */; };
+		5C00802E20157621001382C5 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00802D20157621001382C5 /* Chord.swift */; };
 		5C33018B1E610C8700781582 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33018A1E610C8700781582 /* Extensions.swift */; };
 		5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34311A1DA5C538007690CE /* AppDelegate.swift */; };
 		5C3431201DA5C538007690CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C34311E1DA5C538007690CE /* Main.storyboard */; };
 		5C3431251DA5C538007690CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431241DA5C538007690CE /* Assets.xcassets */; };
 		5C3431281DA5C538007690CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431261DA5C538007690CE /* LaunchScreen.storyboard */; };
-		5C3431321DA5C551007690CE /* OCChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3431311DA5C551007690CE /* OCChordView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5C53090F1DCC2B5E00E5C22C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */; };
 		5C8734AE200B273D00A22F2F /* chordvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A7200B273D00A22F2F /* chordvc.swift */; };
 		5C8734AF200B273D00A22F2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A8200B273D00A22F2F /* MainViewController.swift */; };
 		5C8734B1200B273D00A22F2F /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734AA200B273D00A22F2F /* NoteListViewController.swift */; };
 		5C8734B3200B273D00A22F2F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734AC200B273D00A22F2F /* PageViewController.swift */; };
-		5C9CB2C1201450C6004E4BE3 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C0201450C6004E4BE3 /* Chord.swift */; };
+		5C9CB2C1201450C6004E4BE3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C0201450C6004E4BE3 /* Note.swift */; };
 		5C9CB2C420152379004E4BE3 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C320152379004E4BE3 /* MainCell.swift */; };
 		5C9CB2C7201523CE004E4BE3 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */; };
 		5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */; };
-		C1012CC3715F6DBEF795DA99 /* Pods_Lazy_Guitar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE4BE4FB5CDE5CF700B4A0C /* Pods_Lazy_Guitar.framework */; };
+		DAD84460D27DC8E4CC7A0BFB /* Pods_Lazy_Guitar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7394047F8044B506AF519 /* Pods_Lazy_Guitar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1237468CFF4733C2BAE1C09D /* Pods-Lazy Guitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lazy Guitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.debug.xcconfig"; sourceTree = "<group>"; };
-		36896EE1967431B8F4976419 /* Pods-Lazy Guitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lazy Guitar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.release.xcconfig"; sourceTree = "<group>"; };
-		5C00801F20152AB2001382C5 /* ChordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
+		10E7394047F8044B506AF519 /* Pods_Lazy_Guitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lazy_Guitar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C008021201569CB001382C5 /* MetronomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewController.swift; sourceTree = "<group>"; };
 		5C008023201569DA001382C5 /* TunerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerViewController.swift; sourceTree = "<group>"; };
-		5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordViewCell.swift; sourceTree = "<group>"; };
+		5C00802520156D86001382C5 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		5C008029201572EC001382C5 /* ChordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
+		5C00802B201574E2001382C5 /* ChordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordCell.swift; sourceTree = "<group>"; };
+		5C00802D20157621001382C5 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 		5C33018A1E610C8700781582 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5C3431171DA5C538007690CE /* Lazy Guitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Guitar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C34311A1DA5C538007690CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,19 +45,17 @@
 		5C3431241DA5C538007690CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C3431271DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C3431291DA5C538007690CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C34312F1DA5C551007690CE /* Lazy Guitar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lazy Guitar-Bridging-Header.h"; sourceTree = "<group>"; };
-		5C3431301DA5C551007690CE /* OCChordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCChordView.h; sourceTree = "<group>"; };
-		5C3431311DA5C551007690CE /* OCChordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCChordView.m; sourceTree = "<group>"; };
 		5C53090E1DCC2B5E00E5C22C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		5C8734A7200B273D00A22F2F /* chordvc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chordvc.swift; sourceTree = "<group>"; };
 		5C8734A8200B273D00A22F2F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5C8734AA200B273D00A22F2F /* NoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		5C8734AC200B273D00A22F2F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		5C9CB2C0201450C6004E4BE3 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chord.swift; path = Model/Chord.swift; sourceTree = "<group>"; };
+		5C9CB2C0201450C6004E4BE3 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Note.swift; path = Model/Note.swift; sourceTree = "<group>"; };
 		5C9CB2C320152379004E4BE3 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarChords.swift; sourceTree = "<group>"; };
-		DDE4BE4FB5CDE5CF700B4A0C /* Pods_Lazy_Guitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lazy_Guitar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6653F3B3BFB8B4790BBF5167 /* Pods-Lazy Guitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lazy Guitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.debug.xcconfig"; sourceTree = "<group>"; };
+		FB46DE2A04C085F3B1CB9818 /* Pods-Lazy Guitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lazy Guitar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1012CC3715F6DBEF795DA99 /* Pods_Lazy_Guitar.framework in Frameworks */,
+				DAD84460D27DC8E4CC7A0BFB /* Pods_Lazy_Guitar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +75,8 @@
 			children = (
 				5C3431191DA5C538007690CE /* Lazy Guitar */,
 				5C3431181DA5C538007690CE /* Products */,
-				79A314E784E7E1E122790DE6 /* Pods */,
-				FB390DD465E3A2AEED82D3D6 /* Frameworks */,
+				AF17583A38EA93A95FA0C158 /* Pods */,
+				6B62A2ED2E7E2A16F69F99A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,19 +101,8 @@
 				5C3431261DA5C538007690CE /* LaunchScreen.storyboard */,
 				5C3431241DA5C538007690CE /* Assets.xcassets */,
 				5C3431291DA5C538007690CE /* Info.plist */,
-				5C3431331DA5C558007690CE /* OCChordView */,
 			);
 			path = "Lazy Guitar";
-			sourceTree = "<group>";
-		};
-		5C3431331DA5C558007690CE /* OCChordView */ = {
-			isa = PBXGroup;
-			children = (
-				5C3431301DA5C551007690CE /* OCChordView.h */,
-				5C3431311DA5C551007690CE /* OCChordView.m */,
-				5C34312F1DA5C551007690CE /* Lazy Guitar-Bridging-Header.h */,
-			);
-			name = OCChordView;
 			sourceTree = "<group>";
 		};
 		5C8734A6200B273D00A22F2F /* ViewControllers */ = {
@@ -125,7 +114,8 @@
 				5C008021201569CB001382C5 /* MetronomeViewController.swift */,
 				5C008023201569DA001382C5 /* TunerViewController.swift */,
 				5C8734AC200B273D00A22F2F /* PageViewController.swift */,
-				5C00801F20152AB2001382C5 /* ChordsViewController.swift */,
+				5C008029201572EC001382C5 /* ChordsViewController.swift */,
+				5C00802520156D86001382C5 /* CustomTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -133,7 +123,8 @@
 		5C9CB2C2201450D4004E4BE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5C9CB2C0201450C6004E4BE3 /* Chord.swift */,
+				5C9CB2C0201450C6004E4BE3 /* Note.swift */,
+				5C00802D20157621001382C5 /* Chord.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -149,7 +140,7 @@
 		5CA8E1241E5BFC2E00CE3565 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5C2B94181DAB189F00FEC60C /* ChordViewCell.swift */,
+				5C00802B201574E2001382C5 /* ChordCell.swift */,
 				5C9CB2C320152379004E4BE3 /* MainCell.swift */,
 			);
 			path = Views;
@@ -165,21 +156,21 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		79A314E784E7E1E122790DE6 /* Pods */ = {
+		6B62A2ED2E7E2A16F69F99A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1237468CFF4733C2BAE1C09D /* Pods-Lazy Guitar.debug.xcconfig */,
-				36896EE1967431B8F4976419 /* Pods-Lazy Guitar.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FB390DD465E3A2AEED82D3D6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DDE4BE4FB5CDE5CF700B4A0C /* Pods_Lazy_Guitar.framework */,
+				10E7394047F8044B506AF519 /* Pods_Lazy_Guitar.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF17583A38EA93A95FA0C158 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6653F3B3BFB8B4790BBF5167 /* Pods-Lazy Guitar.debug.xcconfig */,
+				FB46DE2A04C085F3B1CB9818 /* Pods-Lazy Guitar.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,12 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C34312C1DA5C538007690CE /* Build configuration list for PBXNativeTarget "Lazy Guitar" */;
 			buildPhases = (
-				CEF6D22D8090451FD68FC740 /* [CP] Check Pods Manifest.lock */,
+				17F8D178B65C3628A7EBE96D /* [CP] Check Pods Manifest.lock */,
 				5C3431131DA5C538007690CE /* Sources */,
 				5C3431141DA5C538007690CE /* Frameworks */,
 				5C3431151DA5C538007690CE /* Resources */,
-				281A53F806FA66D8E89A50E8 /* [CP] Embed Pods Frameworks */,
-				1B447896A07AFC4C433C74EE /* [CP] Copy Pods Resources */,
+				795646759E2141F74DBC797C /* [CP] Embed Pods Frameworks */,
+				820C1055AECFD343CD70B2FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Daniel Song";
 				TargetAttributes = {
 					5C3431161DA5C538007690CE = {
@@ -255,7 +246,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B447896A07AFC4C433C74EE /* [CP] Copy Pods Resources */ = {
+		17F8D178B65C3628A7EBE96D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lazy Guitar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		795646759E2141F74DBC797C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CenterTextLayer/CenterTextLayer.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/Fretboard/Fretboard.framework",
+				"${BUILT_PRODUCTS_DIR}/MusicTheorySwift/MusicTheorySwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CenterTextLayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fretboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MusicTheorySwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		820C1055AECFD343CD70B2FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,36 +303,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		281A53F806FA66D8E89A50E8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lazy Guitar/Pods-Lazy Guitar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CEF6D22D8090451FD68FC740 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -309,19 +312,20 @@
 			files = (
 				5C53090F1DCC2B5E00E5C22C /* CoreDataHelper.swift in Sources */,
 				5C008024201569DA001382C5 /* TunerViewController.swift in Sources */,
-				5C9CB2C1201450C6004E4BE3 /* Chord.swift in Sources */,
+				5C00802620156D86001382C5 /* CustomTabBarController.swift in Sources */,
+				5C9CB2C1201450C6004E4BE3 /* Note.swift in Sources */,
 				5C9CB2C420152379004E4BE3 /* MainCell.swift in Sources */,
-				5C2B94191DAB189F00FEC60C /* ChordViewCell.swift in Sources */,
-				5C3431321DA5C551007690CE /* OCChordView.m in Sources */,
 				5C8734AF200B273D00A22F2F /* MainViewController.swift in Sources */,
+				5C00802C201574E2001382C5 /* ChordCell.swift in Sources */,
+				5C00802A201572EC001382C5 /* ChordsViewController.swift in Sources */,
 				5C8734B1200B273D00A22F2F /* NoteListViewController.swift in Sources */,
+				5C00802E20157621001382C5 /* Chord.swift in Sources */,
 				5C008022201569CB001382C5 /* MetronomeViewController.swift in Sources */,
 				5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */,
 				5C8734B3200B273D00A22F2F /* PageViewController.swift in Sources */,
 				5C8734AE200B273D00A22F2F /* chordvc.swift in Sources */,
 				5C33018B1E610C8700781582 /* Extensions.swift in Sources */,
 				5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */,
-				5C00802020152AB2001382C5 /* ChordsViewController.swift in Sources */,
 				5C9CB2C7201523CE004E4BE3 /* ReusableViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,8 +461,9 @@
 		};
 		5C34312D1DA5C538007690CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1237468CFF4733C2BAE1C09D /* Pods-Lazy Guitar.debug.xcconfig */;
+			baseConfigurationReference = 6653F3B3BFB8B4790BBF5167 /* Pods-Lazy Guitar.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -468,7 +473,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.danielsongh.Lazy-Guitar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Lazy Guitar/Lazy Guitar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -477,8 +481,9 @@
 		};
 		5C34312E1DA5C538007690CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36896EE1967431B8F4976419 /* Pods-Lazy Guitar.release.xcconfig */;
+			baseConfigurationReference = FB46DE2A04C085F3B1CB9818 /* Pods-Lazy Guitar.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -488,7 +493,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.danielsongh.Lazy-Guitar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Lazy Guitar/Lazy Guitar-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};

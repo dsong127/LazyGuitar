@@ -151,23 +151,23 @@ public final class DropDown: UIView {
 	public var width: CGFloat? {
 		didSet { setNeedsUpdateConstraints() }
 	}
-    
-    /**
-     arrowIndication.x
-     
-     arrowIndication will be add to tableViewContainer when configured
-     */
-    public var arrowIndicationX: CGFloat? {
-        didSet{
-            if arrowIndicationX != nil {
-                tableViewContainer.addSubview(arrowIndication)
-                arrowIndication.tintColor = tableViewBackgroundColor
-                arrowIndication.frame = CGRect(origin: CGPoint(x: arrowIndicationX!, y: arrowIndication.frame.origin.y), size: arrowIndication.frame.size)
-            } else {
-                arrowIndication.removeFromSuperview()
-            }
-        }
-    }
+
+	/**
+	arrowIndication.x
+
+	arrowIndication will be add to tableViewContainer when configured
+	*/
+	public var arrowIndicationX: CGFloat? {
+		didSet {
+			if let arrowIndicationX = arrowIndicationX {
+				tableViewContainer.addSubview(arrowIndication)
+				arrowIndication.tintColor = tableViewBackgroundColor
+				arrowIndication.frame.origin.x = arrowIndicationX
+			} else {
+				arrowIndication.removeFromSuperview()
+			}
+		}
+	}
 
 	//MARK: Constraints
 	fileprivate var heightConstraint: NSLayoutConstraint!
@@ -191,6 +191,13 @@ public final class DropDown: UIView {
 	public override var backgroundColor: UIColor? {
 		get { return tableViewBackgroundColor }
 		set { tableViewBackgroundColor = newValue! }
+	}
+
+	/**
+	The color of the dimmed background (behind the drop down, covering the entire screen).
+	*/
+	public var dimmedBackgroundColor = UIColor.clear {
+		willSet { super.backgroundColor = newValue }
 	}
 
 	/**
@@ -490,7 +497,7 @@ private extension DropDown {
 	}
 
 	func setupUI() {
-		super.backgroundColor = .clear
+		super.backgroundColor = dimmedBackgroundColor
 
 		tableViewContainer.layer.masksToBounds = false
 		tableViewContainer.layer.cornerRadius = cornerRadius
@@ -534,8 +541,8 @@ extension DropDown {
 
 		tableView.isScrollEnabled = layout.offscreenHeight > 0
 
-		DispatchQueue.main.async { [unowned self] in
-			self.tableView.flashScrollIndicators()
+		DispatchQueue.main.async { [weak self] in
+			self?.tableView.flashScrollIndicators()
 		}
 
 		super.updateConstraints()
@@ -609,7 +616,7 @@ extension DropDown {
 		// We update the constraint to update the position
 		setNeedsUpdateConstraints()
 
-		let shadowPath = UIBezierPath(roundedRect: tableViewContainer.bounds, cornerRadius: DPDConstant.UI.CornerRadius)
+		let shadowPath = UIBezierPath(roundedRect: tableViewContainer.bounds, cornerRadius: cornerRadius)
 		tableViewContainer.layer.shadowPath = shadowPath.cgPath
 	}
 
