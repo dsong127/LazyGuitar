@@ -4,7 +4,6 @@
  *
  *************/
 
-
 import Foundation
 
 class GuitarChords {
@@ -15,7 +14,6 @@ class GuitarChords {
         
         cv = OCChordView(frame: CGRect(x: 0, y: 0, width: 147, height: 152))
         
-            
         switch chord {
         // C Chords
         case "C":
