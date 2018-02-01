@@ -1,36 +1,21 @@
 PODS:
-  - CenterTextLayer (0.0.1)
   - DropDown (2.3.1)
-  - Fretboard (0.0.1):
-    - CenterTextLayer
-    - MusicTheorySwift
-  - MusicTheorySwift (0.1)
 
 DEPENDENCIES:
   - DropDown (from `https://github.com/AssistoLab/DropDown.git`)
-  - Fretboard (from `https://github.com/danielsongh/Fretboard.git`, commit `4cd9072948b713a44a58498cc976b7033cbbe8b5`)
 
 EXTERNAL SOURCES:
   DropDown:
     :git: https://github.com/AssistoLab/DropDown.git
-  Fretboard:
-    :commit: 4cd9072948b713a44a58498cc976b7033cbbe8b5
-    :git: https://github.com/danielsongh/Fretboard.git
 
 CHECKOUT OPTIONS:
   DropDown:
     :commit: 9926499d5da8541caaa101a3e280b2e40a1a2210
     :git: https://github.com/AssistoLab/DropDown.git
-  Fretboard:
-    :commit: 4cd9072948b713a44a58498cc976b7033cbbe8b5
-    :git: https://github.com/danielsongh/Fretboard.git
 
 SPEC CHECKSUMS:
-  CenterTextLayer: 8ba737f794769c3bd0e3f28706b9edf6f787fbb7
   DropDown: 64030b8bc3be37372e97b28e090466fc8e4610fe
-  Fretboard: d34cfa28b66bb43b27233f7f3f071f3580c3c0cf
-  MusicTheorySwift: 9e7f1bf66904190f82b34b9d36e09e296dde438b
 
-PODFILE CHECKSUM: d2cda5a57863b5037342e2b3dd45cd5f18359d62
+PODFILE CHECKSUM: 0cd01c5012767d2a3263bfb02657c4e295ce2eae
 
 COCOAPODS: 1.4.0

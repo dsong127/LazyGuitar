@@ -1,6 +1,0 @@
-framework module Fretboard {
-  umbrella header "Fretboard-umbrella.h"
-
-  export *
-  module * { export * }
-}
