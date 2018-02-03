@@ -56,7 +56,7 @@
 		5CB3555A201AD5E30011EB1D /* ChordChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordChartView.swift; sourceTree = "<group>"; };
 		5CB8A37220214DBB0048D5DE /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarChords.swift; sourceTree = "<group>"; };
-		5CF67A94201D888500A0FE6D /* NotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataSource.swift; sourceTree = "<group>"; };
+		5CF67A94201D888500A0FE6D /* NotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesDataSource.swift; path = Model/NotesDataSource.swift; sourceTree = "<group>"; };
 		62FBE75BAB5CBDF8EA83D5C5 /* Pods-LazyGuitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.debug.xcconfig"; sourceTree = "<group>"; };
 		AA9D160F288A5D4AAE6412AA /* Pods-LazyGuitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.release.xcconfig"; sourceTree = "<group>"; };
 		F9B343ED6F37B290C5F2DBA6 /* Pods_LazyGuitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyGuitar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +100,7 @@
 				5C8734A6200B273D00A22F2F /* ViewControllers */,
 				5CA8E1241E5BFC2E00CE3565 /* Views */,
 				5C9CB2C2201450D4004E4BE3 /* Model */,
+				5C36E768202656DA0007C488 /* Controller */,
 				5CA8E1261E5BFC5800CE3565 /* Helper */,
 				5C34311E1DA5C538007690CE /* Main.storyboard */,
 				5C3431261DA5C538007690CE /* LaunchScreen.storyboard */,
@@ -107,6 +108,15 @@
 				5C3431291DA5C538007690CE /* Info.plist */,
 			);
 			path = LazyGuitar;
+			sourceTree = "<group>";
+		};
+		5C36E768202656DA0007C488 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C265026201EE5A7000CE959 /* StorageController.swift */,
+				5C265028201EE75D000CE959 /* StateController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5C8734A6200B273D00A22F2F /* ViewControllers */ = {
@@ -126,8 +136,6 @@
 			children = (
 				5C9CB2C0201450C6004E4BE3 /* Note.swift */,
 				5CF67A94201D888500A0FE6D /* NotesDataSource.swift */,
-				5C265026201EE5A7000CE959 /* StorageController.swift */,
-				5C265028201EE75D000CE959 /* StateController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
