@@ -45,7 +45,7 @@
 		5C3431241DA5C538007690CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C3431271DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C3431291DA5C538007690CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C36E769202664AC0007C488 /* ChordsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsDataSource.swift; sourceTree = "<group>"; };
+		5C36E769202664AC0007C488 /* ChordsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChordsDataSource.swift; path = Model/ChordsDataSource.swift; sourceTree = "<group>"; };
 		5C72AC7E2019879400CE2E4E /* LazyGuitar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LazyGuitar-Bridging-Header.h"; sourceTree = "<group>"; };
 		5C72AC7F2019879500CE2E4E /* OCChordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCChordView.m; sourceTree = "<group>"; };
 		5C72AC802019879500CE2E4E /* OCChordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCChordView.h; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		5C9F3DBD201D75AA0080D45A /* SegueHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerProtocol.swift; sourceTree = "<group>"; };
 		5CB3555A201AD5E30011EB1D /* ChordChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordChartView.swift; sourceTree = "<group>"; };
-		5CBF6ECD2030E380004A233C /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
+		5CBF6ECD2030E380004A233C /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chord.swift; path = Model/Chord.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarChords.swift; sourceTree = "<group>"; };
 		5CF67A94201D888500A0FE6D /* NotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesDataSource.swift; path = Model/NotesDataSource.swift; sourceTree = "<group>"; };
 		62FBE75BAB5CBDF8EA83D5C5 /* Pods-LazyGuitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.debug.xcconfig"; sourceTree = "<group>"; };
