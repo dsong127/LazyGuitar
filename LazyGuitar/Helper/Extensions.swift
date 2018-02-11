@@ -2,11 +2,11 @@ import UIKit
 
 extension UITableView {
     
-    func displayEmptyTableViewMessage(message: String) {
+    func displayEmptyTableViewMessage() {
         
         let frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height)
         let messageLabel = UILabel(frame: frame)
-        messageLabel.text = message
+        messageLabel.text = "There are no notes to show 😩\n Use the button at the top to create one!"
         messageLabel.textColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = .center;
@@ -26,6 +26,7 @@ extension UITableView {
 }
 
 extension UICollectionView {
+    
     func dequeReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not deque with identifier: \(T.reuseIdentifier)")

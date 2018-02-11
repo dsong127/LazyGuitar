@@ -81,7 +81,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Geb-bJ-B1b">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="9LK-4z-ApT">
+                        <barButtonItem key="leftBarButtonItem" id="9LK-4z-ApT">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fgK-uB-dJb">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -94,7 +94,7 @@
                                 <segue destination="ZUZ-M4-01i" kind="presentation" id="Ykg-M3-xKY"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="6mU-6E-nyB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="6mU-6E-nyB">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="createNewNote:" destination="KMi-bQ-9LK" id="azW-zd-fUK"/>
@@ -104,7 +104,7 @@
                     <connections>
                         <outlet property="mainTableView" destination="wGA-gd-K1w" id="Yh1-Ah-u5h"/>
                         <segue destination="OjH-hY-eFq" kind="show" identifier="ViewNoteSegue" id="5g5-L0-DQB"/>
-                        <segue destination="OjH-hY-eFq" kind="show" identifier="NewNoteSegue" id="Zdc-NA-ptt"/>
+                        <segue destination="OjH-hY-eFq" kind="show" identifier="NewNoteSegue" id="Yuy-J7-7V8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuU-j4-tOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa1-T6-m3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3249" y="349"/>
+            <point key="canvasLocation" x="3428" y="173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K2J-7Q-C2R">
@@ -247,10 +247,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDt-x2-yNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2350" y="1272"/>
+            <point key="canvasLocation" x="1815" y="1285"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zdc-NA-ptt"/>
+        <segue reference="Yuy-J7-7V8"/>
     </inferredMetricsTieBreakers>
 </document>

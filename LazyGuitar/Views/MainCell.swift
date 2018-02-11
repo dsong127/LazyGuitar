@@ -9,7 +9,6 @@ class MainCell: UITableViewCell {
     
     var model: Model? {
         didSet {
-            print("hello")
             guard let model = model else { return }
             nameLabel.text = model.noteName
             dateLabel.text = model.dateCreated
@@ -33,7 +32,7 @@ class MainCell: UITableViewCell {
 extension MainCell {
     struct Model {
         var noteName: String
-        var chords: [String]
+        var chords: [Chord]
         var dateCreated: String
     
         init(note: Note, index: Int){

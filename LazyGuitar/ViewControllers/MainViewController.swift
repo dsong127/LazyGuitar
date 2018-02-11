@@ -6,6 +6,7 @@ class MainViewController: UIViewController {
     
     fileprivate var dataSource: NotesDataSource!
     var stateController: StateController!
+    var note: Note!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,12 @@ class MainViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {(action:UIAlertAction) -> Void in
             let textField = alert.textFields!.first
             guard !(textField?.text == "") else { return }
-            self.performSegue(withIdentifier: "CreateNoteSegue", sender: nil)
+            
+            let dateCreated = Date()
+            self.note = Note(noteName: textField!.text!, chords: [], dateCreated: dateCreated)
+            self.stateController.add(self.note)
+        
+            self.performSegue(withIdentifier: "NewNoteSegue", sender: nil)
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (action: UIAlertAction) -> Void in }
@@ -41,11 +47,10 @@ class MainViewController: UIViewController {
         alert.addTextField(configurationHandler: {(textField: UITextField) in
             textField.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
         })
+        
         alert.view.tintColor = UIColor.black
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
-        
-        (alert.actions[0] as UIAlertAction).isEnabled = false
         
         present(alert, animated: true, completion: nil)
     }
@@ -62,7 +67,7 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
-        case "CreateNoteSegue":
+        case "NewNoteSegue":
             if let chordsVC = segue.destination as? ChordsViewController {
                 chordsVC.stateController = stateController
                 chordsVC.chordsData = []
@@ -87,7 +92,7 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         mainTableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "ViewNoteSegue", sender: nil)

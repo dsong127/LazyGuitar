@@ -2,7 +2,7 @@ import Foundation
 
 struct Note {
     var noteName: String
-    var chords: [String]
+    var chords: [Chord]
     var dateCreated: Date
 }
 
@@ -17,7 +17,7 @@ extension Note {
     
     init(plist: [String : AnyObject]) {
         noteName = plist["noteName"] as! String
-        chords = plist["chords"] as! [String]
+        chords = [(plist["chords"] as! Chord)]
         dateCreated = plist["dateCreated"] as! Date
     }
 }

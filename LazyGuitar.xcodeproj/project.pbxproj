@@ -18,6 +18,7 @@
 		5C3431201DA5C538007690CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C34311E1DA5C538007690CE /* Main.storyboard */; };
 		5C3431251DA5C538007690CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431241DA5C538007690CE /* Assets.xcassets */; };
 		5C3431281DA5C538007690CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3431261DA5C538007690CE /* LaunchScreen.storyboard */; };
+		5C36E76A202664AC0007C488 /* ChordsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E769202664AC0007C488 /* ChordsDataSource.swift */; };
 		5C72AC812019879600CE2E4E /* OCChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C72AC7F2019879500CE2E4E /* OCChordView.m */; };
 		5C8734AF200B273D00A22F2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A8200B273D00A22F2F /* MainViewController.swift */; };
 		5C8734B3200B273D00A22F2F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734AC200B273D00A22F2F /* PageViewController.swift */; };
@@ -26,7 +27,7 @@
 		5C9CB2C7201523CE004E4BE3 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */; };
 		5C9F3DBE201D75AA0080D45A /* SegueHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F3DBD201D75AA0080D45A /* SegueHandlerProtocol.swift */; };
 		5CB3555B201AD5E30011EB1D /* ChordChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3555A201AD5E30011EB1D /* ChordChartView.swift */; };
-		5CB8A37320214DBB0048D5DE /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8A37220214DBB0048D5DE /* CreateNoteViewController.swift */; };
+		5CBF6ECE2030E380004A233C /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF6ECD2030E380004A233C /* Chord.swift */; };
 		5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */; };
 		5CF67A95201D888500A0FE6D /* NotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF67A94201D888500A0FE6D /* NotesDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		5C3431241DA5C538007690CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C3431271DA5C538007690CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C3431291DA5C538007690CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C36E769202664AC0007C488 /* ChordsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsDataSource.swift; sourceTree = "<group>"; };
 		5C72AC7E2019879400CE2E4E /* LazyGuitar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LazyGuitar-Bridging-Header.h"; sourceTree = "<group>"; };
 		5C72AC7F2019879500CE2E4E /* OCChordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCChordView.m; sourceTree = "<group>"; };
 		5C72AC802019879500CE2E4E /* OCChordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCChordView.h; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		5C9F3DBD201D75AA0080D45A /* SegueHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerProtocol.swift; sourceTree = "<group>"; };
 		5CB3555A201AD5E30011EB1D /* ChordChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordChartView.swift; sourceTree = "<group>"; };
-		5CB8A37220214DBB0048D5DE /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		5CBF6ECD2030E380004A233C /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarChords.swift; sourceTree = "<group>"; };
 		5CF67A94201D888500A0FE6D /* NotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesDataSource.swift; path = Model/NotesDataSource.swift; sourceTree = "<group>"; };
 		62FBE75BAB5CBDF8EA83D5C5 /* Pods-LazyGuitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +127,6 @@
 				5C008023201569DA001382C5 /* TunerViewController.swift */,
 				5C8734AC200B273D00A22F2F /* PageViewController.swift */,
 				5C8734A8200B273D00A22F2F /* MainViewController.swift */,
-				5CB8A37220214DBB0048D5DE /* CreateNoteViewController.swift */,
 				5C008029201572EC001382C5 /* ChordsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -135,7 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				5C9CB2C0201450C6004E4BE3 /* Note.swift */,
+				5CBF6ECD2030E380004A233C /* Chord.swift */,
 				5CF67A94201D888500A0FE6D /* NotesDataSource.swift */,
+				5C36E769202664AC0007C488 /* ChordsDataSource.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -319,11 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBF6ECE2030E380004A233C /* Chord.swift in Sources */,
 				5C008024201569DA001382C5 /* TunerViewController.swift in Sources */,
 				5C9CB2C1201450C6004E4BE3 /* Note.swift in Sources */,
 				5C9F3DBE201D75AA0080D45A /* SegueHandlerProtocol.swift in Sources */,
 				5CF67A95201D888500A0FE6D /* NotesDataSource.swift in Sources */,
-				5CB8A37320214DBB0048D5DE /* CreateNoteViewController.swift in Sources */,
 				5C9CB2C420152379004E4BE3 /* MainCell.swift in Sources */,
 				5C8734AF200B273D00A22F2F /* MainViewController.swift in Sources */,
 				5C00802C201574E2001382C5 /* ChordCell.swift in Sources */,
@@ -337,6 +340,7 @@
 				5C33018B1E610C8700781582 /* Extensions.swift in Sources */,
 				5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */,
 				5C9CB2C7201523CE004E4BE3 /* ReusableViewProtocol.swift in Sources */,
+				5C36E76A202664AC0007C488 /* ChordsDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +489,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LazyGuitar/Helper/LazyGuitar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -505,7 +509,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.danielsongh.LazyGuitar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LazyGuitar/Helper/LazyGuitar-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

@@ -3,8 +3,23 @@ import UIKit
 class ChordCell: UICollectionViewCell {
     
     @IBOutlet weak var chordView: OCChordView!
-    
     let guitarChords = GuitarChord()
+    
+    var model: Model? {
+        didSet {
+            guard let model = model else { return }
+
+            let cellFrame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+            let chordImage = model.chordImage(frame: cellFrame, chordName: model.chordName)
+            
+            chordImage.chordArray = model.chordArray
+            chordImage.fingerArray = model.fingerArray
+            chordImage.tuningArray = model.tuningArray
+            
+            chordView.addSubview(chordImage)
+        }
+    }
+
     /*
     override var isSelected: Bool{
         didSet{
@@ -20,6 +35,27 @@ class ChordCell: UICollectionViewCell {
     }
 }
 
+extension ChordCell {
+    struct Model {
+        var chordName: String
+        var chordArray: [String]
+        var tuningArray: [String]
+        var fingerArray: [String]
+        
+        func chordImage(frame: CGRect, chordName: String) -> OCChordView {
+            let guitar = GuitarChord()
+            return guitar.generateChordView(frame: frame, chord: chordName)
+        }
+        
+        init(chord: Chord, index: Int){
+            chordName = chord.chordName
+            chordArray = chord.chordArray
+            tuningArray = chord.tuningArray
+            fingerArray = chord.fingerArray
+        }
+    }
+}
+
 extension ChordCell: ReusableView { }
 
-extension ChordCell: NibLoadableView{ }
+
