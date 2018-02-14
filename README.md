@@ -1,7 +1,7 @@
 # LazyGuitar
 
 
-LazyGuitar is an app on the App Store tha thelps users look up guitar chords.
+LazyGuitar is an app on the App Store that helps users learn guitar chords.
 
 # Features
 Add notes by using the plus button
