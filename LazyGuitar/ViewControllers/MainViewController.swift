@@ -70,14 +70,16 @@ class MainViewController: UIViewController {
         case "NewNoteSegue":
             if let chordsVC = segue.destination as? ChordsViewController {
                 chordsVC.stateController = stateController
-                chordsVC.chordsData = []
+                // Needs empty datasource
             }
         case "ViewNoteSegue":
             if let chordsVC = segue.destination as? ChordsViewController,
                 let selectedIndex = mainTableView.indexPathForSelectedRow {
                 let note = dataSource.notes[selectedIndex.row]
-                chordsVC.chordsData = note.chords
+                chordsVC.note = note
                 chordsVC.stateController = stateController
+            } else {
+                print("Unable to get destination or index path")
             }
         default:
             print("No matching segue")
@@ -94,7 +96,7 @@ extension MainViewController: UITableViewDelegate {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        mainTableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "ViewNoteSegue", sender: nil)
+        mainTableView.deselectRow(at: indexPath, animated: true)
     }
 }

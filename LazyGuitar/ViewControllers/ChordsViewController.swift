@@ -9,7 +9,7 @@ class ChordsViewController: UIViewController {
     
     var stateController: StateController!
     fileprivate var chordsDataSource: ChordsDataSource!
-    var chord: Chord!
+    var note: Note!
     
     let keyDropDown = DropDown()
     let variationDropDown = DropDown()
@@ -18,14 +18,13 @@ class ChordsViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
-        
+        navigationItem.title = note.noteName
         chordCollectionView.delegate = self
         chordCollectionView.dataSource = chordsDataSource
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-  
     }
     
 }

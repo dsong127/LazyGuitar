@@ -34,7 +34,7 @@ extension NotesDataSource: UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
             tableView.endUpdates()
             
-            stateController.update(notes[indexPath.row])
+            //stateController.update(notes[indexPath.row])
             
             if notes.isEmpty {
                 tableView.displayEmptyTableViewMessage()
