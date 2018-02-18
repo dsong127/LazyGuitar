@@ -15,10 +15,6 @@ class MainViewController: UIViewController {
         mainTableView.delegate = self
         mainTableView.estimatedRowHeight = UITableViewAutomaticDimension
         mainTableView.rowHeight = UITableViewAutomaticDimension
-        
-        // Remove line at the bottom of navigation bar
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,7 +66,9 @@ class MainViewController: UIViewController {
         case "NewNoteSegue":
             if let chordsVC = segue.destination as? ChordsViewController {
                 chordsVC.stateController = stateController
-                // Needs empty datasource
+                let note = dataSource.notes[0]
+                chordsVC.note = note
+                chordsVC.stateController = stateController
             }
         case "ViewNoteSegue":
             if let chordsVC = segue.destination as? ChordsViewController,

@@ -16,11 +16,19 @@ class ChordsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
+        
         navigationItem.title = note.noteName
+        
         chordCollectionView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    
+        chordsDataSource = ChordsDataSource(chords: note.chords)
         chordCollectionView.dataSource = chordsDataSource
+        chordCollectionView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {

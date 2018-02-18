@@ -25,7 +25,6 @@
 		5C9CB2C1201450C6004E4BE3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C0201450C6004E4BE3 /* Note.swift */; };
 		5C9CB2C420152379004E4BE3 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C320152379004E4BE3 /* MainCell.swift */; };
 		5C9CB2C7201523CE004E4BE3 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */; };
-		5C9F3DBE201D75AA0080D45A /* SegueHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F3DBD201D75AA0080D45A /* SegueHandlerProtocol.swift */; };
 		5CB3555B201AD5E30011EB1D /* ChordChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3555A201AD5E30011EB1D /* ChordChartView.swift */; };
 		5CBF6ECE2030E380004A233C /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF6ECD2030E380004A233C /* Chord.swift */; };
 		5CD32D1F1DB2EF6100D9E6A9 /* GuitarChords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */; };
@@ -54,7 +53,6 @@
 		5C9CB2C0201450C6004E4BE3 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Note.swift; path = Model/Note.swift; sourceTree = "<group>"; };
 		5C9CB2C320152379004E4BE3 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
-		5C9F3DBD201D75AA0080D45A /* SegueHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerProtocol.swift; sourceTree = "<group>"; };
 		5CB3555A201AD5E30011EB1D /* ChordChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordChartView.swift; sourceTree = "<group>"; };
 		5CBF6ECD2030E380004A233C /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chord.swift; path = Model/Chord.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* GuitarChords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuitarChords.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */,
-				5C9F3DBD201D75AA0080D45A /* SegueHandlerProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 				5CBF6ECE2030E380004A233C /* Chord.swift in Sources */,
 				5C008024201569DA001382C5 /* TunerViewController.swift in Sources */,
 				5C9CB2C1201450C6004E4BE3 /* Note.swift in Sources */,
-				5C9F3DBE201D75AA0080D45A /* SegueHandlerProtocol.swift in Sources */,
 				5CF67A95201D888500A0FE6D /* NotesDataSource.swift in Sources */,
 				5C9CB2C420152379004E4BE3 /* MainCell.swift in Sources */,
 				5C8734AF200B273D00A22F2F /* MainViewController.swift in Sources */,
