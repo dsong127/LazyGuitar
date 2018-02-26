@@ -3,7 +3,6 @@ import UIKit
 extension UITableView {
     
     func displayEmptyTableViewMessage() {
-        
         let frame = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height)
         let messageLabel = UILabel(frame: frame)
         messageLabel.text = "There are no notes to show 😩\n Use the button at the top to create one!"
@@ -26,7 +25,6 @@ extension UITableView {
 }
 
 extension UICollectionView {
-    
     func dequeReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not deque with identifier: \(T.reuseIdentifier)")
@@ -46,5 +44,11 @@ extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         return dateFormatter.string(from: self as Date)
+    }
+}
+
+extension UIColor {
+    class func themeColor() -> UIColor {
+        return UIColor(red: 0.761, green: 0.256, blue: 0.0, alpha: 1.0)
     }
 }

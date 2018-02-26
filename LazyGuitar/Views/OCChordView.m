@@ -116,7 +116,7 @@
         //Strings
         float stringSpacing = floorf(fretXWidth / 5.f);
         
-        float stringLabelYOrigin = (nameHeight + 5.f)  ;
+        float stringLabelYOrigin = (nameHeight + 5.f) ;
         
         
         float stringWidth = 1.0f;
@@ -128,22 +128,21 @@
         
         //Draw Chord name
         
-        
         self.fillColor = [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:1.0];
         CGRect nameRect = CGRectMake(self.frame.origin.x, namePositionYOrigin, self.frame.size.width, nameHeight);
         [self.fillColor setFill];
         UIRectFill(nameRect);
         
-        
         NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
         style.alignment = NSTextAlignmentCenter;
-        
         UIFont *nameFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:floorf(self.frame.size.height*0.1f)];
         
         NSString *name = chordName;
-        [name drawInRect:nameRect withAttributes:@{ NSFontAttributeName: nameFont, NSParagraphStyleAttributeName: style, NSForegroundColorAttributeName: [UIColor blackColor] }];
         
         self.fillColor = [UIColor blackColor];
+        [name drawInRect:nameRect withAttributes:@{ NSFontAttributeName: nameFont, NSParagraphStyleAttributeName: style, NSForegroundColorAttributeName: [UIColor blackColor] }];
+        
+        
         
         //Draw Nut
         CGRect nutRect = CGRectMake(fretBoardXOrigin, nutPositionYOrigin, fretXWidth + stringWidth, nutSize);
@@ -209,10 +208,7 @@
                 UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(circleXOrigin, circleYOrigin, circleRadius*2, circleRadius*2)];
                 [self.fillColor setFill];
                 [circlePath fill];
-                
-                
-                
-                
+
                 if(self.fingerArray) {
                     //Draw the label for which finger should be used
                     NSNumber *activeFingerNumber = [self.fingerArray objectAtIndex:i];

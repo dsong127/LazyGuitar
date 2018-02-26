@@ -22,7 +22,7 @@ class MainCell: UITableViewCell {
     }
    
     func updateUI() {
-        cellBackgroundView.layer.borderColor = UIColor(red: 0.583, green: 0.780, blue: 0.586, alpha: 1).cgColor
+        cellBackgroundView.layer.borderColor = UIColor.white.cgColor
         cellBackgroundView.layer.borderWidth = 1
         cellBackgroundView.layer.cornerRadius = 10
         cellBackgroundView.layer.masksToBounds = false

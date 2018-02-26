@@ -11,6 +11,7 @@ class ChordCell: UICollectionViewCell {
             let cellFrame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
             let chordView = OCChordView(frame: cellFrame)
             
+            chordView.chordName = model.chordName
             chordView.chordArray = model.chordArray
             chordView.fingerArray = model.fingerArray
             chordView.tuningArray = model.tuningArray
@@ -27,7 +28,7 @@ class ChordCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        cellView.layer.borderColor = UIColor(red: 0.22, green: 0.22, blue: 0.46, alpha: 1.0).cgColor
+        cellView.layer.borderColor = UIColor.themeColor().cgColor
         isSelected = false
     }
 }

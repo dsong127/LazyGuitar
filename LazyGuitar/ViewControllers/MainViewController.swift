@@ -27,16 +27,16 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func createNewNote(_ sender: Any) {
-        
         // Popup alert for creating a new note
-        let alert = UIAlertController(title: "New Note", message: "Add a new name", preferredStyle: .alert)
-    
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {(action:UIAlertAction) -> Void in
             let textField = alert.textFields!.first
             guard !(textField?.text == "") else { return }
             
             let dateCreated = Date()
             self.note = Note(noteName: textField!.text!, chords: [], dateCreated: dateCreated)
+            //self.dataSource.notes.append(self.note)
             self.stateController.add(self.note)
             
             self.performSegue(withIdentifier: "NewNoteSegue", sender: nil)
@@ -47,8 +47,14 @@ class MainViewController: UIViewController {
         alert.addTextField(configurationHandler: {(textField: UITextField) in
             textField.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
         })
+ 
+        let attributedString = NSAttributedString(string: "New Note", attributes: [
+            NSAttributedStringKey.foregroundColor : UIColor.themeColor()
+            ])
+        alert.setValue(attributedString, forKey: "attributedTitle")
         
-        alert.view.tintColor = UIColor.black
+        alert.view.layer.cornerRadius = 60
+        alert.view.tintColor = UIColor.themeColor()
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         
@@ -70,9 +76,8 @@ class MainViewController: UIViewController {
         switch segue.identifier! {
         case "NewNoteSegue":
             if let chordsVC = segue.destination as? ChordsViewController {
-                chordsVC.stateController = stateController
-                let note = dataSource.notes.last
-                chordsVC.note = note
+                let newNote = self.note
+                chordsVC.note = newNote
                 chordsVC.stateController = stateController
             }
         case "ViewNoteSegue":
