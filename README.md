@@ -5,7 +5,7 @@ LazyGuitar is an app on the App Store that helps users learn guitar chords. User
 
 ## Requirements
 
-Swift 4.0
+Swift 4.0  
 Xcode 9.0+
 
 
