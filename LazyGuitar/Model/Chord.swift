@@ -4,7 +4,7 @@ struct Chord {
     var chordName: String
     var chordArray: [Int]
     var tuningArray: [String]
-    var fingerArray: [Int]
+    //var fingerArray: [Int]
 }
 
 extension Chord {
@@ -13,7 +13,7 @@ extension Chord {
             "chordName" : chordName as AnyObject,
             "chordArray" : chordArray as AnyObject,
             "tuningArray" : tuningArray as AnyObject,
-            "fingerArray" : fingerArray as AnyObject
+            //"fingerArray" : fingerArray as AnyObject
         ]
     }
         
@@ -21,6 +21,6 @@ extension Chord {
         chordName = plist["chordName"] as! String
         chordArray = plist["chordArray"] as! [Int]
         tuningArray = plist["tuningArray"] as! [String]
-        fingerArray = plist["fingerArray"] as! [Int]
+        //fingerArray = plist["fingerArray"] as! [Int]
     }
 }

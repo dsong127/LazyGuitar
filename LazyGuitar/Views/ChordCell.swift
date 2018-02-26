@@ -13,7 +13,7 @@ class ChordCell: UICollectionViewCell {
             
             chordView.chordName = model.chordName
             chordView.chordArray = model.chordArray
-            chordView.fingerArray = model.fingerArray
+            //chordView.fingerArray = model.fingerArray
             chordView.tuningArray = model.tuningArray
             
             cellView.addSubview(chordView)
@@ -37,13 +37,13 @@ extension ChordCell {
         var chordName: String
         var chordArray: [Int]
         var tuningArray: [String]
-        var fingerArray: [Int]
+        //var fingerArray: [Int]
         
         init(chord: Chord, index: Int){
             chordName = chord.chordName
             chordArray = chord.chordArray
             tuningArray = chord.tuningArray
-            fingerArray = chord.fingerArray
+            //fingerArray = chord.fingerArray
         }
     }
 }

@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CenterTextLayer" "${PODS_CONFIGURATION_BUILD_DIR}/DropDown" "${PODS_CONFIGURATION_BUILD_DIR}/Fretboard" "${PODS_CONFIGURATION_BUILD_DIR}/MusicTheorySwift"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DropDown"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CenterTextLayer/CenterTextLayer.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DropDown/DropDown.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Fretboard/Fretboard.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/MusicTheorySwift/MusicTheorySwift.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "CenterTextLayer" -framework "DropDown" -framework "Fretboard" -framework "MusicTheorySwift"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DropDown/DropDown.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "DropDown"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

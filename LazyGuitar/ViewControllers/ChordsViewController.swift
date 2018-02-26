@@ -82,7 +82,7 @@ class ChordsViewController: UIViewController {
             
             //Create new Chord
             let info = ChordInfo(chord: item)
-            let newChord = Chord(chordName: info.chordName, chordArray: info.chordArray, tuningArray: info.tuningArray, fingerArray: [0,0,0,0,0,0,])
+            let newChord = Chord(chordName: info.chordName, chordArray: info.chordArray, tuningArray: info.tuningArray)
             
             //Add new Chord and update data
             self.note.chords.append(newChord)

@@ -12,7 +12,7 @@ class MainCell: UITableViewCell {
             guard let model = model else { return }
             nameLabel.text = model.noteName
             dateLabel.text = model.dateCreated
-            countLabel.text = "\(model.chords.count)" + " Notes"
+            countLabel.text = "\(model.chords.count)" + " Chords"
         }
     }
     

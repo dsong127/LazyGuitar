@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17599333FD012618E4E21D53 /* Pods_LazyGuitar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B343ED6F37B290C5F2DBA6 /* Pods_LazyGuitar.framework */; };
 		5C008024201569DA001382C5 /* TunerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C008023201569DA001382C5 /* TunerViewController.swift */; };
 		5C00802A201572EC001382C5 /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C008029201572EC001382C5 /* ChordsViewController.swift */; };
 		5C00802C201574E2001382C5 /* ChordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00802B201574E2001382C5 /* ChordCell.swift */; };
@@ -28,8 +27,8 @@
 		5CB3555B201AD5E30011EB1D /* ChordChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3555A201AD5E30011EB1D /* ChordChartView.swift */; };
 		5CBF6ECE2030E380004A233C /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF6ECD2030E380004A233C /* Chord.swift */; };
 		5CD32D1F1DB2EF6100D9E6A9 /* ChordInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD32D1E1DB2EF6100D9E6A9 /* ChordInfo.swift */; };
-		5CEF080D2043769500B1FF87 /* ChordsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF080C2043769500B1FF87 /* ChordsViewControllerDelegate.swift */; };
 		5CF67A95201D888500A0FE6D /* NotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF67A94201D888500A0FE6D /* NotesDataSource.swift */; };
+		B1FF8D672ECC290CBDF5FF2E /* Pods_LazyGuitar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F660200D92A37346183502AA /* Pods_LazyGuitar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,11 +56,10 @@
 		5CB3555A201AD5E30011EB1D /* ChordChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordChartView.swift; sourceTree = "<group>"; };
 		5CBF6ECD2030E380004A233C /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chord.swift; path = Model/Chord.swift; sourceTree = "<group>"; };
 		5CD32D1E1DB2EF6100D9E6A9 /* ChordInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordInfo.swift; sourceTree = "<group>"; };
-		5CEF080C2043769500B1FF87 /* ChordsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		5CF67A94201D888500A0FE6D /* NotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesDataSource.swift; path = Model/NotesDataSource.swift; sourceTree = "<group>"; };
-		62FBE75BAB5CBDF8EA83D5C5 /* Pods-LazyGuitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.debug.xcconfig"; sourceTree = "<group>"; };
-		AA9D160F288A5D4AAE6412AA /* Pods-LazyGuitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.release.xcconfig"; sourceTree = "<group>"; };
-		F9B343ED6F37B290C5F2DBA6 /* Pods_LazyGuitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyGuitar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E11D155E5F2CED081F16160 /* Pods-LazyGuitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.debug.xcconfig"; sourceTree = "<group>"; };
+		6ABD441859296EE9F223A1CE /* Pods-LazyGuitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.release.xcconfig"; sourceTree = "<group>"; };
+		F660200D92A37346183502AA /* Pods_LazyGuitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyGuitar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17599333FD012618E4E21D53 /* Pods_LazyGuitar.framework in Frameworks */,
+				B1FF8D672ECC290CBDF5FF2E /* Pods_LazyGuitar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +79,8 @@
 			children = (
 				5C3431191DA5C538007690CE /* LazyGuitar */,
 				5C3431181DA5C538007690CE /* Products */,
-				D4F8F9F638F60090629A1632 /* Pods */,
-				FA5A2A55C5031FBE1F4FB9F1 /* Frameworks */,
+				C40C8E6E55C72703A9DAF5F2 /* Pods */,
+				B741DF7BFB394CFCBABC4CFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				5C9CB2C6201523CE004E4BE3 /* ReusableViewProtocol.swift */,
-				5CEF080C2043769500B1FF87 /* ChordsViewControllerDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -174,21 +171,21 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		D4F8F9F638F60090629A1632 /* Pods */ = {
+		B741DF7BFB394CFCBABC4CFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62FBE75BAB5CBDF8EA83D5C5 /* Pods-LazyGuitar.debug.xcconfig */,
-				AA9D160F288A5D4AAE6412AA /* Pods-LazyGuitar.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FA5A2A55C5031FBE1F4FB9F1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F9B343ED6F37B290C5F2DBA6 /* Pods_LazyGuitar.framework */,
+				F660200D92A37346183502AA /* Pods_LazyGuitar.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C40C8E6E55C72703A9DAF5F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E11D155E5F2CED081F16160 /* Pods-LazyGuitar.debug.xcconfig */,
+				6ABD441859296EE9F223A1CE /* Pods-LazyGuitar.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C34312C1DA5C538007690CE /* Build configuration list for PBXNativeTarget "LazyGuitar" */;
 			buildPhases = (
-				91E83F68E9F760DDB87580ED /* [CP] Check Pods Manifest.lock */,
+				A8AED06417217D93685FA6AB /* [CP] Check Pods Manifest.lock */,
 				5C3431131DA5C538007690CE /* Sources */,
 				5C3431141DA5C538007690CE /* Frameworks */,
 				5C3431151DA5C538007690CE /* Resources */,
-				9C2593E8561B8EE4A3A550FC /* [CP] Embed Pods Frameworks */,
-				A42A4B90387B2EA81125897B /* [CP] Copy Pods Resources */,
+				A72D98B167FDF065731694A1 /* [CP] Embed Pods Frameworks */,
+				FEA904A6A6DE1F1FF967F220 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,7 +261,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		91E83F68E9F760DDB87580ED /* [CP] Check Pods Manifest.lock */ = {
+		A72D98B167FDF065731694A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8AED06417217D93685FA6AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,31 +297,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C2593E8561B8EE4A3A550FC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CenterTextLayer/CenterTextLayer.framework",
-				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
-				"${BUILT_PRODUCTS_DIR}/Fretboard/Fretboard.framework",
-				"${BUILT_PRODUCTS_DIR}/MusicTheorySwift/MusicTheorySwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CenterTextLayer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fretboard.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MusicTheorySwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A42A4B90387B2EA81125897B /* [CP] Copy Pods Resources */ = {
+		FEA904A6A6DE1F1FF967F220 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,7 +332,6 @@
 				5C8734B3200B273D00A22F2F /* PageViewController.swift in Sources */,
 				5C72AC812019879600CE2E4E /* OCChordView.m in Sources */,
 				5C265029201EE75D000CE959 /* StateController.swift in Sources */,
-				5CEF080D2043769500B1FF87 /* ChordsViewControllerDelegate.swift in Sources */,
 				5CB3555B201AD5E30011EB1D /* ChordChartView.swift in Sources */,
 				5C33018B1E610C8700781582 /* Extensions.swift in Sources */,
 				5C34311B1DA5C538007690CE /* AppDelegate.swift in Sources */,
@@ -481,7 +471,7 @@
 		};
 		5C34312D1DA5C538007690CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62FBE75BAB5CBDF8EA83D5C5 /* Pods-LazyGuitar.debug.xcconfig */;
+			baseConfigurationReference = 5E11D155E5F2CED081F16160 /* Pods-LazyGuitar.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -491,7 +481,7 @@
 				DEVELOPMENT_TEAM = Q89K2W93JC;
 				INFOPLIST_FILE = LazyGuitar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.danielsongh.LazyGuitar;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.danielsongh.Lazy-Guitar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LazyGuitar/Helper/LazyGuitar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -502,7 +492,7 @@
 		};
 		5C34312E1DA5C538007690CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA9D160F288A5D4AAE6412AA /* Pods-LazyGuitar.release.xcconfig */;
+			baseConfigurationReference = 6ABD441859296EE9F223A1CE /* Pods-LazyGuitar.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -512,7 +502,7 @@
 				DEVELOPMENT_TEAM = Q89K2W93JC;
 				INFOPLIST_FILE = LazyGuitar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.danielsongh.LazyGuitar;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.danielsongh.Lazy-Guitar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LazyGuitar/Helper/LazyGuitar-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

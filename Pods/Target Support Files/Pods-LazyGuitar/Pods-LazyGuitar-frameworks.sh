@@ -134,16 +134,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CenterTextLayer/CenterTextLayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Fretboard/Fretboard.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MusicTheorySwift/MusicTheorySwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CenterTextLayer/CenterTextLayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Fretboard/Fretboard.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MusicTheorySwift/MusicTheorySwift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
