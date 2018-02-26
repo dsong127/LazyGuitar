@@ -1,21 +1,9 @@
 # LazyGuitar
 
 
-LazyGuitar is an app on the App Store that helps users learn guitar chords.
+LazyGuitar is an app on the App Store that helps users learn guitar chords. Users can add a note containing the guitar chords they need to learn a song.
 
-# Features
-Add notes by using the plus button
+## Update
 
-![demo1](/images/demo1.gif)
+The new version of the app stores the data in a property list instead of using Core Data for complicity.
 
-Add chords by choosing from the menu
-
-![demo2](/images/demo2.gif)
-
-Delete chords by using the "select" button
-
-![demo3](/images/demo3.gif)
-
-Rearrange chords by holding and dragging
-
-![demo4](/images/demo4.gif)
