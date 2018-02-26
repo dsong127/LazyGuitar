@@ -10,10 +10,16 @@ class StateController {
     }
     
     func add(_ note: Note) {
-        notes.append(note)
+        notes.insert(note, at: 0)
         storageController.save(notes)
     }
     
+    func deleteNote(at index: Int) {
+        notes.remove(at: index)
+        storageController.save(notes)
+    }
+    
+    //Update already existing note
     func update(_ note: Note) {
         for (index, storedNote) in notes.enumerated() {
             guard storedNote.dateCreated == note.dateCreated else {

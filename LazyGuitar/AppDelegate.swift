@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         DropDown.startListeningToKeyboard()
         
-        // Initialize Storage Controller - This should only be done once.
+        // Initialize State Controller - This should only be done once.
         
         let initialVC = window?.rootViewController as! UINavigationController
         let mainVC = initialVC.viewControllers.first as! MainViewController

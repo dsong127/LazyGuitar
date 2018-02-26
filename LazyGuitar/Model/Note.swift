@@ -10,7 +10,7 @@ extension Note {
     var plistRepresentation: [String : AnyObject] {
         return [
             "noteName" : noteName as AnyObject,
-            "chords" : chords.map { $0.plistRepresentation } as AnyObject,
+            "chords" : chords.map {$0.plistRepresentation} as AnyObject,
             "dateCreated" : dateCreated as AnyObject,
         ]
     }

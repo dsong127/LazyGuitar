@@ -83,17 +83,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Geb-bJ-B1b">
                         <barButtonItem key="leftBarButtonItem" id="9LK-4z-ApT">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fgK-uB-dJb">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fgK-uB-dJb">
+                                <rect key="frame" x="16" y="6" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" image="WaveIcon"/>
                             </button>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="ZUZ-M4-01i" kind="presentation" id="Ykg-M3-xKY"/>
-                            </connections>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="6mU-6E-nyB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,8 +99,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="wGA-gd-K1w" id="Yh1-Ah-u5h"/>
-                        <segue destination="OjH-hY-eFq" kind="show" identifier="ViewNoteSegue" id="5g5-L0-DQB"/>
-                        <segue destination="OjH-hY-eFq" kind="show" identifier="NewNoteSegue" id="Yuy-J7-7V8"/>
+                        <segue destination="OjH-hY-eFq" kind="push" identifier="ViewNoteSegue" id="5g5-L0-DQB"/>
+                        <segue destination="6It-1w-fdo" kind="show" identifier="NewNoteSegue" id="Ov8-Dh-yc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuU-j4-tOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,9 +136,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMH-Ld-zrx" customClass="OCChordView">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMH-Ld-zrx">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="170"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                         </view>
@@ -155,7 +150,7 @@
                                             <constraint firstItem="TMH-Ld-zrx" firstAttribute="top" secondItem="kt5-om-ZZG" secondAttribute="top" id="dms-v9-w65"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="chordView" destination="TMH-Ld-zrx" id="ctu-1n-QjH"/>
+                                            <outlet property="cellView" destination="TMH-Ld-zrx" id="5KM-sj-VQG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -164,21 +159,24 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="trash" id="FDe-2k-aew">
+                                    <barButtonItem enabled="NO" style="plain" systemItem="trash" id="FDe-2k-aew">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="deleteButtonPressed:" destination="OjH-hY-eFq" id="vCE-Xd-cOr"/>
+                                            <action selector="deleteButtonPressed:" destination="OjH-hY-eFq" id="cE3-3P-CcW"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9GM-3o-lS2"/>
                                     <barButtonItem title="Key" id="dql-hH-mQn">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="keyButtonPressed:" destination="OjH-hY-eFq" id="JjJ-AV-VYh"/>
+                                            <action selector="keyButtonPressed:" destination="OjH-hY-eFq" id="Uip-yf-Wj3"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem enabled="NO" title="Var" id="T8B-IC-dgR">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="varButtonPressed:" destination="OjH-hY-eFq" id="wkz-gS-NVH"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.5827512145" green="0.78006070849999998" blue="0.58554702999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -192,15 +190,42 @@
                             <constraint firstItem="BaO-ab-Wxm" firstAttribute="top" secondItem="B70-fc-R57" secondAttribute="bottom" id="bsq-wC-V9U"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="diW-t6-ThW">
+                        <barButtonItem key="rightBarButtonItem" title="Select" id="j6a-kI-Yrz">
+                            <connections>
+                                <action selector="selectButtonPressed:" destination="OjH-hY-eFq" id="eep-pd-ahd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chordCollectionView" destination="B70-fc-R57" id="U7c-x1-jHd"/>
+                        <outlet property="deleteButton" destination="FDe-2k-aew" id="MWl-qN-9KF"/>
                         <outlet property="keyButton" destination="dql-hH-mQn" id="yrD-LB-Aub"/>
+                        <outlet property="selectButton" destination="j6a-kI-Yrz" id="6pt-gF-SGv"/>
                         <outlet property="variationButton" destination="T8B-IC-dgR" id="Tgf-e3-eAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa1-T6-m3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3428" y="173"/>
+            <point key="canvasLocation" x="3732" y="125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VbT-iq-5Qf">
+            <objects>
+                <viewController id="6It-1w-fdo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3nS-mG-RoN"/>
+                        <viewControllerLayoutGuide type="bottom" id="uUr-yM-d9v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iFh-2D-yBF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwO-WW-bWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3732" y="881"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K2J-7Q-C2R">
@@ -251,10 +276,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDt-x2-yNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="1285"/>
+            <point key="canvasLocation" x="2350" y="-312"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Yuy-J7-7V8"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="WaveIcon" width="32" height="32"/>
+    </resources>
 </document>

@@ -2,9 +2,9 @@ import Foundation
 
 struct Chord {
     var chordName: String
-    var chordArray: [String]
+    var chordArray: [Int]
     var tuningArray: [String]
-    var fingerArray: [String]
+    var fingerArray: [Int]
 }
 
 extension Chord {
@@ -19,8 +19,8 @@ extension Chord {
         
     init(plist: [String : AnyObject]) {
         chordName = plist["chordName"] as! String
-        chordArray = plist["chordArray"] as! [String]
+        chordArray = plist["chordArray"] as! [Int]
         tuningArray = plist["tuningArray"] as! [String]
-        fingerArray = plist["fingerArray"] as! [String]
+        fingerArray = plist["fingerArray"] as! [Int]
     }
 }

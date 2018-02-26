@@ -53,7 +53,6 @@ class ChordChartView: UIView {
             
             let fretDisplayDifference = maxDisplayFret - minDisplayFret
             
-            
             var fretLineHeight: CGFloat = 1.0
             
             //Chord Name

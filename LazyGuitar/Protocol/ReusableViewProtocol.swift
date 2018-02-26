@@ -15,4 +15,3 @@ extension NibLoadableView where Self: UIView {
         return String(describing: self)
     }
 }
-

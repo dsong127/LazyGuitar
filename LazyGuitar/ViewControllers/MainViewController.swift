@@ -19,14 +19,18 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+        //Load data from the datasource, then store into tableview data
         dataSource = NotesDataSource(notes: stateController.notes)
         mainTableView.dataSource = dataSource
         mainTableView.reloadData()
     }
     
     @IBAction func createNewNote(_ sender: Any) {
+        
+        // Popup alert for creating a new note
         let alert = UIAlertController(title: "New Note", message: "Add a new name", preferredStyle: .alert)
-       
+    
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {(action:UIAlertAction) -> Void in
             let textField = alert.textFields!.first
             guard !(textField?.text == "") else { return }
@@ -34,7 +38,7 @@ class MainViewController: UIViewController {
             let dateCreated = Date()
             self.note = Note(noteName: textField!.text!, chords: [], dateCreated: dateCreated)
             self.stateController.add(self.note)
-        
+            
             self.performSegue(withIdentifier: "NewNoteSegue", sender: nil)
         })
         
@@ -51,6 +55,7 @@ class MainViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    // Disables Save button in the create new note alert window if title is blank
     @objc func textFieldDidChange(sender: AnyObject) {
         let tf = sender as! UITextField
         var resp: UIResponder = tf
@@ -66,7 +71,7 @@ class MainViewController: UIViewController {
         case "NewNoteSegue":
             if let chordsVC = segue.destination as? ChordsViewController {
                 chordsVC.stateController = stateController
-                let note = dataSource.notes[0]
+                let note = dataSource.notes.last
                 chordsVC.note = note
                 chordsVC.stateController = stateController
             }
@@ -96,5 +101,13 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ViewNoteSegue", sender: nil)
         mainTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        if let indexPath = indexPath {
+            stateController.deleteNote(at: indexPath.row)
+        } else {
+            print("indexPath is nil")
+        }
     }
 }
