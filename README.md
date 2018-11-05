@@ -11,5 +11,5 @@ Xcode 9.0+
 
 ## Update
 
-The new version of the app stores the data in a property list instead of using Core Data for complicity.
+The new version of the app doesn't use CoreData anymore, instead it now stores its data in a property list.
 
