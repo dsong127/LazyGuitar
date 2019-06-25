@@ -3,6 +3,7 @@ DerivedData/
 
 Gemfile
 Gemfile.lock
+.DS_Store
 
 ## Various settings
 *.pbxuser
