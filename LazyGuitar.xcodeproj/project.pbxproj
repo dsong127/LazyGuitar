@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A7D65C52873B6CCF5BD22E3 /* Pods_LazyGuitar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1215E2E6CDACD2951C50E8E5 /* Pods_LazyGuitar.framework */; };
+		5C4F905622C2BF9A00BC9412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4F905522C2BF9A00BC9412 /* AppDelegate.swift */; };
+		5C4F905822C2BF9A00BC9412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4F905722C2BF9A00BC9412 /* ViewController.swift */; };
+		5C4F905B22C2BF9A00BC9412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4F905922C2BF9A00BC9412 /* Main.storyboard */; };
+		5C4F905D22C2BF9A00BC9412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C4F905C22C2BF9A00BC9412 /* Assets.xcassets */; };
+		5C4F906022C2BF9A00BC9412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4F905E22C2BF9A00BC9412 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1215E2E6CDACD2951C50E8E5 /* Pods_LazyGuitar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyGuitar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26BC23D74350DB90504E8E7C /* Pods-LazyGuitar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.release.xcconfig"; path = "Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.release.xcconfig"; sourceTree = "<group>"; };
+		57DC8AA72464ADCE2A93DC28 /* Pods-LazyGuitar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyGuitar.debug.xcconfig"; path = "Target Support Files/Pods-LazyGuitar/Pods-LazyGuitar.debug.xcconfig"; sourceTree = "<group>"; };
+		5C4F905222C2BF9900BC9412 /* LazyGuitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyGuitar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4F905522C2BF9A00BC9412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C4F905722C2BF9A00BC9412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C4F905A22C2BF9A00BC9412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C4F905C22C2BF9A00BC9412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C4F905F22C2BF9A00BC9412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C4F906122C2BF9A00BC9412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C4F904F22C2BF9900BC9412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7D65C52873B6CCF5BD22E3 /* Pods_LazyGuitar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C4F904922C2BF9900BC9412 = {
+			isa = PBXGroup;
+			children = (
+				5C4F905422C2BF9900BC9412 /* LazyGuitar */,
+				5C4F905322C2BF9900BC9412 /* Products */,
+				C181670910087D4994A471AD /* Pods */,
+				7AB0B0B99A90036CADB9AAAB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5C4F905322C2BF9900BC9412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C4F905222C2BF9900BC9412 /* LazyGuitar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C4F905422C2BF9900BC9412 /* LazyGuitar */ = {
+			isa = PBXGroup;
+			children = (
+				5C4F905522C2BF9A00BC9412 /* AppDelegate.swift */,
+				5C4F905722C2BF9A00BC9412 /* ViewController.swift */,
+				5C4F905922C2BF9A00BC9412 /* Main.storyboard */,
+				5C4F905C22C2BF9A00BC9412 /* Assets.xcassets */,
+				5C4F905E22C2BF9A00BC9412 /* LaunchScreen.storyboard */,
+				5C4F906122C2BF9A00BC9412 /* Info.plist */,
+			);
+			path = LazyGuitar;
+			sourceTree = "<group>";
+		};
+		7AB0B0B99A90036CADB9AAAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1215E2E6CDACD2951C50E8E5 /* Pods_LazyGuitar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C181670910087D4994A471AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57DC8AA72464ADCE2A93DC28 /* Pods-LazyGuitar.debug.xcconfig */,
+				26BC23D74350DB90504E8E7C /* Pods-LazyGuitar.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C4F905122C2BF9900BC9412 /* LazyGuitar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C4F906422C2BF9A00BC9412 /* Build configuration list for PBXNativeTarget "LazyGuitar" */;
+			buildPhases = (
+				E74ED1AFC2699B9DE33B4958 /* [CP] Check Pods Manifest.lock */,
+				5C4F904E22C2BF9900BC9412 /* Sources */,
+				5C4F904F22C2BF9900BC9412 /* Frameworks */,
+				5C4F905022C2BF9900BC9412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyGuitar;
+			productName = LazyGuitar;
+			productReference = 5C4F905222C2BF9900BC9412 /* LazyGuitar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C4F904A22C2BF9900BC9412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Daniel Song";
+				TargetAttributes = {
+					5C4F905122C2BF9900BC9412 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 5C4F904D22C2BF9900BC9412 /* Build configuration list for PBXProject "LazyGuitar" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C4F904922C2BF9900BC9412;
+			productRefGroup = 5C4F905322C2BF9900BC9412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C4F905122C2BF9900BC9412 /* LazyGuitar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C4F905022C2BF9900BC9412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4F906022C2BF9A00BC9412 /* LaunchScreen.storyboard in Resources */,
+				5C4F905D22C2BF9A00BC9412 /* Assets.xcassets in Resources */,
+				5C4F905B22C2BF9A00BC9412 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E74ED1AFC2699B9DE33B4958 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LazyGuitar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C4F904E22C2BF9900BC9412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4F905822C2BF9A00BC9412 /* ViewController.swift in Sources */,
+				5C4F905622C2BF9A00BC9412 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5C4F905922C2BF9A00BC9412 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C4F905A22C2BF9A00BC9412 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C4F905E22C2BF9A00BC9412 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C4F905F22C2BF9A00BC9412 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C4F906222C2BF9A00BC9412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C4F906322C2BF9A00BC9412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C4F906522C2BF9A00BC9412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DC8AA72464ADCE2A93DC28 /* Pods-LazyGuitar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q89K2W93JC;
+				INFOPLIST_FILE = LazyGuitar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dsong.LazyGuitar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C4F906622C2BF9A00BC9412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26BC23D74350DB90504E8E7C /* Pods-LazyGuitar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q89K2W93JC;
+				INFOPLIST_FILE = LazyGuitar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dsong.LazyGuitar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C4F904D22C2BF9900BC9412 /* Build configuration list for PBXProject "LazyGuitar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4F906222C2BF9A00BC9412 /* Debug */,
+				5C4F906322C2BF9A00BC9412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C4F906422C2BF9A00BC9412 /* Build configuration list for PBXNativeTarget "LazyGuitar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4F906522C2BF9A00BC9412 /* Debug */,
+				5C4F906622C2BF9A00BC9412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C4F904A22C2BF9900BC9412 /* Project object */;
+}
